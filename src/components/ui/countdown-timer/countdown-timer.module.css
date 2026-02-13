@@ -7,7 +7,7 @@
 .timer {
   color: #2ECC71;
   font-weight: 900;
-  font-size: clamp(2.5rem, 2.5rem + 2.2vw, 8rem);
+  font-size: clamp(2.5rem, 2.5rem + 12.5714vw, 8rem);
   line-height: 100px;
   letter-spacing: 0px;
   text-align: center;
