@@ -58,6 +58,6 @@ body {
   html {
     background-image: url("./assets/bg_mob.png");
     background-size: cover;
-    height: 100%;
+    height: 100dvh;
   }
 }
