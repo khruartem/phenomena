@@ -12,4 +12,6 @@ export const initDigitsTypography = (mediaQuery: {
   if (isLarge || isLaptop) return Typography.Digits_120;
   if (isDesktop || isTablet) return Typography.Digits_80;
   if (isMobile) return Typography.Digits_60;
+
+  return Typography.Digits_60;
 };

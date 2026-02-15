@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: flex-start;
+}
+
+.wrapper_large-width {
+  width: 280px;
+}
+
+.wrapper_middle-width {
+  width: 200px;
+}
+
+.wrapper_small-width {
+  width: 140px;
+}
+
+.digits {
+  text-align: center;
+}
+
+.digits_large-height {
+  height: 140px;
+}
+
+.digits_middle-height {
+  height: 100px;
+}
+
+.digits_small-height {
+  height: 80px;
+}
+
+.text {
+  text-align: center;
+}
