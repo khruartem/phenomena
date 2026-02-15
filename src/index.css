@@ -37,8 +37,8 @@ body {
   display: flex;
   place-items: center;
   min-width: 370px;
-  min-height: 100dvh;
-  background-size: 100% 100%;
+  min-height: 100vh;
+  background-size: 100% 100vh;
   background-repeat: no-repeat;
 }
 
@@ -57,12 +57,5 @@ body {
 @media (max-width: 768.9px) {
   body {
     background-image: url("./assets/bg_mob.png");
-    margin: 0;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Фиксирует фон */
-    background-position: center;
-    background-size: 100% 200%;; /* Растягивает на весь экран */
-    height: 150vh;
   }
 }
