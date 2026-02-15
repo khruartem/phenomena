@@ -1,0 +1,17 @@
+.dots {
+  animation: fade-effect 2s infinite ease-in-out;
+}
+
+@keyframes fade-effect {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

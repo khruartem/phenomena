@@ -7,6 +7,8 @@ import dotsRight from "../../../assets/icons/dots_right.svg";
 
 import { useMedia } from "../../../hooks/useMedia";
 
+import styles from "./dots.module.css"
+
 export const DotsUI: FC<TDotsUIProps> = ({ direction }) => {
   const { isDesktop, isMobile } = useMedia();
 
@@ -18,6 +20,7 @@ export const DotsUI: FC<TDotsUIProps> = ({ direction }) => {
       }}
       src={direction === "left" ? dotsLeft : dotsRight}
       alt="Dots"
+      className={styles.dots}
     />
   );
 };
