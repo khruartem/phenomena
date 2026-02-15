@@ -37,7 +37,7 @@ body {
   display: flex;
   place-items: center;
   min-width: 370px;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -57,6 +57,5 @@ body {
 @media (max-width: 768.9px) {
   body {
     background-image: url("./assets/bg_mob.png");
-    background-size: 100% 100dvh;
   }
 }
