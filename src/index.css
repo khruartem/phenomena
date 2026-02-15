@@ -62,7 +62,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; /* Фиксирует фон */
     background-position: center;
-    background-size: cover; /* Растягивает на весь экран */
+    background-size: 100% 200%;; /* Растягивает на весь экран */
     height: 100vh;
   }
 }
