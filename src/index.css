@@ -57,7 +57,12 @@ body {
 @media (max-width: 768.9px) {
   body {
     background-image: url("./assets/bg_mob.png");
-    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Фиксирует фон */
+    background-position: center;
+    background-size: cover; /* Растягивает на весь экран */
     height: 100vh;
   }
 }
