@@ -55,9 +55,9 @@ body {
 }
 
 @media (max-width: 768.9px) {
-  html {
+  body {
     background-image: url("./assets/bg_mob.png");
     background-size: cover;
-    height: 100dvh;
+    height: 100vh;
   }
 }
