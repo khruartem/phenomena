@@ -8,6 +8,7 @@
   --black: #000;
 
   font-family: "KharkivTone", sans-serif;
+  font-weight: 400;
   text-decoration: none;
 
   color: var(--light);
@@ -19,9 +20,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 370px;
+  min-height: 100dvh;
+}
+
+#root {
+  width: 100%;
+}
+
 a {
   color: var(--badge);
   text-decoration: none;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
 }
 
 a:hover {
@@ -31,32 +48,4 @@ a:hover {
 a:active {
   color: var(--light);
   text-decoration: underline;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 370px;
-  min-height: 100dvh;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-@media (min-width: 1200px) {
-  body {
-    background-image: url("./assets/bg_desk.png");
-  }
-}
-
-@media (769px <= width <= 1199.9px) {
-  body {
-    background-image: url("./assets/bg_tab.png");
-  }
-}
-
-@media (max-width: 768.9px) {
-  body {
-    background-image: url("./assets/bg_mob.png");
-  }
 }

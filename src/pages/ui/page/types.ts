@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
 
-export type TCountdownTimerProps = {
+export type TPageUIProps = {
   children: ReactNode;
 };

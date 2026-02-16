@@ -1,5 +1,5 @@
 .dots {
-  animation: fade-effect 2s infinite ease-in-out;
+  animation: fade-effect 2s infinite linear;
 }
 
 @keyframes fade-effect {

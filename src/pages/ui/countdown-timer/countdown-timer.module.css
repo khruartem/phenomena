@@ -1,0 +1,78 @@
+.main_timer {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Стили для разных разрешений экранов */
+/* main_timer */
+.main_timer_large {
+  justify-content: center;
+  padding-inline: 17.70vw;
+  background-image: url("../../../assets/bg_desk.png");
+}
+
+.main_timer_desktop {
+  justify-content: center;
+  padding-inline: 4.61vw;
+  background-image: url("../../../assets/bg_desk.png");
+}
+
+.main_timer_laptop {
+  justify-content: center;
+  padding-inline: 10.94vw;
+  background-image: url("../../../assets/bg_tab.png");
+  min-height: 1366px;
+}
+
+.main_timer_tablet {
+  justify-content: center;
+  padding-inline: 4.17vw;
+  background-image: url("../../../assets/bg_tab.png");
+  min-height: 1024px;
+}
+
+.main_timer_mobile {
+  justify-content: flex-start;
+  padding-block-start: 27vw;
+  padding-inline: 3.81vw;
+  background-image: url("../../../assets/bg_mob.png");
+  min-height: 912px;
+}
+
+.bottom_large {
+  gap: 2.71vw;
+  margin-block-start: 7.29vw;
+}
+
+.bottom_desktop {
+  gap: 1.76vw;
+  margin-block-start: 6.44vw;
+}
+
+.bottom_laptop {
+  gap: 7.03vw;
+  margin-block-start: 17.97vw;
+}
+
+.bottom_tablet {
+  gap: 5.21vw;
+  margin-block-start: 17.71vw;
+}
+
+.bottom_mobile {
+  gap: 10.48vw;
+  margin-block-start: 20.95vw;
+}

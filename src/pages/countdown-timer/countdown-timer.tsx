@@ -5,35 +5,31 @@ import { CountdownTimerUI } from "../ui/countdown-timer";
 import type { TCountdownTimerProps } from "./types";
 import type { TTimeLeft } from "../../utils/types";
 
-export const CountdownTimer: FC<TCountdownTimerProps> = ({ children }) => {
+export const CountdownTimer: FC<TCountdownTimerProps> = ({ content }) => {
   const [timeLeft, setTimeLeft] = useState<TTimeLeft>({
     daysLeft: "",
     hoursLeft: "",
     minutesLeft: "",
     secondsLeft: "",
   }); // Оставшееся время для отображения
-  const [showContent, setShowContent] = useState<boolean>(
-    () => Boolean(localStorage.getItem("contentShown")) || false,
-  ); // Флаг показа лэндинга
+  const [showContent, setShowContent] = useState<boolean>(false); // Флаг показа лэндинга
 
   const cycleDuration = 24 * 60 * 60 * 1000; // Цикл: дни в миллисекундах
 
   useEffect(() => {
-    // Если в LocalStorage установлен флаг - обновлять интервал не нужно
+    // Прошло больше положенного времени
     if (showContent) return;
 
     const updateTimeLeft = () => {
       // Фиксируем дату старта (например, конкретный момент времени)
-      const globalStartDate = new Date("2026-02-15T22:00:00Z"); // ISO формат
-      // const globalStartDate = new Date("2026-02-13T22:09:00Z"); // ISO формат
+      const globalStartDate = new Date("2026-02-16T22:18:00Z"); // ISO формат
       const now = new Date(); // Текущее глобальное время
       const elapsed = +now - +globalStartDate; // Время, прошедшее с момента старта (в миллисекундах)
       const remainingTimeMs = cycleDuration - (elapsed % cycleDuration); // Время до окончания текущих N дней
 
       // Если времени больше нет (0 или отрицательное значение), показываем лэндинг
-      if (remainingTimeMs < 1000) {
+      if (elapsed > cycleDuration) {
         setShowContent(true);
-        localStorage.setItem("contentShown", "true");
         return;
       }
 
@@ -68,7 +64,7 @@ export const CountdownTimer: FC<TCountdownTimerProps> = ({ children }) => {
   }, [cycleDuration, showContent]);
 
   if (showContent) {
-    return children;
+    return content;
   }
 
   return <CountdownTimerUI timeLeft={timeLeft} />;

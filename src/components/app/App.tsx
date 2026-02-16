@@ -1,12 +1,8 @@
-import { CountdownTimer } from "../countdown-timer";
-import { Main } from "../main";
+import { CountdownTimer } from "../../pages/countdown-timer";
+import { Main } from "../../pages/main";
 
 function App() {
-  return (
-    <CountdownTimer>
-      <Main />
-    </CountdownTimer>
-  );
+  return <CountdownTimer content={<Main />} />;
 }
 
 export default App;
