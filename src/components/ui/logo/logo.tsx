@@ -18,7 +18,7 @@ export const LogoUI: FC<TLogoUIProps> = ({ src }) => {
           isDesktop && "12.59vw",
           isLaptop && "28.91vw",
           isTablet && "28.65vw",
-          isMobile && "32.38vw",
+          isMobile && "30.38vw",
         ),
       }}
     />
