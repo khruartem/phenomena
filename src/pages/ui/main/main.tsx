@@ -1,4 +1,7 @@
 import type { FC } from "react";
+import clsx from "clsx";
+
+import { Page } from "../../page";
 
 import type { TMainUIProps } from "./types";
 
@@ -6,11 +9,10 @@ import reactLogo from "../../../assets/react.svg";
 import viteLogo from "/vite.svg";
 
 import styles from "./main.module.css";
-import clsx from "clsx";
 
 export const MainUI: FC<TMainUIProps> = ({ count, onClick }) => {
   return (
-    <>
+    <Page className={styles.main}>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className={styles.logo} alt="Vite logo" />
@@ -33,6 +35,6 @@ export const MainUI: FC<TMainUIProps> = ({ count, onClick }) => {
       <p className={styles["read-the-docs"]}>
         Click on the Vite and React logos to learn more
       </p>
-    </>
+    </Page>
   );
 };
