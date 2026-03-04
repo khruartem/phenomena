@@ -22,7 +22,7 @@ export const CountdownTimer: FC<TCountdownTimerProps> = ({ content }) => {
 
     const updateTimeLeft = () => {
       // Фиксируем дату старта (например, конкретный момент времени)
-      const globalStartDate = new Date("2026-03-03T23:00:00Z"); // ISO формат
+      const globalStartDate = new Date("2026-03-04T23:00:00Z"); // ISO формат
       const now = new Date(); // Текущее глобальное время
       const elapsed = +now - +globalStartDate; // Время, прошедшее с момента старта (в миллисекундах)
       const remainingTimeMs = cycleDuration - (elapsed % cycleDuration); // Время до окончания текущих N дней
