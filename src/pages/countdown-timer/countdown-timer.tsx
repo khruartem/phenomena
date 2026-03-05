@@ -14,7 +14,7 @@ export const CountdownTimer: FC<TCountdownTimerProps> = ({ content }) => {
   }); // Оставшееся время для отображения
   const [showContent, setShowContent] = useState<boolean>(false); // Флаг показа лэндинга
 
-  const cycleDuration = 24 * 60 * 60 * 1000; // Цикл: дни в миллисекундах
+  const cycleDuration = 30 * 24 * 60 * 60 * 1000; // Цикл: дни в миллисекундах
 
   useEffect(() => {
     // Прошло больше положенного времени
@@ -22,7 +22,7 @@ export const CountdownTimer: FC<TCountdownTimerProps> = ({ content }) => {
 
     const updateTimeLeft = () => {
       // Фиксируем дату старта (например, конкретный момент времени)
-      const globalStartDate = new Date("2026-04-30T21:00:00Z"); // ISO формат
+      const globalStartDate = new Date("2026-03-31T21:00:00Z"); // ISO формат
       const now = new Date(); // Текущее глобальное время
       const elapsed = +now - +globalStartDate; // Время, прошедшее с момента старта (в миллисекундах)
       const remainingTimeMs = cycleDuration - (elapsed % cycleDuration); // Время до окончания текущих N дней
