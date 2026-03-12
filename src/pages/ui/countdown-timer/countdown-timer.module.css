@@ -20,7 +20,7 @@
 /* main_timer */
 .main_timer_large {
   justify-content: center;
-  padding-inline: 17.70vw;
+  /* padding-inline: 17.70vw; */
   background-image: url("../../../assets/bg_desk.png");
 }
 
