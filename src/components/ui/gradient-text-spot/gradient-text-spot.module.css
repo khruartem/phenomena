@@ -1,0 +1,19 @@
+.gradient-text-spot {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: radial-gradient(circle 80px at var(--x, 50%) var(--y, 50%),
+      #ff009a99 0%,
+      #5c93ff66 40%,
+      transparent 70%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background 0.5s, filter 0.3s;
+  filter: brightness(0.7) grayscale(0.5);
+}
+
+.gradient-text-spot.hovered {
+  filter: brightness(1.2) grayscale(0);
+}
