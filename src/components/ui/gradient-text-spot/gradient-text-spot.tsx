@@ -2,7 +2,7 @@ import { useRef, type FC } from "react";
 
 import type { TGradientTextSpotUIProps } from "./types";
 
-import styles from "./gradient-text-spot.module.scss";
+import styles from "./gradient-text-spot.module.css";
 
 export const GradientTextSpotUI: FC<TGradientTextSpotUIProps> = ({
   children,

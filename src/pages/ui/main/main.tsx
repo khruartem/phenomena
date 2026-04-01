@@ -9,6 +9,7 @@ import reactLogo from "../../../assets/react.svg";
 import viteLogo from "/vite.svg";
 
 import styles from "./main.module.css";
+import { GradientTextSpotUI } from "../../../components/ui/gradient-text-spot copy/gradient-text-spot";
 
 export const MainUI: FC<TMainUIProps> = ({ count, onClick }) => {
   return (
@@ -25,7 +26,7 @@ export const MainUI: FC<TMainUIProps> = ({ count, onClick }) => {
           />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <GradientTextSpotUI>{"Vite + React"}</GradientTextSpotUI>
       <div className={styles.card}>
         <button onClick={onClick}>count is {count}</button>
         <p>
