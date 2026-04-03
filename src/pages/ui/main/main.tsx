@@ -2,6 +2,7 @@ import type { FC } from "react";
 import clsx from "clsx";
 
 import { Page } from "../../page";
+import { GlowTextUI } from "../../../components/ui/glow-text";
 
 import type { TMainUIProps } from "./types";
 
@@ -9,7 +10,6 @@ import reactLogo from "../../../assets/react.svg";
 import viteLogo from "/vite.svg";
 
 import styles from "./main.module.css";
-import { GradientTextSpotUI } from "../../../components/ui/gradient-text-spot copy/gradient-text-spot";
 
 export const MainUI: FC<TMainUIProps> = ({ count, onClick }) => {
   return (
@@ -26,7 +26,7 @@ export const MainUI: FC<TMainUIProps> = ({ count, onClick }) => {
           />
         </a>
       </div>
-      <GradientTextSpotUI>{"Vite + React"}</GradientTextSpotUI>
+      <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
       <div className={styles.card}>
         <button onClick={onClick}>count is {count}</button>
         <p>
