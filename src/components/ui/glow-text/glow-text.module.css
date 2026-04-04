@@ -39,7 +39,11 @@
 
 .title__base {
   margin: 0;
-  color: var(--dark);
+  background-color: #565656;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0.2px 0.2px 1.6px rgba(255, 255, 255, 0.75);
 }
 
 .title__lit {
