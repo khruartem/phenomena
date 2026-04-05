@@ -2,7 +2,7 @@ import type { FC } from "react";
 import clsx from "clsx";
 
 import { Page } from "../../page";
-import { Logo } from "../../../components/logo";
+import { LogoUI } from "../../../components/ui/logo";
 import { DigitsUI } from "../../../components/ui/digits";
 import { DotsUI } from "../../../components/ui/dots";
 import { TeleportUI } from "../../../components/ui/teleport";
@@ -30,7 +30,18 @@ export const CountdownTimerUI: FC<TCountdownTimerUIProps> = ({ timeLeft }) => {
         isMobile && styles.main_timer_mobile,
       )}
     >
-      <Logo />
+      <LogoUI
+        type={"logo-full"}
+        style={{
+          marginBlockEnd: clsx(
+            isLarge && "12.50vw",
+            isDesktop && "12.59vw",
+            isLaptop && "28.91vw",
+            isTablet && "28.65vw",
+            isMobile && "30vw",
+          ),
+        }}
+      />
       <div
         className={styles.timer}
         style={{

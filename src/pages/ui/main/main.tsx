@@ -10,8 +10,9 @@ import reactLogo from "../../../assets/react.svg";
 import viteLogo from "/vite.svg";
 
 import styles from "./main.module.css";
+import SvgButton from "../../../components/ui/button/button";
 
-export const MainUI: FC<TMainUIProps> = ({ count, onClick }) => {
+export const MainUI: FC<TMainUIProps> = () => {
   return (
     <Page className={styles.main}>
       <div>
@@ -28,7 +29,7 @@ export const MainUI: FC<TMainUIProps> = ({ count, onClick }) => {
       </div>
       <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
       <div className={styles.card}>
-        <button onClick={onClick}>count is {count}</button>
+        <SvgButton />
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
