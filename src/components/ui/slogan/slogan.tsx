@@ -13,7 +13,7 @@ export const SloganUI: FC<TSloganUIProps> = ({ text }) => {
   return (
     <TextUI
       typography={Typography.Text_32}
-      color={Colors.Light}
+      color={Colors.White100}
       className={styles.slogan}
     >
       {text}

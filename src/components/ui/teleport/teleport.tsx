@@ -8,7 +8,7 @@ import styles from "./teleport.module.css";
 export const TeleportUI: FC = () => {
   return (
     <div className={styles.teleport}>
-      <TextUI typography={Typography.Text_16} color={Colors.Light}>
+      <TextUI typography={Typography.Text_16} color={Colors.White100}>
         {"Следите за"}
       </TextUI>
       <a href={"https://t.me/ivn_journal"} target="_blank">
