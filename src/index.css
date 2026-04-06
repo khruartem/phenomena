@@ -3,16 +3,16 @@
 :root {
   --badge: #D8A48C;
   --pudge: #B87773;
-  --light: #FFFFFF;
-  --dark: #D9D9D9;
-  --black: #000;
+  --white100: #FFFFFF;
+  --white80: #D9D9D9;
+  --bg: #020000;
 
   font-family: "KharkivTone", sans-serif;
   font-weight: 400;
   text-decoration: none;
 
-  color: var(--light);
-  background-color: var(--black);
+  color: var(--white100);
+  background-color: var(--bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,6 +46,6 @@ a:hover {
 }
 
 a:active {
-  color: var(--light);
+  color: var(--white100);
   text-decoration: underline;
 }
