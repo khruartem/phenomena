@@ -3,6 +3,7 @@ const Colors = {
   Pudge: "#B87773",
   White100: "#FFFFFF",
   White80: "#D9D9D9",
+  BG: "#020000",
 } as const;
 
 type Colors = (typeof Colors)[keyof typeof Colors];
