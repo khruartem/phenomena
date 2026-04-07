@@ -33,4 +33,35 @@
       </clipPath>
     </defs>
   </symbol>
+
+  <symbol id="segment-left-secondary" viewBox="0 0 12 40">
+    <path d="M2 0H12V40H11.6569C10.596 40 9.57857 39.5786 8.82843 38.8284L1.17157 31.1716C0.421427 30.4214 0 29.404 0 28.3431V2C0 0.895432 0.895431 0 2 0Z" fill="#F85600"/>
+  </symbol>
+
+  <symbol id="segment-right-secondary" viewBox="0 0 12 40">
+    <path d="M10 40H0V0H0.343145C1.40401 0 2.42143 0.421428 3.17157 1.17157L10.8284 8.82843C11.5786 9.57857 12 10.596 12 11.6569V38C12 39.1046 11.1046 40 10 40Z" fill="#F85600"/>
+  </symbol>
+
+  <symbol id="segment-left-primary" viewBox="0 0 18 60">
+    <clipPath id="c">
+      <rect width="18" height="60"/>
+    </clipPath>
+    <g clip-path="url(#c)">
+      <path d="M3 60H18V0h-.515C15.894 0 14.368.632 13.243 1.757L1.757 13.243C.632 14.368 0 15.894 0 17.485V57c0 1.657 1.343 3 3 3z" fill="#F85600"/>
+      <line x1="-3.707" y1="12.293" x2="17.506" y2="-8.92" stroke="#F85600" stroke-width="2"/>
+    </g>
+  </symbol>
+
+  <symbol id="segment-right-primary" viewBox="0 0 18 60">
+    <path d="M15 0H0v60h.515C2.106 60 3.632 59.368 4.757 58.243L16.243 46.757C17.368 45.632 18 44.106 18 42.515V3c0-1.657-1.343-3-3-3z" fill="#F85600"/>
+    <circle cx="15" cy="57" r="3" fill="#D8A48C"/>
+  </symbol>
+
+  <symbol id="segment-left-ghost" viewBox="0 0 12 40">
+    <path stroke="#F85600" d="M12 0.5H2.33333C1.32081 0.5 0.5 1.37305 0.5 2.45V28.1346C0.5 29.1689 0.886308 30.1609 1.57394 30.8923L8.59273 38.3577C9.28036 39.0891 10.213 39.5 11.1855 39.5H12" />
+  </symbol>
+
+  <symbol id="segment-right-ghost" viewBox="0 0 12 40">
+    <path stroke="#F85600" d="M0 39.5H9.66667C10.6792 39.5 11.5 38.627 11.5 37.55V11.8654C11.5 10.8311 11.1137 9.83911 10.4261 9.10772L3.40727 1.64228C2.71964 0.910889 1.78701 0.5 0.814549 0.5H0" />
+  </symbol>
 </svg>

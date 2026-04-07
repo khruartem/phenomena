@@ -6,3 +6,8 @@ export type TTimeLeft = {
 };
 
 export type TLogoType = "logo-full" | "logo-sign";
+
+export type TMenuItem = {
+  label: string;
+  to: string;
+};

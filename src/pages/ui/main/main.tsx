@@ -10,7 +10,7 @@ import reactLogo from "../../../assets/react.svg";
 import viteLogo from "/vite.svg";
 
 import styles from "./main.module.css";
-import SvgButton from "../../../components/ui/button/button";
+import { ButtonUI } from "../../../components/ui/button";
 
 export const MainUI: FC<TMainUIProps> = () => {
   return (
@@ -29,7 +29,7 @@ export const MainUI: FC<TMainUIProps> = () => {
       </div>
       <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
       <div className={styles.card}>
-        <SvgButton />
+        <ButtonUI variant={"ghost"}>{"Label"}</ButtonUI>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

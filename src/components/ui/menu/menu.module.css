@@ -1,0 +1,8 @@
+.menu {
+  background-color: transparent;
+}
+
+.menu__list {
+  display: flex;
+  gap: 32px;
+}
