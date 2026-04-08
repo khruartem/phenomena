@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.button_contented {
+  position: relative;
+}
+
 .button__segment_left {
   margin-inline-end: -1px;
 }
@@ -12,6 +16,16 @@
   padding-inline: 12px;
   display: inline-flex;
   align-items: center;
+}
+
+.button__text_contented {
+  padding-inline: 0;
+}
+
+.button__text_contented svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
 }
 
 .button__text_primary {
@@ -28,4 +42,8 @@
   height: 40px;
   background-color: transparent;
   border-block: 1px var(--fire) solid;
+}
+
+.button__text_ghost_contented {
+  width: 17px;
 }

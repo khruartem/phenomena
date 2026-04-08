@@ -6,6 +6,7 @@ export const Icon: FC<TIconProps> = ({
   name,
   width,
   height,
+  color,
   className,
   style,
 }) => {
@@ -13,7 +14,12 @@ export const Icon: FC<TIconProps> = ({
   const href = `${spriteUrl}#${name}`;
 
   return (
-    <svg width={width} height={height} className={className} style={style}>
+    <svg
+      width={width}
+      height={height}
+      className={className}
+      style={{ ...style, color: color }}
+    >
       <use href={href} />
     </svg>
   );

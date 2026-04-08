@@ -11,6 +11,8 @@ import viteLogo from "/vite.svg";
 
 import styles from "./main.module.css";
 import { ButtonUI } from "../../../components/ui/button";
+import { Icon } from "../../../components/icon";
+import { Colors } from "../../../utils/colors";
 
 export const MainUI: FC<TMainUIProps> = () => {
   return (
@@ -29,7 +31,10 @@ export const MainUI: FC<TMainUIProps> = () => {
       </div>
       <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
       <div className={styles.card}>
-        <ButtonUI variant={"ghost"}>{"Label"}</ButtonUI>
+        <ButtonUI variant={"ghost"}>
+          <Icon name="telegram" width={28} height={28} color={Colors.Fire} />
+          {/* {"Label"} */}
+        </ButtonUI>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
