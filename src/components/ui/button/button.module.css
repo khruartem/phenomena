@@ -4,6 +4,42 @@
   justify-content: center;
 }
 
+.button :is(.button__body_primary, .button__body_secondary) {
+  color: var(--dark100);
+}
+
+.button:hover :is(.button__body_primary, .button__body_secondary) {
+  color: var(--white100);
+  background-color: var(--red);
+}
+
+.button:active :is(.button__body_primary, .button__body_secondary) {
+  color: var(--dark100);
+  background-color: var(--white100);
+}
+
+.button:hover .segment-right-primary {
+  --circle: var(--pudge);
+}
+
+.button:active .segment-right-primary {
+  --circle: var(--white100);
+}
+
+.button :is(svg, .button__body_ghost) {
+  color: var(--fire);
+}
+
+.button:hover :is(svg, .button__body_ghost) {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.button:active :is(svg, .button__body_ghost) {
+  color: var(--white100);
+  border-color: var(--white100);
+}
+
 .button_contented {
   position: relative;
 }
@@ -12,38 +48,38 @@
   margin-inline-end: -1px;
 }
 
-.button__text {
+.button__body {
   padding-inline: 12px;
   display: inline-flex;
   align-items: center;
 }
 
-.button__text_contented {
+.button__body_contented {
   padding-inline: 0;
 }
 
-.button__text_contented svg {
+.button__body_contented svg {
   position: absolute;
   inset: 0;
   margin: auto;
 }
 
-.button__text_primary {
+.button__body_primary {
   height: 60px;
   background-color: var(--fire);
 }
 
-.button__text_secondary {
+.button__body_secondary {
   height: 40px;
   background-color: var(--fire);
 }
 
-.button__text_ghost {
+.button__body_ghost {
   height: 40px;
   background-color: transparent;
   border-block: 1px var(--fire) solid;
 }
 
-.button__text_ghost_contented {
+.button__body_ghost_contented {
   width: 17px;
 }

@@ -6,6 +6,6 @@ export type TTextUIProps = {
   as?: ElementType;
   children: ReactNode;
   typography: TTypography;
-  color: Colors;
+  color?: Colors;
   className?: string;
 };

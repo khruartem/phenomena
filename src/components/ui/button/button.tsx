@@ -7,7 +7,6 @@ import { TextUI } from "../text";
 import type { TButtonUIProps } from "./types";
 
 import { Typography } from "../../../utils/typography";
-import { Colors } from "../../../utils/colors";
 
 import styles from "./button.module.css";
 
@@ -29,11 +28,11 @@ export const ButtonUI: FC<TButtonUIProps> = ({ variant, children }) => {
       />
       <div
         className={clsx(
-          styles.button__text,
-          styles[`button__text_${variant}`],
+          styles.button__body,
+          styles[`button__body_${variant}`],
           !typeOfChildrenIsString && [
-            styles.button__text_contented,
-            styles[`button__text_${variant}_contented`],
+            styles.button__body_contented,
+            styles[`button__body_${variant}_contented`],
           ],
         )}
       >
@@ -41,11 +40,6 @@ export const ButtonUI: FC<TButtonUIProps> = ({ variant, children }) => {
           <TextUI
             as={"span"}
             typography={Typography[`Text_${variant === "primary" ? 24 : 16}`]}
-            color={variant === "ghost" ? Colors.Fire : Colors.Dark100}
-            // className={clsx(
-            //   styles.button__text,
-            //   styles[`button__text_${variant}`],
-            // )}
           >
             {children}
           </TextUI>
@@ -57,6 +51,9 @@ export const ButtonUI: FC<TButtonUIProps> = ({ variant, children }) => {
         name={`segment-right-${variant}`}
         width={variant === "primary" ? 18 : 12}
         height={variant === "primary" ? 60 : 40}
+        className={
+          variant === "primary" ? styles[`segment-right-${variant}`] : undefined
+        }
       />
     </button>
   );

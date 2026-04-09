@@ -12,7 +12,6 @@ import viteLogo from "/vite.svg";
 import styles from "./main.module.css";
 import { ButtonUI } from "../../../components/ui/button";
 import { Icon } from "../../../components/icon";
-import { Colors } from "../../../utils/colors";
 
 export const MainUI: FC<TMainUIProps> = () => {
   return (
@@ -32,7 +31,7 @@ export const MainUI: FC<TMainUIProps> = () => {
       <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
       <div className={styles.card}>
         <ButtonUI variant={"ghost"}>
-          <Icon name="telegram" width={28} height={28} color={Colors.Fire} />
+          <Icon name="telegram" width={28} height={28} />
           {/* {"Label"} */}
         </ButtonUI>
         <p>

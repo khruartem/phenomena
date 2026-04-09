@@ -1,0 +1,18 @@
+.socials {
+display: flex;
+flex-direction: row;
+gap: 4px;
+}
+
+.socials__item {
+  padding: 6px;
+  color: var(--fire);
+}
+
+.socials__item:hover {
+  color: var(--red);
+}
+
+.socials__item:active {
+  color: var(--white100);
+}
