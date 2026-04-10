@@ -3,6 +3,7 @@
   width: 100%;
   flex-direction: row;
   align-content: center;
+  justify-content: space-between;
   background: linear-gradient(180deg, var(--dark100) 0%, rgba(2, 0, 0, 0) 100%);
   position: sticky;
 }

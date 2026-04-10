@@ -1,25 +1,32 @@
 import type { FC } from "react";
+import clsx from "clsx";
 
 import { CobrandUI } from "../cobrand";
-import { Menu } from "../../menu";
-import { ButtonUI } from "../button";
-import { Socials } from "../../socials";
+import { NavigationUI } from "../navigation";
 
 import { useMedia } from "../../../hooks/useMedia";
 
 import styles from "./header.module.css";
 
 export const HeaderUI: FC = () => {
-  const { isLarge } = useMedia();
+  const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
   return (
-    <header className={styles.header} style={{ height: isLarge ? 72 : 56 }}>
+    <header
+      className={styles.header}
+      style={{
+        height: isLarge ? 72 : 56,
+        paddingInline: clsx(
+          isLarge && "8.13vw",
+          isDesktop && "7.83vw",
+          isLaptop && "4.10vw",
+          isTablet && "3.91vw",
+          isMobile && "3.81vw",
+        ),
+      }}
+    >
       <CobrandUI />
-      <Menu />
-      <div className={styles.header__buttons}>
-        <ButtonUI variant={"secondary"}>{"Участвовать"}</ButtonUI>
-        <Socials />
-      </div>
+      <NavigationUI />
     </header>
   );
 };

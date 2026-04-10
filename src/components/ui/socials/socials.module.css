@@ -2,14 +2,7 @@
   display: flex;
   flex-direction: row;
   gap: 4px;
-}
-
-.socials:hover>.socials__item {
-  color: var(--red);
-}
-
-.socials:active>.socials__item {
-  color: var(--white100);
+  max-height: 40px;
 }
 
 .socials__item {
@@ -17,10 +10,10 @@
   color: var(--fire);
 }
 
-.socials__item:hover {
+.socials__item:hover svg{
   color: var(--red);
 }
 
-.socials__item:active {
+.socials__item:active svg {
   color: var(--white100);
 }

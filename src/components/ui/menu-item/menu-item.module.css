@@ -1,4 +1,4 @@
-.menu__item {
+.menu__item a {
   font-family: "KharkivTone", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -9,10 +9,10 @@
   padding-block: 8px;
 }
 
-.menu__item:hover {
+.menu__item:hover a {
   color: var(--white100);
 }
 
-.menu__item:active {
+.menu__item:active a {
   border-bottom: 1px var(--fire) solid;
 }

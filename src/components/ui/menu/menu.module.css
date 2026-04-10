@@ -1,5 +1,8 @@
 .menu {
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .menu__list {
