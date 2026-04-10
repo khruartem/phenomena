@@ -31,10 +31,15 @@
   width: 100%;
   height: 140px;
   border-radius: 10%;
-  background: transparent;
-  backdrop-filter: blur(10px);
+  /* background: transparent;
+  backdrop-filter: blur(10px); */
   mask-image: radial-gradient(circle 168px at var(--x) var(--y), black 0%, transparent 100%);
   z-index: 2;
+}
+
+.title_blured::before {
+  background: transparent;
+  backdrop-filter: blur(10px);
 }
 
 .title__base {
@@ -48,9 +53,8 @@
 
 .title__lit {
   color: transparent;
-  background: linear-gradient(180deg, #F85600 0%, #FF1F00 100%);
-  /* filter: blur(5px); */
-  background-clip: text;
+  /* background: linear-gradient(180deg, #F85600 0%, #FF1F00 100%);
+  background-clip: text; */
   position: absolute;
   top: 0px;
   left: 0px;

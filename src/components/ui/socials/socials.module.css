@@ -1,7 +1,15 @@
 .socials {
-display: flex;
-flex-direction: row;
-gap: 4px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.socials:hover>.socials__item {
+  color: var(--red);
+}
+
+.socials:active>.socials__item {
+  color: var(--white100);
 }
 
 .socials__item {
