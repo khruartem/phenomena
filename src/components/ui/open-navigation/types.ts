@@ -1,4 +1,4 @@
-export type TNavigationUIProps = {
+export type TOpenNavigationUIProps = {
   opened?: boolean;
   onOpen: () => void;
 };

@@ -2,7 +2,7 @@ import type { FC } from "react";
 import clsx from "clsx";
 
 import { CobrandUI } from "../cobrand";
-import { NavigationUI } from "../navigation";
+import { Navigation } from "../../navigation";
 
 import { useMedia } from "../../../hooks/useMedia";
 
@@ -16,6 +16,7 @@ export const HeaderUI: FC = () => {
       className={styles.header}
       style={{
         height: isLarge ? 72 : 56,
+        paddingBlock: isLarge ? 16 : 8,
         paddingInline: clsx(
           isLarge && "8.13vw",
           isDesktop && "7.83vw",
@@ -26,7 +27,7 @@ export const HeaderUI: FC = () => {
       }}
     >
       <CobrandUI />
-      <NavigationUI />
+      <Navigation />
     </header>
   );
 };

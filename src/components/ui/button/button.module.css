@@ -48,6 +48,10 @@
   margin-inline-end: -1px;
 }
 
+.button__segment_right {
+  margin-inline-start: -1px;
+}
+
 .button__body {
   padding-inline: 12px;
   display: inline-flex;

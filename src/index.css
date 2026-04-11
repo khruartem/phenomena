@@ -1,4 +1,5 @@
 @import url(../src/fonts/fonts.module.css);
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
 :root {
   --badge: #D8A48C;
@@ -11,6 +12,7 @@
 
   font-family: "KharkivTone", sans-serif;
   font-weight: 400;
+  font-optical-sizing: auto;
   text-decoration: none;
 
   color: var(--white100);

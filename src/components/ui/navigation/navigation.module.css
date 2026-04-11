@@ -1,10 +1,10 @@
 .navigation {
   display: flex;
   flex-direction: row;
+  gap: 48px;
 }
 
 .navigation__buttons {
   display: flex;
   flex-direction: row;
-  gap: 4px;
 }

@@ -10,7 +10,11 @@ import { Typography } from "../../../utils/typography";
 
 import styles from "./button.module.css";
 
-export const ButtonUI: FC<TButtonUIProps> = ({ variant, children }) => {
+export const ButtonUI: FC<TButtonUIProps> = ({
+  onClick,
+  variant,
+  children,
+}) => {
   const typeOfChildrenIsString = typeof children === "string";
 
   return (
@@ -19,6 +23,7 @@ export const ButtonUI: FC<TButtonUIProps> = ({ variant, children }) => {
         styles.button,
         !typeOfChildrenIsString && styles.button_contented,
       )}
+      onClick={onClick}
     >
       <Icon
         name={`segment-left-${variant}`}
@@ -51,9 +56,10 @@ export const ButtonUI: FC<TButtonUIProps> = ({ variant, children }) => {
         name={`segment-right-${variant}`}
         width={variant === "primary" ? 18 : 12}
         height={variant === "primary" ? 60 : 40}
-        className={
-          variant === "primary" ? styles[`segment-right-${variant}`] : undefined
-        }
+        className={clsx(
+          styles.button__segment_right,
+          variant === "primary" && styles[`segment-right-${variant}`],
+        )}
       />
     </button>
   );

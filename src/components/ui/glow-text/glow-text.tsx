@@ -3,6 +3,7 @@ import { useRef, type FC } from "react";
 import type { TGlowTextUIProps } from "./types";
 
 import styles from "./glow-text.module.css";
+import clsx from "clsx";
 
 export const GlowTextUI: FC<TGlowTextUIProps> = ({ children }) => {
   const title = useRef<HTMLDivElement | null>(null);
@@ -59,7 +60,14 @@ export const GlowTextUI: FC<TGlowTextUIProps> = ({ children }) => {
       ref={scene}
     >
       <div className={styles.title} ref={title}>
-        <div id="base" className={styles.title__base}>
+        <div
+          id="base"
+          className={clsx(
+            styles.title__base,
+            styles.title__base_imaged,
+            // styles.title__base_colored,
+          )}
+        >
           {children}
         </div>
         <div id="lit" className={styles.title__lit} ref={lit}>

@@ -1,6 +1,8 @@
 export type TTypography = {
-  size: "120px" | "80px" | "60px" | "32px" | "24px" | "16px";
-  lineHeight: "140px" | "100px" | "80px" | "48px" | "32px" | "20px";
+  fontFamily?: "KharkivTone" | "Onest";
+  fontWeight?: 300 | 400;
+  size: "120px" | "80px" | "60px" | "32px" | "24px" | "16px" | "14px";
+  lineHeight: "140px" | "100px" | "80px" | "48px" | "32px" | "24px" | "20px";
   letterSpacing: "0" | "0.02em";
 };
 
@@ -33,6 +35,13 @@ const Typography = {
   Text_16: {
     size: "16px",
     lineHeight: "20px",
+    letterSpacing: "0.02em",
+  },
+  Text_Onest_14: {
+    fontFamily: "Onest",
+    fontWeight: 300,
+    size: "14px",
+    lineHeight: "24px",
     letterSpacing: "0.02em",
   },
 } as const;

@@ -1,0 +1,1 @@
+export { CopyrightUI } from "./copyright";

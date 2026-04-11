@@ -16,7 +16,7 @@ export const MainUI: FC<TMainUIProps> = () => {
       <HeaderUI />
       <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
       <div className={styles.card}>
-        <ButtonUI variant={"ghost"}>
+        <ButtonUI variant={"ghost"} onClick={() => {}}>
           <Icon name="telegram" width={28} height={28} />
           {/* {"Label"} */}
         </ButtonUI>

@@ -1,7 +1,6 @@
 .socials {
   display: flex;
   flex-direction: row;
-  gap: 4px;
   max-height: 40px;
 }
 
@@ -10,7 +9,7 @@
   color: var(--fire);
 }
 
-.socials__item:hover svg{
+.socials__item:hover svg {
   color: var(--red);
 }
 
