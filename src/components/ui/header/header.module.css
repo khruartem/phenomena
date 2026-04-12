@@ -6,6 +6,7 @@
   justify-content: space-between;
   background: linear-gradient(180deg, var(--dark100) 0%, rgba(2, 0, 0, 0) 100%);
   position: sticky;
+  z-index: 2;
 }
 
 /* Стили для разных разрешений экранов */

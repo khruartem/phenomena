@@ -40,7 +40,7 @@ export const NavigationUI: FC<TNavigationUIProps> = ({ opened, onOpen }) => {
       ) : (
         <OpenNavigationUI opened={opened} onOpen={onOpen} />
       )}
-      {opened && <BurgerUI />}
+      {!isLargeResolution && <BurgerUI opened={opened} />}
     </>
   );
 };
