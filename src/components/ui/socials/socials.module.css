@@ -1,0 +1,18 @@
+.socials {
+  display: flex;
+  flex-direction: row;
+  max-height: 40px;
+}
+
+.socials__item {
+  padding: 6px;
+  color: var(--fire);
+}
+
+.socials__item:hover svg {
+  color: var(--red);
+}
+
+.socials__item:active svg {
+  color: var(--white100);
+}

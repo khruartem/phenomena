@@ -5,7 +5,10 @@ import { CountdownTimerUI } from "../ui/countdown-timer";
 import type { TCountdownTimerProps } from "./types";
 import type { TTimeLeft } from "../../utils/types";
 
-export const CountdownTimer: FC<TCountdownTimerProps> = ({ content }) => {
+export const CountdownTimer: FC<TCountdownTimerProps> = ({
+  content,
+  forcedEnd,
+}) => {
   const [timeLeft, setTimeLeft] = useState<TTimeLeft>({
     daysLeft: "",
     hoursLeft: "",
@@ -16,7 +19,7 @@ export const CountdownTimer: FC<TCountdownTimerProps> = ({ content }) => {
 
   useEffect(() => {
     // Прошло больше положенного времени
-    if (showContent) return;
+    if (showContent || forcedEnd) return;
 
     const updateTimeLeft = () => {
       // Фиксируем дату старта (например, конкретный момент времени)
@@ -61,9 +64,9 @@ export const CountdownTimer: FC<TCountdownTimerProps> = ({ content }) => {
 
     // Очистка интервала
     return () => clearInterval(interval);
-  }, [showContent]);
+  }, [forcedEnd, showContent]);
 
-  if (showContent) {
+  if (showContent || forcedEnd) {
     return content;
   }
 

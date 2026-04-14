@@ -1,0 +1,19 @@
+.copiright {
+  text-align: center;
+}
+
+.copiright::before {
+  content: "©";
+}
+
+.copiright__link {
+  color: var(--fire);
+}
+
+.copiright__link:hover {
+  color: var(--red);
+}
+
+.copiright__link:active {
+  color: var(--white100);
+}

@@ -4,3 +4,10 @@ export type TTimeLeft = {
   minutesLeft: string;
   secondsLeft: string;
 };
+
+export type TLogoType = "logo-full" | "logo-sign";
+
+export type TMenuItem = {
+  label: string;
+  to: string;
+};

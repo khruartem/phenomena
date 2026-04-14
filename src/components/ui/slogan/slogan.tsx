@@ -12,8 +12,8 @@ import styles from "./slogan.module.css";
 export const SloganUI: FC<TSloganUIProps> = ({ text }) => {
   return (
     <TextUI
-      typography={Typography.Text_32}
-      color={Colors.Light}
+      typography={Typography.Text_KharkivTone_400_32}
+      color={Colors.White100}
       className={styles.slogan}
     >
       {text}

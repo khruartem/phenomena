@@ -14,6 +14,8 @@ export const TextUI: FC<TTextUIProps> = ({
     <Tag
       className={clsx(className && className)}
       style={{
+        fontFamily: typography.fontFamily,
+        fontWeight: typography.fontWeight,
         fontSize: typography.size,
         lineHeight: typography.lineHeight,
         letterSpacing: typography.letterSpacing,

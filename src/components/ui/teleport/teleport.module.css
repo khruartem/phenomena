@@ -1,6 +1,26 @@
 .teleport {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: max-content;
   gap: 8px;
+}
+
+.teleport__link {
+  font-family: "KharkivTone", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  color: var(--badge);
+}
+
+.teleport__link:hover {
+  text-decoration: underline;
+}
+
+.teleport__link:active {
+  color: var(--white100);
 }

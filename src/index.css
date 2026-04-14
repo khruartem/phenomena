@@ -1,18 +1,22 @@
 @import url(../src/fonts/fonts.module.css);
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
 :root {
   --badge: #D8A48C;
   --pudge: #B87773;
-  --light: #FFFFFF;
-  --dark: #D9D9D9;
-  --black: #000;
+  --white100: #FFFFFF;
+  --white80: #D9D9D9;
+  --dark100: #020000;
+  --fire: #F85600;
+  --red: #FF1F00;
 
   font-family: "KharkivTone", sans-serif;
   font-weight: 400;
+  font-optical-sizing: auto;
   text-decoration: none;
 
-  color: var(--light);
-  background-color: var(--black);
+  color: var(--white100);
+  background-color: var(--dark100);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,32 +24,178 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 370px;
   min-height: 100dvh;
+} */
+
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-style: normal;
+  background-color: var(--dark100);
 }
 
 #root {
   width: 100%;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
 a {
-  color: var(--badge);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
+  text-decoration: inherit;
 }
 
-a:hover {
-  text-decoration: underline;
+
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  appearance: none;
+  font-family: "KharkivTone", sans-serif;
 }
 
-a:active {
-  color: var(--light);
-  text-decoration: underline;
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }

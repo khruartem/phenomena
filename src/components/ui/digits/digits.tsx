@@ -28,7 +28,7 @@ export const DigitsUI: FC<TDigitsUIProps> = ({ value, text }) => {
     >
       <TextUI
         typography={initDigitsTypography(media)}
-        color={Colors.Light}
+        color={Colors.White100}
         className={clsx(
           styles.digits,
           (isLarge || isLaptop) && styles["digits_large-height"],
@@ -39,8 +39,8 @@ export const DigitsUI: FC<TDigitsUIProps> = ({ value, text }) => {
         {value}
       </TextUI>
       <TextUI
-        typography={isMobile ? Typography.Text_16 : Typography.Text_24}
-        color={Colors.Light}
+        typography={isMobile ? Typography.Text_KharkivTone_400_16 : Typography.Text_KharkivTone_400_24}
+        color={Colors.White100}
         className={styles.text}
       >
         {text}
