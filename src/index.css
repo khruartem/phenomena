@@ -32,6 +32,20 @@
   min-height: 100dvh;
 } */
 
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-style: normal;
+  background-color: var(--dark100);
+}
+
 #root {
   width: 100%;
 }
@@ -154,19 +168,6 @@ a {
   text-decoration: inherit;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  align-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  font: inherit;
-  font-style: normal;
-  background-color: var(--dark100);
-}
 
 button {
   border: none;

@@ -49,7 +49,8 @@
   padding-block-start: 27vw;
   padding-inline: 3.81vw;
   background-image: url("../../../assets/bg_mob.png");
-  min-height: 912px;
+  /* min-height: 912px; */
+  min-height: 1010px;
 }
 
 .bottom_large {

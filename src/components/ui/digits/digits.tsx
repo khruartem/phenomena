@@ -39,7 +39,7 @@ export const DigitsUI: FC<TDigitsUIProps> = ({ value, text }) => {
         {value}
       </TextUI>
       <TextUI
-        typography={isMobile ? Typography.Text_16 : Typography.Text_24}
+        typography={isMobile ? Typography.Text_KharkivTone_400_16 : Typography.Text_KharkivTone_400_24}
         color={Colors.White100}
         className={styles.text}
       >

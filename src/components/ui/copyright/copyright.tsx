@@ -13,7 +13,7 @@ import { Colors } from "../../../utils/colors";
 export const CopyrightUI: FC<TCopirightUIProps> = ({ year }) => {
   return (
     <TextUI
-      typography={Typography.Text_Onest_14}
+      typography={Typography.Text_Onest_300_14}
       color={Colors.White100}
       className={styles.copiright}
     >

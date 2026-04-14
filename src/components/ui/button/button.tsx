@@ -44,7 +44,11 @@ export const ButtonUI: FC<TButtonUIProps> = ({
         {typeOfChildrenIsString ? (
           <TextUI
             as={"span"}
-            typography={Typography[`Text_${variant === "primary" ? 24 : 16}`]}
+            typography={
+              Typography[
+                `Text_KharkivTone_400_${variant === "primary" ? 24 : 16}`
+              ]
+            }
           >
             {children}
           </TextUI>

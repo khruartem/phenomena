@@ -5,6 +5,6 @@ export type TSectionUIProps = {
   paddingedBlock?: boolean;
   paddingedInline?: boolean;
   gap?: number;
-  hidden: boolean;
+  hidden?: boolean;
   className?: string;
 };
