@@ -1,0 +1,60 @@
+.hero {
+  width: 100vw;
+  min-height: 100dvh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__label {
+  width: min-content;
+  text-align: center;
+}
+
+.hero__label_decorated {
+  color: var(--pudge);
+}
+
+.hero__label_decorated::before {
+  content: "[";
+}
+
+.hero__label_decorated::after {
+  content: "/.]";
+}
+
+.hero__title {
+  text-align: center;
+}
+
+.hero__title_colored {
+  color: var(--badge);
+}
+
+.hero__title_decorated::before {
+  content: "{/";
+}
+
+.hero__title_decorated::after {
+  content: "}";
+}
+
+.hero__text {
+  text-align: center;
+}
+
+.hero__text_decorated::after {
+  content: "]";
+}
+
+.hero__text_decorated::before {
+  content: "/";
+}
+
+.hero__text_colored {
+  color: var(--badge);
+}
+
+.hero__text_decorated {
+  color: var(--white100);
+}

@@ -1,6 +1,8 @@
 import { useMediaQuery } from "react-responsive";
 
-export const useMedia = () => ({
+import type { TMedia } from "../utils/types";
+
+export const useMedia: () => TMedia = () => ({
   isLarge: useMediaQuery({ minWidth: 1681 }),
   isDesktop: useMediaQuery({ minWidth: 1201, maxWidth: 1680.9 }),
   isLaptop: useMediaQuery({ minWidth: 1021, maxWidth: 1200.9 }),

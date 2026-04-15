@@ -14,6 +14,7 @@ export const SectionUI: FC<TSectionUIProps> = ({
   gap = 0,
   hidden = false,
   className,
+  style,
 }) => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
@@ -41,6 +42,7 @@ export const SectionUI: FC<TSectionUIProps> = ({
         paddingBlock: clsx(paddingedBlock && paddingedBlockStyle),
         paddingInline: clsx(paddingedInline && paddingedInlineStyle),
         gap,
+        ...style,
       }}
     >
       {children}
