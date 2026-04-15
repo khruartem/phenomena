@@ -21,6 +21,8 @@ export const CountdownTimerUI: FC<TCountdownTimerUIProps> = ({ timeLeft }) => {
 
   return (
     <Page
+      noHeader
+      noFooter
       className={clsx(
         styles.main_timer,
         isLarge && styles.main_timer_large,

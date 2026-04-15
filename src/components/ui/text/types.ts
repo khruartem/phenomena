@@ -1,4 +1,4 @@
-import type { ElementType, ReactNode } from "react";
+import type { CSSProperties, ElementType, ReactNode } from "react";
 import type { Colors } from "../../../utils/colors";
 import type { TTypography } from "../../../utils/typography";
 
@@ -8,4 +8,5 @@ export type TTextUIProps = {
   typography: TTypography;
   color?: Colors;
   className?: string;
+  style?: CSSProperties;
 };

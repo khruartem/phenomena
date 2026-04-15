@@ -2,7 +2,7 @@ export type TTypography = {
   fontFamily: "KharkivTone" | "Onest";
   fontWeight: 300 | 400;
   size: "120px" | "80px" | "60px" | "32px" | "24px" | "20px" | "16px" | "14px";
-  lineHeight: "140px" | "100px" | "80px" | "48px" | "32px" | "24px" | "20px";
+  lineHeight: "140px" | "100px" | "80px" | "48px" | "32px" | "28px" | "24px" | "20px";
   letterSpacing: "0" | "0.02em";
 };
 
@@ -46,7 +46,7 @@ const Typography = {
     fontFamily: "KharkivTone",
     fontWeight: 400,
     size: "16px",
-    lineHeight: "20px",
+    lineHeight: "24px",
     letterSpacing: "0.02em",
   },
   Text_Onest_400_20: {
@@ -54,6 +54,13 @@ const Typography = {
     fontWeight: 400,
     size: "20px",
     lineHeight: "32px",
+    letterSpacing: "0.02em",
+  },
+  Text_Onest_400_16: {
+    fontFamily: "Onest",
+    fontWeight: 400,
+    size: "16px",
+    lineHeight: "28px",
     letterSpacing: "0.02em",
   },
   Text_Onest_300_14: {

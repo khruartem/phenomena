@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 export type TSectionUIProps = {
   children: ReactNode;
@@ -7,4 +7,5 @@ export type TSectionUIProps = {
   gap?: number;
   hidden?: boolean;
   className?: string;
+  style?: CSSProperties;
 };

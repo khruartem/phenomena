@@ -9,5 +9,13 @@ import { usePageContext } from "../hooks/usePageContext";
 export const Layout: FC<TLayoutProps> = ({ children }) => {
   const pageContext = usePageContext();
 
-  return <LayoutUI className={pageContext?.className}>{children}</LayoutUI>;
+  return (
+    <LayoutUI
+      noHeader={pageContext?.noHeader}
+      noFooter={pageContext?.noFooter}
+      className={pageContext?.className}
+    >
+      {children}
+    </LayoutUI>
+  );
 };

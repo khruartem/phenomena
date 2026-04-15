@@ -11,3 +11,11 @@ export type TMenuItem = {
   label: string;
   to: string;
 };
+
+export type TMedia = {
+  isLarge: boolean;
+  isDesktop: boolean;
+  isLaptop: boolean;
+  isTablet: boolean;
+  isMobile: boolean;
+}

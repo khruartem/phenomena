@@ -11,6 +11,7 @@ import type { TNavigationUIProps } from "./types";
 import { useMedia } from "../../../hooks/useMedia";
 
 import styles from "./navigation.module.css";
+import clsx from "clsx";
 
 export const NavigationUI: FC<TNavigationUIProps> = ({ opened, onOpen }) => {
   const { isLarge, isDesktop, isMobile } = useMedia();
@@ -19,7 +20,10 @@ export const NavigationUI: FC<TNavigationUIProps> = ({ opened, onOpen }) => {
   return (
     <>
       {!isMobile ? (
-        <div className={styles.navigation}>
+        <div
+          className={styles.navigation}
+          style={{ gap: clsx(isLarge && "48px", isDesktop && "50px") }}
+        >
           {isLargeResolution && <Menu />}
           <div
             className={styles.navigation__buttons}

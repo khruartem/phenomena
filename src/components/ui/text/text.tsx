@@ -9,11 +9,13 @@ export const TextUI: FC<TTextUIProps> = ({
   typography,
   color,
   className,
+  style,
 }) => {
   return (
     <Tag
       className={clsx(className && className)}
       style={{
+        ...style,
         fontFamily: typography.fontFamily,
         fontWeight: typography.fontWeight,
         fontSize: typography.size,
