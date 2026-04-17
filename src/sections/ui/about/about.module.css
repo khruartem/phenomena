@@ -1,8 +1,13 @@
+.about {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .about__text {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: flex-start;
+  gap: 40px;
 }
 
 .bordered-left {
@@ -51,4 +56,52 @@
 
 .paddinged-right-mobile {
   padding-inline-end: 3.81vw;
+}
+
+.width-left-large {
+  max-width: 60ch;
+}
+
+.width-left-desktop {
+  max-width: 45ch;
+}
+
+.width-left-laptop {
+  max-width: 38ch;
+}
+
+
+/* ddd */
+.text__line {
+  display: flex;
+  flex-direction: row;
+}
+
+.text__block_style-1::before {
+  content: "[";
+  color: var(--white80);
+}
+
+.text__block_style-1::after {
+  content: "],";
+}
+
+.text__block_style-2::before {
+  content: ".:.";
+}
+
+.text__block_style-2::after {
+  content: ":,";
+}
+
+.text__block_style-3::before {
+  content: "{--";
+}
+
+.text__block_style-4::before {
+  content: "{";
+}
+
+.text__block_style-4::after {
+  content: "/}";
 }

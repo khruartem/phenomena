@@ -16,11 +16,15 @@ export const TextUI: FC<TTextUIProps> = ({
       className={clsx(className && className)}
       style={{
         ...style,
-        fontFamily: typography.fontFamily,
-        fontWeight: typography.fontWeight,
-        fontSize: typography.size,
-        lineHeight: typography.lineHeight,
-        letterSpacing: typography.letterSpacing,
+        fontFamily:
+          typeof typography === "string" ? "inherit" : typography.fontFamily,
+        fontWeight:
+          typeof typography === "string" ? "inherit" : typography.fontWeight,
+        fontSize: typeof typography === "string" ? "inherit" : typography.size,
+        lineHeight:
+          typeof typography === "string" ? "inherit" : typography.lineHeight,
+        letterSpacing:
+          typeof typography === "string" ? "inherit" : typography.letterSpacing,
         color: color,
       }}
     >
