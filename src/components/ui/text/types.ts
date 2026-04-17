@@ -5,8 +5,8 @@ import type { TTypography } from "../../../utils/typography";
 export type TTextUIProps = {
   as?: ElementType;
   children: ReactNode;
-  typography: TTypography;
-  color?: Colors;
+  typography: TTypography | "inherit";
+  color?: Colors | "inherit";
   className?: string;
   style?: CSSProperties;
 };
