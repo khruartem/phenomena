@@ -1,12 +1,12 @@
 import { useRef, useState, type FC } from "react";
 
-import { VideoUI } from "../ui/video";
+import { TrailerUI } from "../ui/trailer";
 
-export const Video: FC = () => {
-  const [videoSrc, setVideoSrc] = useState<string | undefined>(undefined);
+export const Trailer: FC = () => {
+  const [trailerSrc, setTrailerSrc] = useState<string | undefined>(undefined);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const trailerRef = useRef<HTMLVideoElement>(null);
 
   const source =
     "https://storage.yandexcloud.net/otkter-bucket/hero/season_1/video_hero.mp4";
@@ -15,12 +15,12 @@ export const Video: FC = () => {
   const showControls = !isPlaying || isHovered;
 
   const handleEnded = () => {
-    setVideoSrc(undefined);
-    videoRef.current?.load();
+    setTrailerSrc(undefined);
+    trailerRef.current?.load();
   };
 
   const handleCanPlay = () => {
-    videoRef.current?.play();
+    trailerRef.current?.play();
   };
 
   const handlePlay = () => {
@@ -40,22 +40,22 @@ export const Video: FC = () => {
   };
 
   const togglePlay = () => {
-    const video = videoRef.current;
+    const Trailer = trailerRef.current;
 
-    if (!video) return;
+    if (!Trailer) return;
 
-    if (!videoSrc) {
-      setVideoSrc(source);
+    if (!trailerSrc) {
+      setTrailerSrc(source);
     }
 
-    if (video.paused) {
-      video.play();
-    } else video.pause();
+    if (Trailer.paused) {
+      Trailer.play();
+    } else Trailer.pause();
   };
 
   return (
-    <VideoUI
-      src={videoSrc}
+    <TrailerUI
+      src={trailerSrc}
       poster={poster}
       alt={"Трейлер спектактя"}
       isPlaying={isPlaying}
@@ -67,7 +67,7 @@ export const Video: FC = () => {
       onClick={togglePlay}
       onShowControls={handleShowControls}
       onHideControls={handleHideControls}
-      ref={videoRef}
+      ref={trailerRef}
     />
   );
 };

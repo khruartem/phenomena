@@ -1,15 +1,16 @@
 import { forwardRef } from "react";
+import clsx from "clsx";
 
-import type { TVideoUIProps } from "./types";
+import type { TTrailerUIProps } from "./types";
 
 import { Icon } from "../../icon";
 import { Colors } from "../../../utils/colors";
 
-import styles from "./video.module.css";
-import clsx from "clsx";
 import { useMedia } from "../../../hooks/useMedia";
 
-export const VideoUI = forwardRef<HTMLVideoElement, TVideoUIProps>(
+import styles from "./trailer.module.css";
+
+export const TrailerUI = forwardRef<HTMLVideoElement, TTrailerUIProps>(
   (
     {
       src,
@@ -33,7 +34,7 @@ export const VideoUI = forwardRef<HTMLVideoElement, TVideoUIProps>(
     return (
       !isHidden && (
         <div
-          className={styles["video-container"]}
+          className={styles.trailer}
           onMouseEnter={onShowControls}
           onMouseLeave={onHideControls}
           style={{
@@ -63,16 +64,16 @@ export const VideoUI = forwardRef<HTMLVideoElement, TVideoUIProps>(
             onClick={onClick}
             onEnded={onEnded}
             playsInline
-            className={styles.video}
+            className={styles.trailer__video}
             ref={ref}
           />
           <button
             onClick={onClick ?? (() => {})}
             className={clsx(
-              styles.video__button,
+              styles.trailer__button,
               showControls
-                ? styles.video__button_shown
-                : styles.video__button_hidden,
+                ? styles.trailer__button_shown
+                : styles.trailer__button_hidden,
             )}
           >
             {isPlaying ? (

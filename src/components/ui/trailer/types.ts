@@ -1,4 +1,4 @@
-export type TVideoUIProps = {
+export type TTrailerUIProps = {
   src?: string;
   poster?: string;
   alt?: string;
