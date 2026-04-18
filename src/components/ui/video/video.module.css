@@ -1,0 +1,23 @@
+.video-container {
+  position: relative;
+  align-self: center;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+}
+
+.video__button {
+  position: absolute;
+  transition: opacity 1s;
+  inset: 0;
+}
+
+.video__button_hidden {
+  opacity: 0;
+}
+
+.video__button_shown {
+  opacity: 1;
+}
