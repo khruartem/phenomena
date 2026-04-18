@@ -81,4 +81,12 @@
   <symbol id="close" viewBox="0 0 28 28">
     <path fill="currentColor" d="M16.71 15.29 23 9V5h-4v2.59l-3.71 3.7L9 5H5v4l3 3v-1.41L6.41 9h1.18l3.7 3.71L5 19v4h4v-2.59l3.71-3.7L19 23h4v-4l-3-3v1.41L21.59 19h-1.18z"/>
   </symbol>
+
+  <symbol id="play" viewBox="0 0 28 28">
+    <path fill="currentColor" d="m6 26 20-12L6 2zm18.06-12-1.51.91L7 5.58V3.76l17.06 10.23z"/>
+  </symbol>
+
+  <symbol id="pause" viewBox="0 0 28 28">
+    <path fill="currentColor" d="M16.71 15.29 23 9V5h-4v2.59l-3.71 3.7L9 5H5v4l3 3v-1.41L6.41 9h1.18l3.7 3.71L5 19v4h4v-2.59l3.71-3.7L19 23h4v-4l-3-3v1.41L21.59 19h-1.18z"/>
+  </symbol>
 </svg>

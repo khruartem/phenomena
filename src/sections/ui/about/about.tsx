@@ -13,6 +13,7 @@ import { Colors } from "../../../utils/colors";
 import { useMedia } from "../../../hooks/useMedia";
 
 import styles from "./about.module.css";
+import { Video } from "../../../components/video";
 
 export const AboutUI: FC<TAboutUIProps> = () => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
@@ -34,7 +35,7 @@ export const AboutUI: FC<TAboutUIProps> = () => {
       </SectionTitleUI>
       <div
         className={styles.about__text}
-        // style={{ flexWrap: isTablet || isMobile ? "wrap" : "nowrap" }}
+        style={{ gap: isTablet || isMobile ? 20 : 40 }}
       >
         <div
           className={styles["text__line"]}
@@ -50,7 +51,7 @@ export const AboutUI: FC<TAboutUIProps> = () => {
               isLarge && "7.08vw",
               isDesktop && "7.17vw",
               isLaptop && "7.81vw",
-              isTablet && "7.81vw 0",
+              isTablet && "7.81vw",
               isMobile && "3.81vw",
             ),
             flexWrap: isLarge || isDesktop || isLaptop ? "nowrap" : "wrap",
@@ -142,7 +143,7 @@ export const AboutUI: FC<TAboutUIProps> = () => {
               isLarge && "7.08vw",
               isDesktop && "7.17vw 0",
               isLaptop && "7.81vw 0",
-              isTablet && "7.81vw",
+              isTablet && "7.81vw 0",
               isMobile && "3.81vw",
             ),
             flexWrap: isLarge || isDesktop || isLaptop ? "nowrap" : "wrap",
@@ -203,6 +204,7 @@ export const AboutUI: FC<TAboutUIProps> = () => {
           </TextUI>
         </div>
       </div>
+      <Video />
       {/* <ul className={styles.about__text}>
         <li
           className={clsx(
