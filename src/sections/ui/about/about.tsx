@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { SectionUI } from "../section";
 import { SectionTitleUI } from "../../../components/ui/section-title";
 import { TextUI } from "../../../components/ui/text";
+import { Trailer } from "../../../components/trailer";
 
 import type { TAboutUIProps } from "./types";
 
@@ -13,7 +14,6 @@ import { Colors } from "../../../utils/colors";
 import { useMedia } from "../../../hooks/useMedia";
 
 import styles from "./about.module.css";
-import { Video } from "../../../components/video";
 
 export const AboutUI: FC<TAboutUIProps> = () => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
@@ -204,7 +204,7 @@ export const AboutUI: FC<TAboutUIProps> = () => {
           </TextUI>
         </div>
       </div>
-      <Video />
+      <Trailer />
       {/* <ul className={styles.about__text}>
         <li
           className={clsx(

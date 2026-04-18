@@ -1,23 +1,23 @@
-.video-container {
+.trailer {
   position: relative;
   align-self: center;
 }
 
-.video {
+.trailer__video {
   width: 100%;
   height: 100%;
 }
 
-.video__button {
+.trailer__button {
   position: absolute;
   transition: opacity 1s;
   inset: 0;
 }
 
-.video__button_hidden {
+.trailer__button_hidden {
   opacity: 0;
 }
 
-.video__button_shown {
+.trailer__button_shown {
   opacity: 1;
 }
