@@ -10,8 +10,9 @@
 
 .trailer__button {
   position: absolute;
-  transition: opacity 1s;
   inset: 0;
+  transition: opacity 1s;
+  cursor: pointer;
 }
 
 .trailer__button_hidden {
