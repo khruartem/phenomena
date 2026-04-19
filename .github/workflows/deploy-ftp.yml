@@ -42,13 +42,13 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           npm install
-          npm run build -- --mode production
+          npm run build:production
 
       - name: Install dependencies and build (test)
         if: github.ref == 'refs/heads/test'
         run: |
           npm install
-          npm run build -- --mode test
+          npm run build:test
 
       # Deploy only on main branch
       - name: Upload from dist via FTP
