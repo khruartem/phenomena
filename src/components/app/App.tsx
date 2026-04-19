@@ -6,7 +6,7 @@ function App() {
   return (
     <CountdownTimer
       content={<Main />}
-      forcedEnd={import.meta.env.REACT_APP_IS_TEST}
+      forcedEnd={import.meta.env.VITE_REACT_APP_IS_TEST}
     />
   );
 }
