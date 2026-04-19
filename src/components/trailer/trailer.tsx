@@ -20,7 +20,9 @@ export const Trailer: FC = () => {
   };
 
   const handleCanPlay = () => {
-    trailerRef.current?.play();
+    if (trailerSrc) {
+      trailerRef.current?.play();
+    }
   };
 
   const handlePlay = () => {
