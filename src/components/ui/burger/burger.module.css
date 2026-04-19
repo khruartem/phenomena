@@ -4,7 +4,7 @@ body:has(.burger_opened) {
 
 .burger {
   position: absolute;
-  inset: 56px 0;
+  inset: 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -19,7 +19,7 @@ body:has(.burger_opened) {
 }
 
 .burger_opened {
-  max-height: calc(100dvh - 56px);
+  max-height: 100dvh;
 }
 
 .burger_closed {

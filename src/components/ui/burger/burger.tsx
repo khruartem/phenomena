@@ -11,11 +11,12 @@ import type { TBurgerUIProps } from "./types";
 import { useMedia } from "../../../hooks/useMedia";
 
 import styles from "./burger.module.css";
+import { createPortal } from "react-dom";
 
 export const BurgerUI: FC<TBurgerUIProps> = ({ opened }) => {
   const { isLaptop, isTablet, isMobile } = useMedia();
 
-  return (
+  return createPortal(
     <div
       className={clsx(
         styles.burger,
@@ -57,6 +58,7 @@ export const BurgerUI: FC<TBurgerUIProps> = ({ opened }) => {
           <Copyright />
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 };

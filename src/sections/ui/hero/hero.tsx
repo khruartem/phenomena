@@ -39,11 +39,11 @@ export const HeroUI: FC<THeroUIProps> = ({ externalLink }) => {
         )})`,
         backgroundPosition: clsx(
           // isDesktop && "50% 40%",
-          isMobile && "0 42%"
+          isMobile && "0 42%",
         ),
         backgroundSize: clsx(
           // isDesktop && "123% 98%",
-          isMobile && "100%"
+          isMobile && "100%",
         ),
         paddingInline: clsx(isMobile && "14px"),
       }}
