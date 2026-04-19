@@ -37,6 +37,7 @@ export const TrailerUI = forwardRef<HTMLVideoElement, TTrailerUIProps>(
           className={styles.trailer}
           onMouseEnter={onShowControls}
           onMouseLeave={onHideControls}
+          onTouchStart={onShowControls}
           style={{
             width: clsx(
               isLarge && "69.58vw",

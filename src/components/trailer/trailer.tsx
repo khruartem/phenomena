@@ -7,12 +7,20 @@ export const Trailer: FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const trailerRef = useRef<HTMLVideoElement>(null);
+  const hideTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const source =
     "https://storage.yandexcloud.net/otkter-bucket/hero/season_1/video_hero.mp4";
   const poster =
     "https://storage.yandexcloud.net/otkter-bucket/hero/season_1/video_poster.webp";
   const showControls = !isPlaying || isHovered;
+
+  const clearHideTimeout = () => {
+    if (hideTimeoutRef.current !== null) {
+      clearTimeout(hideTimeoutRef.current);
+      hideTimeoutRef.current = null;
+    }
+  };
 
   const handleEnded = () => {
     setTrailerSrc(undefined);
@@ -34,10 +42,19 @@ export const Trailer: FC = () => {
   };
 
   const handleShowControls = () => {
+    clearHideTimeout();
     setIsHovered(true);
+
+    // Авто-скрытие для тач-устройств
+    hideTimeoutRef.current = setTimeout(() => {
+      setIsHovered(false);
+    }, 3000);
   };
 
   const handleHideControls = () => {
+    // Для мыши — скрываем сразу, без таймера
+    clearHideTimeout();
+
     setIsHovered(false);
   };
 
