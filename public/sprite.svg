@@ -87,6 +87,13 @@
   </symbol>
 
   <symbol id="pause" viewBox="0 0 28 28">
-    <path fill="currentColor" d="M16.71 15.29 23 9V5h-4v2.59l-3.71 3.7L9 5H5v4l3 3v-1.41L6.41 9h1.18l3.7 3.71L5 19v4h4v-2.59l3.71-3.7L19 23h4v-4l-3-3v1.41L21.59 19h-1.18z"/>
+    <path fill="currentColor" d="M7 25h1v-7l-1 1zM15 13l1-1V3l-1 1zM17 3v22h4V3zm3 21h-1V4h1zM7 3l1 3h1v19h4V3z"/>
+  </symbol>
+
+  <symbol id="person-segment-top-left" viewBox="0 0 80 80">
+    <path fill="#b87773" d="M20.293 1.707 1.707 20.293c-.63.63-1.707.184-1.707-.707V1a1 1 0 0 1 1-1h18.586c.89 0 1.337 1.077.707 1.707"/>
+    <circle cx="21" cy="21" r="4" fill="#d8a48c"/>
+    <circle cx="31" cy="11" r="4" fill="#d8a48c"/>
+    <circle cx="11" cy="31" r="4" fill="#b87773"/>
   </symbol>
 </svg>
