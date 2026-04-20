@@ -8,11 +8,13 @@ import { GlowTextUI } from "../../../components/ui/glow-text";
 import type { TMainUIProps } from "./types";
 
 import styles from "./main.module.css";
+import { PersonUI } from "../../../components/ui/person";
 
 export const MainUI: FC<TMainUIProps> = () => {
   return (
     <Page className={styles.main}>
       <Hero />
+      <PersonUI />
       <About />
       <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
     </Page>
