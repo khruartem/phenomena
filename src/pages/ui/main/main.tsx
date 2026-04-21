@@ -4,17 +4,20 @@ import { Page } from "../../page";
 import { Hero } from "../../../sections/hero";
 import { About } from "../../../sections/about";
 import { GlowTextUI } from "../../../components/ui/glow-text";
+import { PersonUI } from "../../../components/ui/person";
 
 import type { TMainUIProps } from "./types";
 
-import styles from "./main.module.css";
-import { PersonUI } from "../../../components/ui/person";
-
 export const MainUI: FC<TMainUIProps> = () => {
   return (
-    <Page className={styles.main}>
+    <Page>
       <Hero />
-      <PersonUI />
+      <PersonUI
+        variant={"right"}
+        src={
+          "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png"
+        }
+      />
       <About />
       <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
     </Page>

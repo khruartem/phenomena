@@ -18,4 +18,6 @@ export type TMedia = {
   isLaptop: boolean;
   isTablet: boolean;
   isMobile: boolean;
-}
+};
+
+export type TPersonVariant = "left" | "right";
