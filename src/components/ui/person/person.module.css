@@ -1,48 +1,61 @@
-.person {
+.container {
   position: relative;
   width: 248px;
   min-height: 248px;
+}
 
-  /* Размер среза */
-  --cut-top: 63px;
-  --cut-bottom: 61px;
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
 
-  /* Обрезаем углы через clip-path */
-  clip-path: polygon(var(--cut-top) 0%,
-      /* верхний левый — срез */
-      100% 0%,
-      /* верхний правый */
-      100% calc(100% - var(--cut-bottom)),
-      /* нижний правый — срез */
-      calc(100% - var(--cut-bottom)) 100%,
-      /* нижний правый — срез */
-      0% 100%,
-      /* нижний левый */
-      0% var(--cut-top)
-      /* верхний левый — срез */
-    );
+.container_left-top::before {
+  background-image: url("../../../assets/icons/person_decor_top_left.svg");
+  left: 0;
+  top: 0;
+}
 
-  background: var(--white50);
-  /* толщина рамки */
-  padding: 2px;
-  border-radius: 2px;
-  position: relative;
+.container_left-bottom::after {
+  background-image: url("../../../assets/icons/person_decor_bottom_right.svg");
+  right: 0;
+  bottom: 0;
+}
+
+.container_right-top::before {
+  background-image: url("../../../assets/icons/person_decor_top_right.svg");
+  right: 0;
+  top: 0;
+}
+
+.container_right-bottom::after {
+  background-image: url("../../../assets/icons/person_decor_bottom_left.svg");
+  left: 0;
+  bottom: 0;
+}
+
+.person_left {
+  clip-path: url(#person-clip-left);
+}
+
+.person_right {
+  clip-path: url(#person-clip-right);
 }
 
 .person img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  clip-path: inherit;
-  border-radius: inherit;
+  display: block;
 }
 
-.person::before {
-  content: "";
+/* SVG-рамка — абсолютно поверх всего */
+.person__border {
   position: absolute;
-  width: 80px;
-  height: 80px;
-  background: url("../../../assets/icons/person_decor_top_left.svg") no-repeat center / contain;
-  top: 0;
-  left: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
