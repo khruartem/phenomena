@@ -6,6 +6,7 @@ import type { TPersonUIProps } from "./types";
 import { Colors } from "../../../utils/colors";
 
 import styles from "./person.module.css";
+import { PersonInfoUI } from "../person-info";
 
 // Нормализованные пути (координаты ÷ 248), скругления из SVG дизайнера
 const CLIP_PATHS = {
@@ -62,42 +63,47 @@ const BORDER_STYLES = {
   },
 };
 
-export const PersonUI: FC<TPersonUIProps> = ({ variant, src }) => {
+export const PersonUI: FC<TPersonUIProps> = ({ variant, src, alt }) => {
   const clipId = `person-clip-${variant}`;
 
   return (
-    <div
-      className={clsx(
-        styles.container,
-        styles[`container_${variant}-top`],
-        styles[`container_${variant}-bottom`],
-      )}
-    >
-      <div className={clsx(styles.person, styles[`person_${variant}`])}>
-        <svg width="0" height="0" style={{ position: "absolute" }}>
-          <defs>
-            <clipPath id={clipId} clipPathUnits="objectBoundingBox">
-              <path d={CLIP_PATHS[variant]} />
-            </clipPath>
-          </defs>
-        </svg>
+    <div className={styles["card-container"]}>
+      <div
+        className={clsx(
+          styles["person-container"],
+          styles[`person-container_${variant}-top`],
+          styles[`person-container_${variant}-bottom`],
+        )}
+      >
+        <div className={clsx(styles.person, styles[`person_${variant}`])}>
+          <svg width="0" height="0" style={{ position: "absolute" }}>
+            <defs>
+              <clipPath id={clipId} clipPathUnits="objectBoundingBox">
+                <path d={CLIP_PATHS[variant]} />
+              </clipPath>
+            </defs>
+          </svg>
 
-        <svg
-          className={styles.person__border}
-          viewBox="0 0 248 248"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-        >
-          <path
-            d={BORDER_PATHS[variant]}
-            stroke={BORDER_STYLES[variant].stroke}
-            strokeOpacity={BORDER_STYLES[variant].strokeOpacity}
-            strokeWidth="2"
-          />
-        </svg>
-        <img src={src} alt="" />
+          <svg
+            className={styles.person__border}
+            viewBox="0 0 248 248"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+          >
+            <path
+              d={BORDER_PATHS[variant]}
+              stroke={BORDER_STYLES[variant].stroke}
+              strokeOpacity={BORDER_STYLES[variant].strokeOpacity}
+              strokeWidth="2"
+            />
+          </svg>
+          <img src={src} alt={alt} />
+        </div>
       </div>
+      <PersonInfoUI
+        info={{ character: "Евгений Иванов", actor: "Дмитрий Грошев" }}
+      />
     </div>
   );
 };

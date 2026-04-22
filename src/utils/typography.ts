@@ -1,6 +1,6 @@
 export type TTypography = {
   fontFamily: "KharkivTone" | "Onest";
-  fontWeight: 300 | 400;
+  fontWeight: 300 | 400 | 500;
   size:
     | "120px"
     | "80px"
@@ -8,6 +8,7 @@ export type TTypography = {
     | "40px"
     | "32px"
     | "24px"
+    | "22px"
     | "20px"
     | "16px"
     | "14px";
@@ -67,6 +68,13 @@ const Typography = {
     lineHeight: "32px",
     letterSpacing: "0.02em",
   },
+  Text_KharkivTone_400_22: {
+    fontFamily: "KharkivTone",
+    fontWeight: 400,
+    size: "22px",
+    lineHeight: "32px",
+    letterSpacing: "0.02em",
+  },
   Text_KharkivTone_400_16: {
     fontFamily: "KharkivTone",
     fontWeight: 400,
@@ -79,6 +87,13 @@ const Typography = {
     fontWeight: 400,
     size: "20px",
     lineHeight: "32px",
+    letterSpacing: "0.02em",
+  },
+  Text_Onest_500_14: {
+    fontFamily: "Onest",
+    fontWeight: 500,
+    size: "14px",
+    lineHeight: "20px",
     letterSpacing: "0.02em",
   },
   Text_Onest_400_16: {
