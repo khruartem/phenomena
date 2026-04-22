@@ -6,6 +6,7 @@
 
 .button :is(.button__body_primary, .button__body_secondary) {
   color: var(--dark100);
+  transition: color 0.3s linear, background-color 0.3s linear;
 }
 
 .button:hover :is(.button__body_primary, .button__body_secondary) {
@@ -28,6 +29,7 @@
 
 .button :is(svg, .button__body_ghost) {
   color: var(--fire);
+  transition: color 0.3s linear;
 }
 
 .button:hover :is(svg, .button__body_ghost) {

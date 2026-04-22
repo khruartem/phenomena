@@ -21,3 +21,10 @@ export type TMedia = {
 };
 
 export type TPersonVariant = "left" | "right";
+
+export type TPersonInfo = {
+  character: string;
+  actor: string;
+  position?: string;
+  icon?: string;
+};
