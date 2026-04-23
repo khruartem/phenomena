@@ -1,7 +1,8 @@
-import type { TPersonVariant } from "../../../utils/types";
+import type { TPersonDirection, TPersonSize } from "../../../utils/types";
 
 export type TPersonUIProps = {
-  variant: TPersonVariant;
+  direction: TPersonDirection;
+  size: TPersonSize;
   src: string;
   alt?: string;
 };

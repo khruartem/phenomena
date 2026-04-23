@@ -1,12 +1,13 @@
 import type { FC } from "react";
 import clsx from "clsx";
 
+import { PersonInfoUI } from "../person-info";
+
 import type { TPersonUIProps } from "./types";
 
 import { Colors } from "../../../utils/colors";
 
 import styles from "./person.module.css";
-import { PersonInfoUI } from "../person-info";
 
 // Нормализованные пути (координаты ÷ 248), скругления из SVG дизайнера
 const CLIP_PATHS = {
@@ -63,23 +64,28 @@ const BORDER_STYLES = {
   },
 };
 
-export const PersonUI: FC<TPersonUIProps> = ({ variant, src, alt }) => {
-  const clipId = `person-clip-${variant}`;
+export const PersonUI: FC<TPersonUIProps> = ({ direction, size, src, alt }) => {
+  const clipId = `person-clip-${direction}`;
 
   return (
-    <div className={styles["card-container"]}>
+    <div
+      className={clsx(
+        styles["card-container"],
+        styles[`card-container_${size}`],
+      )}
+    >
       <div
         className={clsx(
           styles["person-container"],
-          styles[`person-container_${variant}-top`],
-          styles[`person-container_${variant}-bottom`],
+          styles[`person-container_${direction}-top`],
+          styles[`person-container_${direction}-bottom`],
         )}
       >
-        <div className={clsx(styles.person, styles[`person_${variant}`])}>
+        <div className={clsx(styles.person, styles[`person_${direction}`])}>
           <svg width="0" height="0" style={{ position: "absolute" }}>
             <defs>
               <clipPath id={clipId} clipPathUnits="objectBoundingBox">
-                <path d={CLIP_PATHS[variant]} />
+                <path d={CLIP_PATHS[direction]} />
               </clipPath>
             </defs>
           </svg>
@@ -92,9 +98,9 @@ export const PersonUI: FC<TPersonUIProps> = ({ variant, src, alt }) => {
             preserveAspectRatio="none"
           >
             <path
-              d={BORDER_PATHS[variant]}
-              stroke={BORDER_STYLES[variant].stroke}
-              strokeOpacity={BORDER_STYLES[variant].strokeOpacity}
+              d={BORDER_PATHS[direction]}
+              stroke={BORDER_STYLES[direction].stroke}
+              strokeOpacity={BORDER_STYLES[direction].strokeOpacity}
               strokeWidth="2"
             />
           </svg>
@@ -102,7 +108,12 @@ export const PersonUI: FC<TPersonUIProps> = ({ variant, src, alt }) => {
         </div>
       </div>
       <PersonInfoUI
-        info={{ character: "Евгений Иванов", actor: "Дмитрий Грошев" }}
+        info={{
+          character: "Евгений Иванов",
+          actor: "Дмитрий Грошев",
+          position: "Гражданский",
+          icon: "regular",
+        }}
       />
     </div>
   );

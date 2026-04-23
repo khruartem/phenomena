@@ -1,0 +1,24 @@
+.person-info {
+  --bottom-position: -104px;
+
+  position: absolute;
+  opacity: 0;
+  bottom: var(--bottom-position);
+  left: 8px;
+  transition: bottom 0.8s ease, opacity 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.person-info__main {
+  display: inherit;
+  flex-direction: inherit;
+  gap: 4px;
+}
+
+.person-info__extra {
+  display: inherit;
+  flex-direction: row;
+  gap: 12px;
+}
