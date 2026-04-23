@@ -1,48 +1,104 @@
 .card-container {
-  width: 248px;
-  min-height: 248px;
+  --size-card: 296px;
+
+  width: var(--size-card);
+  min-height: var(--size-card);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  position: relative;
+}
+
+.card-container_L {
+  --size-person-l: 248px;
+  --size-svg-l: 80px;
+  --scale-l: 0.452;
+  --translate-y-l: 72px;
+  --translate-x-l: -32px;
+  --decor-left-top-l: url("../../../assets/icons/person_decor_top_left_l.svg");
+  --decor-left-bottom-l: url("../../../assets/icons/person_decor_bottom_right_l.svg");
+  --decor-right-top-l: url("../../../assets/icons/person_decor_top_right_l.svg");
+  --decor-right-bottom-l: url("../../../assets/icons/person_decor_bottom_left_l.svg");
+
+  --size-person: var(--size-person-l);
+  --size-svg: var(--size-svg-l);
+  --scale: var(--scale-l);
+  --translate-y: var(--translate-y-l);
+  --translate-x: var(--translate-x-l);
+  --decor-left-top: var(--decor-left-top-l);
+  --decor-left-bottom: var(--decor-left-bottom-l);
+  --decor-right-top: var(--decor-right-top-l);
+  --decor-right-bottom: var(--decor-right-bottom-l);
+}
+
+.card-container_M {
+  --size-person-m: 160px;
+  --size-svg-m: 51.61px;
+  --scale-m: 0.7;
+  --translate-y-m: -17px;
+  --translate-x-m: -84px;
+  --decor-left-top-m: url("../../../assets/icons/person_decor_top_left_m.svg");
+  --decor-left-bottom-m: url("../../../assets/icons/person_decor_bottom_right_m.svg");
+  --decor-right-top-m: url("../../../assets/icons/person_decor_top_right_m.svg");
+  --decor-right-bottom-m: url("../../../assets/icons/person_decor_bottom_left_m.svg");
+
+  --size-person: var(--size-person-m);
+  --size-svg: var(--size-svg-m);
+  --scale: var(--scale-m);
+  --translate-y: var(--translate-y-m);
+  --translate-x: var(--translate-x-m);
+  --decor-left-top: var(--decor-left-top-m);
+  --decor-left-bottom: var(--decor-left-bottom-m);
+  --decor-right-top: var(--decor-right-top-m);
+  --decor-right-bottom: var(--decor-right-bottom-m);
 }
 
 .card-container:hover .person-container {
-  transform: scale(0.5);
-  transform-origin: left top;
+  transform: scale(var(--scale)) translateY(var(--translate-y)) translateX(var(--translate-x));
+}
+
+.card-container:hover>:global(#person-info) {
+  bottom: 8px;
+  opacity: 1;
 }
 
 .person-container {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: var(--size-person);
+  height: var(--size-person);
+  transform-origin: left top;
+  transition: transform 0.8s ease;
 }
 
 .person-container::before,
 .person-container::after {
   content: "";
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: var(--size-svg);
+  height: var(--size-svg);
 }
 
 .person-container_left-top::before {
-  background-image: url("../../../assets/icons/person_decor_top_left.svg");
+  background-image: var(--decor-left-top);
   left: 0;
   top: 0;
 }
 
 .person-container_left-bottom::after {
-  background-image: url("../../../assets/icons/person_decor_bottom_right.svg");
+  background-image: var(--decor-left-bottom);
   right: 0;
   bottom: 0;
 }
 
 .person-container_right-top::before {
-  background-image: url("../../../assets/icons/person_decor_top_right.svg");
+  background-image: var(--decor-right-top);
   right: 0;
   top: 0;
 }
 
 .person-container_right-bottom::after {
-  background-image: url("../../../assets/icons/person_decor_bottom_left.svg");
+  background-image: var(--decor-right-bottom);
   left: 0;
   bottom: 0;
 }

@@ -20,11 +20,17 @@ export type TMedia = {
   isMobile: boolean;
 };
 
-export type TPersonVariant = "left" | "right";
+export type TPersonDirection = "left" | "right";
+
+export type TPersonSize = "L" | "M" | "S";
+
+export type TPersonIcon = "regular" | "phenomen" | "science";
+
+export type TPersonPosition = "Гражданский" | "Феномен" | "Научный сотрудник";
 
 export type TPersonInfo = {
   character: string;
   actor: string;
   position?: string;
-  icon?: string;
+  icon?: TPersonIcon;
 };
