@@ -5,7 +5,7 @@
   opacity: 0;
   bottom: var(--bottom-position);
   left: 8px;
-  transition: bottom 0.8s ease, opacity 0.8s ease;
+  transition: bottom var(--animation-duration) ease, opacity var(--animation-duration) ease;
   display: flex;
   flex-direction: column;
   gap: 16px;

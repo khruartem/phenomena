@@ -14,7 +14,8 @@ export const MainUI: FC<TMainUIProps> = () => {
       <Hero />
       <PersonUI
         direction={"left"}
-        size={"M"}
+        decorated
+        size={"L"}
         src={
           "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png"
         }
