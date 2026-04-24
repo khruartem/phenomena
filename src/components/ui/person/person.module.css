@@ -1,5 +1,6 @@
 .card-container {
   --size-card: 296px;
+  --animation-duration: 0.8s;
 
   width: var(--size-card);
   min-height: var(--size-card);
@@ -14,8 +15,8 @@
   --size-person-l: 248px;
   --size-svg-l: 80px;
   --scale-l: 0.452;
-  --translate-y-l: 72px;
-  --translate-x-l: -32px;
+  --translate-person-y-l: 72px;
+  --translate-person-x-l: -37px;
   --decor-left-top-l: url("../../../assets/icons/person_decor_top_left_l.svg");
   --decor-left-bottom-l: url("../../../assets/icons/person_decor_bottom_right_l.svg");
   --decor-right-top-l: url("../../../assets/icons/person_decor_top_right_l.svg");
@@ -24,8 +25,8 @@
   --size-person: var(--size-person-l);
   --size-svg: var(--size-svg-l);
   --scale: var(--scale-l);
-  --translate-y: var(--translate-y-l);
-  --translate-x: var(--translate-x-l);
+  --translate-person-y: var(--translate-person-y-l);
+  --translate-person-x: var(--translate-person-x-l);
   --decor-left-top: var(--decor-left-top-l);
   --decor-left-bottom: var(--decor-left-bottom-l);
   --decor-right-top: var(--decor-right-top-l);
@@ -36,8 +37,8 @@
   --size-person-m: 160px;
   --size-svg-m: 51.61px;
   --scale-m: 0.7;
-  --translate-y-m: -17px;
-  --translate-x-m: -84px;
+  --translate-person-y-m: -17px;
+  --translate-person-x-m: -88px;
   --decor-left-top-m: url("../../../assets/icons/person_decor_top_left_m.svg");
   --decor-left-bottom-m: url("../../../assets/icons/person_decor_bottom_right_m.svg");
   --decor-right-top-m: url("../../../assets/icons/person_decor_top_right_m.svg");
@@ -46,16 +47,55 @@
   --size-person: var(--size-person-m);
   --size-svg: var(--size-svg-m);
   --scale: var(--scale-m);
-  --translate-y: var(--translate-y-m);
-  --translate-x: var(--translate-x-m);
+  --translate-person-y: var(--translate-person-y-m);
+  --translate-person-x: var(--translate-person-x-m);
   --decor-left-top: var(--decor-left-top-m);
   --decor-left-bottom: var(--decor-left-bottom-m);
   --decor-right-top: var(--decor-right-top-m);
   --decor-right-bottom: var(--decor-right-bottom-m);
 }
 
+.card-container_S {
+  --size-person-s: 112px;
+  --size-svg-s: 36px;
+  --scale-s: 1;
+  --translate-person-y-s: -36px;
+  --translate-person-x-s: -84px;
+  --decor-left-top-s: url("../../../assets/icons/person_decor_top_left_s.svg");
+  --decor-left-bottom-s: url("../../../assets/icons/person_decor_bottom_right_s.svg");
+  --decor-right-top-s: url("../../../assets/icons/person_decor_top_right_s.svg");
+  --decor-right-bottom-s: url("../../../assets/icons/person_decor_bottom_left_s.svg");
+
+  --size-person: var(--size-person-s);
+  --size-svg: var(--size-svg-s);
+  --scale: var(--scale-s);
+  --translate-person-y: var(--translate-person-y-s);
+  --translate-person-x: var(--translate-person-x-s);
+  --decor-left-top: var(--decor-left-top-s);
+  --decor-left-bottom: var(--decor-left-bottom-s);
+  --decor-right-top: var(--decor-right-top-s);
+  --decor-right-bottom: var(--decor-right-bottom-s);
+}
+
+.card-container_decorated::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 88px;
+  top: 24%;
+  right: -40px;
+  background-image: url("../../../assets/icons/person_paginator_segment.svg");
+  opacity: 0;
+  transition: transform var(--animation-duration) ease, opacity var(--animation-duration) ease;
+}
+
+.card-container:hover.card-container_decorated::after {
+  transform: translateX(-153px);
+  opacity: 1;
+}
+
 .card-container:hover .person-container {
-  transform: scale(var(--scale)) translateY(var(--translate-y)) translateX(var(--translate-x));
+  transform: scale(var(--scale)) translateY(var(--translate-person-y)) translateX(var(--translate-person-x));
 }
 
 .card-container:hover>:global(#person-info) {
@@ -68,7 +108,7 @@
   width: var(--size-person);
   height: var(--size-person);
   transform-origin: left top;
-  transition: transform 0.8s ease;
+  transition: transform var(--animation-duration) ease;
 }
 
 .person-container::before,

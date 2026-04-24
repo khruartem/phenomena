@@ -5,4 +5,5 @@ export type TPersonUIProps = {
   size: TPersonSize;
   src: string;
   alt?: string;
+  decorated?: boolean;
 };

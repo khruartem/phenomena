@@ -64,7 +64,13 @@ const BORDER_STYLES = {
   },
 };
 
-export const PersonUI: FC<TPersonUIProps> = ({ direction, size, src, alt }) => {
+export const PersonUI: FC<TPersonUIProps> = ({
+  direction,
+  size,
+  src,
+  alt,
+  decorated,
+}) => {
   const clipId = `person-clip-${direction}`;
 
   return (
@@ -72,6 +78,7 @@ export const PersonUI: FC<TPersonUIProps> = ({ direction, size, src, alt }) => {
       className={clsx(
         styles["card-container"],
         styles[`card-container_${size}`],
+        decorated && styles["card-container_decorated"],
       )}
     >
       <div
@@ -79,6 +86,7 @@ export const PersonUI: FC<TPersonUIProps> = ({ direction, size, src, alt }) => {
           styles["person-container"],
           styles[`person-container_${direction}-top`],
           styles[`person-container_${direction}-bottom`],
+          
         )}
       >
         <div className={clsx(styles.person, styles[`person_${direction}`])}>
@@ -101,7 +109,7 @@ export const PersonUI: FC<TPersonUIProps> = ({ direction, size, src, alt }) => {
               d={BORDER_PATHS[direction]}
               stroke={BORDER_STYLES[direction].stroke}
               strokeOpacity={BORDER_STYLES[direction].strokeOpacity}
-              strokeWidth="2"
+              strokeWidth="7"
             />
           </svg>
           <img src={src} alt={alt} />
@@ -109,9 +117,9 @@ export const PersonUI: FC<TPersonUIProps> = ({ direction, size, src, alt }) => {
       </div>
       <PersonInfoUI
         info={{
-          character: "Евгений Иванов",
-          actor: "Дмитрий Грошев",
-          position: "Гражданский",
+          character: "Character",
+          actor: "Actor",
+          position: "Position",
           icon: "regular",
         }}
       />
