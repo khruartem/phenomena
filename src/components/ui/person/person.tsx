@@ -64,13 +64,8 @@ const BORDER_STYLES = {
   },
 };
 
-export const PersonUI: FC<TPersonUIProps> = ({
-  direction,
-  size,
-  src,
-  alt,
-  decorated,
-}) => {
+export const PersonUI: FC<TPersonUIProps> = ({ info, appearance }) => {
+  const { direction, size, image, caption, decorated } = appearance;
   const clipId = `person-clip-${direction}`;
 
   return (
@@ -86,7 +81,6 @@ export const PersonUI: FC<TPersonUIProps> = ({
           styles["person-container"],
           styles[`person-container_${direction}-top`],
           styles[`person-container_${direction}-bottom`],
-          
         )}
       >
         <div className={clsx(styles.person, styles[`person_${direction}`])}>
@@ -112,17 +106,10 @@ export const PersonUI: FC<TPersonUIProps> = ({
               strokeWidth="7"
             />
           </svg>
-          <img src={src} alt={alt} />
+          <img src={image} alt={caption} />
         </div>
       </div>
-      <PersonInfoUI
-        info={{
-          character: "Character",
-          actor: "Actor",
-          position: "Position",
-          icon: "regular",
-        }}
-      />
+      <PersonInfoUI info={info} />
     </div>
   );
 };

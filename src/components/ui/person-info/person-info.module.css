@@ -1,6 +1,6 @@
 .person-info {
   --bottom-position: -104px;
-
+  --animation-duration: 1s;
   position: absolute;
   opacity: 0;
   bottom: var(--bottom-position);
@@ -15,10 +15,4 @@
   display: inherit;
   flex-direction: inherit;
   gap: 4px;
-}
-
-.person-info__extra {
-  display: inherit;
-  flex-direction: row;
-  gap: 12px;
 }

@@ -1,3 +1,9 @@
+.person-info__extra {
+  display: inherit;
+  flex-direction: row;
+  gap: 12px;
+}
+
 .position {
   display: flex;
   flex-direction: row;

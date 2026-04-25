@@ -14,13 +14,17 @@ export const SectionTitleUI: FC<TSectionTitleUIProps> = ({
   className,
   style,
 }) => {
-  const { isMobile } = useMedia();
+  const { isLarge, isMobile } = useMedia();
 
   return (
     <TextUI
       as={"h2"}
       typography={
-        isMobile ? Typography.Text_KharkivTone_400_32 : Typography.Digits_40
+        isMobile
+          ? Typography.Text_KharkivTone_400_32
+          : isLarge
+            ? Typography.Digits_60
+            : Typography.Digits_40
       }
       color={Colors.Badge}
       className={className}

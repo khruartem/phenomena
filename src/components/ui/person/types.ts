@@ -1,9 +1,11 @@
-import type { TPersonDirection, TPersonSize } from "../../../utils/types";
+import type { TPersonAppearance, TPersonInfo } from "../../../utils/types";
 
 export type TPersonUIProps = {
-  direction: TPersonDirection;
-  size: TPersonSize;
-  src: string;
-  alt?: string;
-  decorated?: boolean;
+  info: TPersonInfo;
+  appearance: TPersonAppearance;
+  // direction: TPersonDirection;
+  // size: TPersonSize;
+  // src: string;
+  // alt?: string;
+  // decorated?: boolean;
 };
