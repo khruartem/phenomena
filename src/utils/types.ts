@@ -1,3 +1,5 @@
+import type { Positions } from "./positions";
+
 export type TTimeLeft = {
   daysLeft: string;
   hoursLeft: string;
@@ -26,11 +28,24 @@ export type TPersonSize = "L" | "M" | "S";
 
 export type TPersonIcon = "regular" | "phenomen" | "science";
 
-export type TPersonPosition = "Гражданский" | "Феномен" | "Научный сотрудник";
+// export type TPersonPosition = "Гражданский" | "Феномен" | "Научный сотрудник";
+export type TPersonPosition = keyof typeof Positions;
 
 export type TPersonInfo = {
   character: string;
   actor: string;
-  position?: string;
-  icon?: TPersonIcon;
+  position: TPersonPosition;
+};
+
+export type TPersonAppearance = {
+  size: TPersonSize;
+  direction: TPersonDirection;
+  image: string;
+  caption?: string;
+  decorated?: boolean;
+};
+
+export type TPerson = {
+  info: TPersonInfo;
+  appearance: TPersonAppearance;
 };

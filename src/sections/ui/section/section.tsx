@@ -9,6 +9,7 @@ import styles from "./section.module.css";
 
 export const SectionUI: FC<TSectionUIProps> = ({
   children,
+  id,
   paddingedBlock = true,
   paddingedInline = true,
   gap = 0,
@@ -27,7 +28,7 @@ export const SectionUI: FC<TSectionUIProps> = ({
   );
 
   const paddingedInlineStyle = clsx(
-    isLarge && "8.13vw",
+    isLarge && "8.12vw",
     isDesktop && "7.83vw",
     isLaptop && "4.10vw",
     isTablet && "3.91vw",
@@ -36,6 +37,7 @@ export const SectionUI: FC<TSectionUIProps> = ({
 
   return (
     <section
+      id={id}
       className={clsx(styles.section, className && className)}
       style={{
         display: clsx(hidden && "none"),

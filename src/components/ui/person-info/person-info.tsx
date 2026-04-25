@@ -1,7 +1,6 @@
 import type { FC } from "react";
 
 import { TextUI } from "../text";
-import { Icon } from "../../icon";
 import { PersonPositionUI } from "../person-position";
 
 import type { TPersonInfoUIProps } from "./types";
@@ -12,7 +11,7 @@ import { Colors } from "../../../utils/colors";
 import styles from "./person-info.module.css";
 
 export const PersonInfoUI: FC<TPersonInfoUIProps> = ({ info }) => {
-  const { character, actor, position, icon } = info;
+  const { character, actor, position } = info;
 
   return (
     <div id="person-info" className={styles["person-info"]}>
@@ -30,12 +29,7 @@ export const PersonInfoUI: FC<TPersonInfoUIProps> = ({ info }) => {
           {actor}
         </TextUI>
       </div>
-      {position && icon && (
-        <div className={styles["person-info__extra"]}>
-          <Icon name={icon} width={28} height={28} color={Colors.White100} />
-          <PersonPositionUI position={position} />
-        </div>
-      )}
+      <PersonPositionUI position={position} />
     </div>
   );
 };

@@ -1,0 +1,13 @@
+.person-grid {
+  --size-card: 296px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.person-grid>li {
+  width: var(--size-card);
+  height: var(--size-card);
+}

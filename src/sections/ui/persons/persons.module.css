@@ -1,0 +1,10 @@
+.persons {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.persons__title {
+  width: min-content;
+  align-self: flex-start;
+}
