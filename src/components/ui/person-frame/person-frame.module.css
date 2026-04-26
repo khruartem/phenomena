@@ -1,0 +1,109 @@
+.person__frame_L {
+  --size-person-l: 248px;
+  --size-svg-l: 80px;
+  --decor-left-top-l: url("../../../assets/icons/person_decor_top_left_l.svg");
+  --decor-left-bottom-l: url("../../../assets/icons/person_decor_bottom_right_l.svg");
+  --decor-right-top-l: url("../../../assets/icons/person_decor_top_right_l.svg");
+  --decor-right-bottom-l: url("../../../assets/icons/person_decor_bottom_left_l.svg");
+
+  --size-person: var(--size-person-l);
+  --size-svg: var(--size-svg-l);
+  --decor-left-top: var(--decor-left-top-l);
+  --decor-left-bottom: var(--decor-left-bottom-l);
+  --decor-right-top: var(--decor-right-top-l);
+  --decor-right-bottom: var(--decor-right-bottom-l);
+}
+
+.person__frame_M {
+  --size-person-m: 160px;
+  --size-svg-m: 51.61px;
+  --decor-left-top-m: url("../../../assets/icons/person_decor_top_left_m.svg");
+  --decor-left-bottom-m: url("../../../assets/icons/person_decor_bottom_right_m.svg");
+  --decor-right-top-m: url("../../../assets/icons/person_decor_top_right_m.svg");
+  --decor-right-bottom-m: url("../../../assets/icons/person_decor_bottom_left_m.svg");
+
+  --size-person: var(--size-person-m);
+  --size-svg: var(--size-svg-m);
+  --decor-left-top: var(--decor-left-top-m);
+  --decor-left-bottom: var(--decor-left-bottom-m);
+  --decor-right-top: var(--decor-right-top-m);
+  --decor-right-bottom: var(--decor-right-bottom-m);
+}
+
+.person__frame_S {
+  --size-person-s: 112px;
+  --size-svg-s: 36px;
+  --decor-left-top-s: url("../../../assets/icons/person_decor_top_left_s.svg");
+  --decor-left-bottom-s: url("../../../assets/icons/person_decor_bottom_right_s.svg");
+  --decor-right-top-s: url("../../../assets/icons/person_decor_top_right_s.svg");
+  --decor-right-bottom-s: url("../../../assets/icons/person_decor_bottom_left_s.svg");
+
+  --size-person: var(--size-person-s);
+  --size-svg: var(--size-svg-s);
+  --decor-left-top: var(--decor-left-top-s);
+  --decor-left-bottom: var(--decor-left-bottom-s);
+  --decor-right-top: var(--decor-right-top-s);
+  --decor-right-bottom: var(--decor-right-bottom-s);
+}
+
+.person__frame {
+  position: relative;
+  width: var(--size-person);
+  height: var(--size-person);
+}
+
+.person__frame::before,
+.person__frame::after {
+  content: "";
+  position: absolute;
+  width: var(--size-svg);
+  height: var(--size-svg);
+}
+
+.person__frame_left-top::before {
+  top: 0;
+  left: 0;
+  background-image: var(--decor-left-top);
+}
+
+.person__frame_left-bottom::after {
+  right: 0;
+  bottom: 0;
+  background-image: var(--decor-left-bottom);
+}
+
+.person__frame_right-top::before {
+  top: 0;
+  right: 0;
+  background-image: var(--decor-right-top);
+}
+
+.person__frame_right-bottom::after {
+  bottom: 0;
+  left: 0;
+  background-image: var(--decor-right-bottom);
+}
+
+.person__image_left {
+  clip-path: url(#person-clip-left);
+}
+
+.person__image_right {
+  clip-path: url(#person-clip-right);
+}
+
+.person__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SVG-рамка — абсолютно поверх всего */
+.person__border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}

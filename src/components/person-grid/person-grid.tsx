@@ -17,7 +17,6 @@ export const PersonGrid: FC = () => {
         direction: "left",
         image:
           "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/dolgiy.png",
-        caption: "",
         decorated: true,
       },
     },
@@ -32,7 +31,6 @@ export const PersonGrid: FC = () => {
         direction: "left",
         image:
           "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/petruhin.png",
-        caption: "",
       },
     },
     {
@@ -46,7 +44,6 @@ export const PersonGrid: FC = () => {
         direction: "right",
         image:
           "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/strelnikov.png",
-        caption: "",
       },
     },
     {
@@ -60,7 +57,6 @@ export const PersonGrid: FC = () => {
         direction: "left",
         image:
           "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
-        caption: "",
       },
     },
     {
@@ -74,7 +70,6 @@ export const PersonGrid: FC = () => {
         direction: "left",
         image:
           "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/rudnitskiy.png",
-        caption: "",
       },
     },
     {
@@ -88,7 +83,6 @@ export const PersonGrid: FC = () => {
         direction: "right",
         image:
           "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/cherkashina.png",
-        caption: "",
         decorated: true,
       },
     },
@@ -103,7 +97,6 @@ export const PersonGrid: FC = () => {
         direction: "right",
         image:
           "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/salnik.png",
-        caption: "",
         decorated: true,
       },
     },
@@ -118,7 +111,6 @@ export const PersonGrid: FC = () => {
         direction: "right",
         image:
           "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/prohorova.png",
-        caption: "",
       },
     },
     {
@@ -132,7 +124,6 @@ export const PersonGrid: FC = () => {
         direction: "right",
         image:
           "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/mochalova.png",
-        caption: "",
       },
     },
   ];
