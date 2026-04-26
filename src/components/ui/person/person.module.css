@@ -4,79 +4,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: var(--size-card);
-  min-height: var(--size-card);
+  width: var(--size-card, 296px);
+  min-height: var(--size-card, 296px);
   overflow: hidden;
 }
 
 .card-container_L {
-  --size-person-l: 248px;
-  --size-svg-l: 80px;
   --scale-l: 0.452;
   --translate-person-y-l: 72px;
   --translate-person-x-l: -37px;
-  --decor-left-top-l: url("../../../assets/icons/person_decor_top_left_l.svg");
-  --decor-left-bottom-l: url("../../../assets/icons/person_decor_bottom_right_l.svg");
-  --decor-right-top-l: url("../../../assets/icons/person_decor_top_right_l.svg");
-  --decor-right-bottom-l: url("../../../assets/icons/person_decor_bottom_left_l.svg");
 
-  --size-person: var(--size-person-l);
-  --size-svg: var(--size-svg-l);
   --scale: var(--scale-l);
   --translate-person-y: var(--translate-person-y-l);
   --translate-person-x: var(--translate-person-x-l);
-  --decor-left-top: var(--decor-left-top-l);
-  --decor-left-bottom: var(--decor-left-bottom-l);
-  --decor-right-top: var(--decor-right-top-l);
-  --decor-right-bottom: var(--decor-right-bottom-l);
 }
 
 .card-container_M {
-  --size-person-m: 160px;
-  --size-svg-m: 51.61px;
   --scale-m: 0.7;
   --translate-person-y-m: -17px;
   --translate-person-x-m: -88px;
-  --decor-left-top-m: url("../../../assets/icons/person_decor_top_left_m.svg");
-  --decor-left-bottom-m: url("../../../assets/icons/person_decor_bottom_right_m.svg");
-  --decor-right-top-m: url("../../../assets/icons/person_decor_top_right_m.svg");
-  --decor-right-bottom-m: url("../../../assets/icons/person_decor_bottom_left_m.svg");
 
-  --size-person: var(--size-person-m);
-  --size-svg: var(--size-svg-m);
   --scale: var(--scale-m);
   --translate-person-y: var(--translate-person-y-m);
   --translate-person-x: var(--translate-person-x-m);
-  --decor-left-top: var(--decor-left-top-m);
-  --decor-left-bottom: var(--decor-left-bottom-m);
-  --decor-right-top: var(--decor-right-top-m);
-  --decor-right-bottom: var(--decor-right-bottom-m);
 }
 
 .card-container_S {
-  --size-person-s: 112px;
-  --size-svg-s: 36px;
   --scale-s: 1;
-  --translate-person-y-s: -36px;
+  --translate-person-y-s: -37px;
   --translate-person-x-s: -84px;
-  --decor-left-top-s: url("../../../assets/icons/person_decor_top_left_s.svg");
-  --decor-left-bottom-s: url("../../../assets/icons/person_decor_bottom_right_s.svg");
-  --decor-right-top-s: url("../../../assets/icons/person_decor_top_right_s.svg");
-  --decor-right-bottom-s: url("../../../assets/icons/person_decor_bottom_left_s.svg");
 
-  --size-person: var(--size-person-s);
-  --size-svg: var(--size-svg-s);
   --scale: var(--scale-s);
   --translate-person-y: var(--translate-person-y-s);
   --translate-person-x: var(--translate-person-x-s);
-  --decor-left-top: var(--decor-left-top-s);
-  --decor-left-bottom: var(--decor-left-bottom-s);
-  --decor-right-top: var(--decor-right-top-s);
-  --decor-right-bottom: var(--decor-right-bottom-s);
 }
 
-.card-container_decorated::after {
+.card-container_mobile {
+  --scale-s: 1;
+  --translate-person-y-s: -37px;
+  --translate-person-x-s: 0px;
+
+  --scale: var(--scale-s);
+  --translate-person-y: var(--translate-person-y-s);
+  --translate-person-x: var(--translate-person-x-s);
+}
+
+.card-container_decorated:not(.card-container_mobile)::after {
   content: "";
   position: absolute;
   top: 24%;
@@ -88,80 +61,42 @@
   transition: transform var(--animation-duration) ease, opacity var(--animation-duration) ease;
 }
 
-.card-container_decorated:hover::after {
+.card-container_decorated.card-container_mobile::after {
+  content: "";
+  position: absolute;
+  top: 24%;
+  right: 20px;
+  width: 40px;
+  height: 88px;
+  opacity: 1;
+  background-image: url("../../../assets/icons/person_paginator_segment.svg");
+}
+
+.card-container_decorated:not(.card-container_mobile):hover::after {
   opacity: 1;
   transform: translateX(-153px);
 }
 
-.card-container:hover .person-container {
-  transform: scale(var(--scale)) translateY(var(--translate-person-y)) translateX(var(--translate-person-x));
-}
-
-.card-container:hover>:global(#person-info) {
-  bottom: 8px;
-  opacity: 1;
-}
-
-.person-container {
-  position: relative;
-  width: var(--size-person);
-  height: var(--size-person);
+.card-container>:global(#person-frame) {
   transition: transform var(--animation-duration) ease;
   transform-origin: left top;
 }
 
-.person-container::before,
-.person-container::after {
-  content: "";
-  position: absolute;
-  width: var(--size-svg);
-  height: var(--size-svg);
+.card-container:not(.card-container_mobile):hover>:global(#person-frame) {
+  transform: scale(var(--scale)) translateY(var(--translate-person-y)) translateX(var(--translate-person-x));
 }
 
-.person-container_left-top::before {
-  top: 0;
-  left: 0;
-  background-image: var(--decor-left-top);
+.card-container:not(.card-container_mobile):hover>:global(#person-info) {
+  bottom: 8px;
+  opacity: 1;
 }
 
-.person-container_left-bottom::after {
-  right: 0;
-  bottom: 0;
-  background-image: var(--decor-left-bottom);
+.card-container_mobile>:global(#person-frame) {
+  transform: scale(var(--scale)) translateY(var(--translate-person-y)) translateX(var(--translate-person-x));
 }
 
-.person-container_right-top::before {
-  top: 0;
-  right: 0;
-  background-image: var(--decor-right-top);
-}
-
-.person-container_right-bottom::after {
-  bottom: 0;
-  left: 0;
-  background-image: var(--decor-right-bottom);
-}
-
-.person_left {
-  clip-path: url(#person-clip-left);
-}
-
-.person_right {
-  clip-path: url(#person-clip-right);
-}
-
-.person img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* SVG-рамка — абсолютно поверх всего */
-.person__border {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+.card-container_mobile>:global(#person-info) {
+  bottom: 8px;
+  left: unset;
+  opacity: 1;
 }
