@@ -1,0 +1,18 @@
+.tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  position: relative;
+  background-color: transparent;
+}
+
+.tabs::before {
+  content: "";
+  transition: left .4s ease-in;
+  position: absolute;
+  top: 0;
+  left: var(--left);
+  width: 120px;
+  height: 36px;
+  background-image: url("../../../assets/icons/tab.svg");
+}

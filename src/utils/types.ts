@@ -1,4 +1,5 @@
 import type { Positions } from "./positions";
+import type { Tabs } from "./tabs";
 
 export type TTimeLeft = {
   daysLeft: string;
@@ -49,3 +50,5 @@ export type TPerson = {
   info: TPersonInfo;
   appearance: TPersonAppearance;
 };
+
+export type TTab = keyof typeof Tabs;
