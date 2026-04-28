@@ -7,7 +7,6 @@ import { Persons } from "../../../sections/persons";
 import { GlowTextUI } from "../../../components/ui/glow-text";
 
 import type { TMainUIProps } from "./types";
-import { TabBar } from "../../../components/tab-bar";
 
 export const MainUI: FC<TMainUIProps> = () => {
   return (
@@ -15,7 +14,6 @@ export const MainUI: FC<TMainUIProps> = () => {
       <Hero />
       <About />
       <Persons />
-      <TabBar />
       <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
     </Page>
   );

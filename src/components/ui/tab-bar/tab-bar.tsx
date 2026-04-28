@@ -23,7 +23,7 @@ export const TabBarUI: FC<TTabBarUIProps> = ({
           key={index}
           tab={tab}
           current={currentTab === tab}
-          onClick={() => onChange(tab)}
+          onClick={() => onChange(tab, index)}
         />
       ))}
     </ul>

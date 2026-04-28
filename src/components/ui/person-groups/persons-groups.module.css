@@ -1,0 +1,15 @@
+.persons__groups {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.persons__group {
+  min-width: 100vw;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
