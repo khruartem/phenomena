@@ -1,7 +1,7 @@
-import type { TTab } from "../../../utils/types";
+import type { TGroup } from "../../../utils/types";
 
 export type TTabUIProps = {
-  tab: TTab;
+  tab: TGroup;
   current: boolean;
   onClick: () => void;
 };

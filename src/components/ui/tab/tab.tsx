@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import type { TTabUIProps } from "./types";
 
-import { Tabs } from "../../../utils/tabs";
+import { Groups } from "../../../utils/groups";
 
 import styles from "./tab.module.css";
 import { TextUI } from "../text";
@@ -17,7 +17,7 @@ export const TabUI: FC<TTabUIProps> = ({ tab, current, onClick }) => {
         color={current ? Colors.White100 : Colors.White50}
         className={styles.tab__text}
       >
-        {Tabs[tab]}
+        {Groups[tab]}
       </TextUI>
     </li>
   );

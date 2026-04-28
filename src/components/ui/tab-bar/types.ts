@@ -1,7 +1,7 @@
-import type { TTab } from "../../../utils/types";
+import type { TGroup } from "../../../utils/types";
 
 export type TTabBarUIProps = {
-  tabs: TTab[];
-  currentTab: TTab;
-  onChange: (tab: TTab) => void;
+  tabs: TGroup[];
+  currentTab: TGroup;
+  onChange: (tab: TGroup, index: number) => void;
 };
