@@ -1,4 +1,4 @@
-.person-grid {
+.subject-group {
   --size-card: 296px;
   display: flex;
   flex-direction: row;
@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.person-grid>li {
+.subject-group>li {
   width: var(--size-card);
   height: var(--size-card);
 }

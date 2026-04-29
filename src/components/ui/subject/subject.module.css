@@ -1,4 +1,4 @@
-.card-container {
+.subject {
   --animation-duration: 0.8s;
   position: relative;
   display: flex;
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-.card-container_L {
+.subject_L {
   --scale-l: 0.452;
   --translate-person-y-l: 72px;
   --translate-person-x-l: -37px;
@@ -19,7 +19,7 @@
   --translate-person-x: var(--translate-person-x-l);
 }
 
-.card-container_M {
+.subject_M {
   --scale-m: 0.7;
   --translate-person-y-m: -17px;
   --translate-person-x-m: -88px;
@@ -29,7 +29,7 @@
   --translate-person-x: var(--translate-person-x-m);
 }
 
-.card-container_S {
+.subject_S {
   --scale-s: 1;
   --translate-person-y-s: -37px;
   --translate-person-x-s: -84px;
@@ -39,7 +39,7 @@
   --translate-person-x: var(--translate-person-x-s);
 }
 
-.card-container_mobile {
+.subject_mobile {
   --scale-s: 1;
   --translate-person-y-s: -37px;
   --translate-person-x-s: 0px;
@@ -49,7 +49,7 @@
   --translate-person-x: var(--translate-person-x-s);
 }
 
-.card-container_decorated:not(.card-container_mobile)::after {
+.subject_decorated:not(.subject_mobile)::after {
   content: "";
   position: absolute;
   top: 24%;
@@ -61,7 +61,7 @@
   transition: transform var(--animation-duration) ease, opacity var(--animation-duration) ease;
 }
 
-.card-container_decorated.card-container_mobile::after {
+.subject_decorated.subject_mobile::after {
   content: "";
   position: absolute;
   top: 24%;
@@ -72,30 +72,30 @@
   background-image: url("../../../assets/icons/person_paginator_segment.svg");
 }
 
-.card-container_decorated:not(.card-container_mobile):hover::after {
+.subject_decorated:not(.subject_mobile):hover::after {
   opacity: 1;
   transform: translateX(-153px);
 }
 
-.card-container>:global(#person-frame) {
+.subject>:global(#person-frame) {
   transition: transform var(--animation-duration) ease;
   transform-origin: left top;
 }
 
-.card-container:not(.card-container_mobile):hover>:global(#person-frame) {
+.subject:not(.subject_mobile):hover>:global(#person-frame) {
   transform: scale(var(--scale)) translateY(var(--translate-person-y)) translateX(var(--translate-person-x));
 }
 
-.card-container:not(.card-container_mobile):hover>:global(#person-info) {
+.subject:not(.subject_mobile):hover>:global(#person-info) {
   bottom: 8px;
   opacity: 1;
 }
 
-.card-container_mobile>:global(#person-frame) {
+.subject_mobile>:global(#person-frame) {
   transform: scale(var(--scale)) translateY(var(--translate-person-y)) translateX(var(--translate-person-x));
 }
 
-.card-container_mobile>:global(#person-info) {
+.subject_mobile>:global(#person-info) {
   bottom: 8px;
   left: unset;
   opacity: 1;

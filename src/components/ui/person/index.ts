@@ -1,1 +1,0 @@
-export { PersonUI } from "./person";

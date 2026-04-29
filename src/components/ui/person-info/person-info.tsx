@@ -16,7 +16,7 @@ export const PersonInfoUI: FC<TPersonInfoUIProps> = ({ info }) => {
   const { isLaptop, isTablet, isMobile } = useMedia();
   const mobileResolution = isLaptop || isTablet || isMobile;
 
-  const { character, actor, position } = info;
+  const { main, extra, position } = info;
 
   return (
     <div
@@ -29,16 +29,16 @@ export const PersonInfoUI: FC<TPersonInfoUIProps> = ({ info }) => {
           typography={Typography.Text_KharkivTone_400_22}
           color={Colors.Badge}
         >
-          {character}
+          {main}
         </TextUI>
         <TextUI
           typography={Typography.Text_KharkivTone_400_16}
           color={Colors.White100}
         >
-          {actor}
+          {extra}
         </TextUI>
       </div>
-      <PersonPositionUI position={position} />
+      {position && <PersonPositionUI position={position} />}
     </div>
   );
 };

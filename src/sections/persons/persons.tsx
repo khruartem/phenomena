@@ -13,8 +13,8 @@ const groups: TPersonGroup[] = [
     persons: [
       {
         info: {
-          character: "Михаил Прохоров",
-          actor: "Виктор Долгий",
+          main: "Михаил Прохоров",
+          extra: "Виктор Долгий",
           position: "phenomen",
         },
         appearance: {
@@ -27,8 +27,8 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          character: "Антон Прохоров",
-          actor: "Степан Петрухин",
+          main: "Антон Прохоров",
+          extra: "Степан Петрухин",
           position: "regular",
         },
         appearance: {
@@ -40,8 +40,8 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          character: "Олег Ларичев",
-          actor: "Леонид Стрельников",
+          main: "Олег Ларичев",
+          extra: "Леонид Стрельников",
           position: "science",
         },
         appearance: {
@@ -53,8 +53,8 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          character: "Евгений Иванов",
-          actor: "Дмитрий Грошев",
+          main: "Евгений Иванов",
+          extra: "Дмитрий Грошев",
           position: "phenomen",
         },
         appearance: {
@@ -66,8 +66,8 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          character: "Авангард Дягилев",
-          actor: "Марат Рудницкий",
+          main: "Авангард Дягилев",
+          extra: "Марат Рудницкий",
           position: "science",
         },
         appearance: {
@@ -79,8 +79,8 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          character: "Елена Ларичева",
-          actor: "Полина Черкашина",
+          main: "Елена Ларичева",
+          extra: "Полина Черкашина",
           position: "science",
         },
         appearance: {
@@ -93,8 +93,8 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          character: "Сергей Клягин",
-          actor: "Александр Сальник",
+          main: "Сергей Клягин",
+          extra: "Александр Сальник",
           position: "phenomen",
         },
         appearance: {
@@ -107,8 +107,8 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          character: "Дежурная Люба",
-          actor: "Валерия Прохорова",
+          main: "Дежурная Люба",
+          extra: "Валерия Прохорова",
           position: "regular",
         },
         appearance: {
@@ -120,8 +120,8 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          character: "Валентина Богина",
-          actor: "Светлана Мочалова",
+          main: "Валентина Богина",
+          extra: "Светлана Мочалова",
           position: "science",
         },
         appearance: {
@@ -138,52 +138,50 @@ const groups: TPersonGroup[] = [
     persons: [
       {
         info: {
-          character: "Михаил Прохоров",
-          actor: "Виктор Долгий",
-          position: "phenomen",
+          main: "Сергей Яковлев ",
+          extra:
+            "Режиссёр-постановщик, автор идеи вертикального сериала «Журнал ИВН». Глава творческой экосистемы “Открытая Территория”",
         },
         appearance: {
-          size: "L",
-          direction: "left",
+          size: "M",
           image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/dolgiy.png",
-          decorated: true,
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          direction: "right",
         },
       },
       {
         info: {
-          character: "Антон Прохоров",
-          actor: "Степан Петрухин",
-          position: "regular",
+          main: "Евгений Скочин",
+          extra: "Хореограф, актёр театра “Ленком Марка Захарова”",
         },
         appearance: {
-          size: "S",
-          direction: "left",
+          size: "M",
           image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/petruhin.png",
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          direction: "left",
         },
       },
       {
         info: {
-          character: "Олег Ларичев",
-          actor: "Леонид Стрельников",
-          position: "science",
+          main: "Арсений Аспек",
+          extra:
+            "Дизайнер-айдентик, дизайнер интерфейсов. Арт-директор творческой экосистемы «Открытая Территория» и агентства «Открытый глаз»",
         },
         appearance: {
           size: "M",
           direction: "right",
           image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/strelnikov.png",
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
       {
         info: {
-          character: "Евгений Иванов",
-          actor: "Дмитрий Грошев",
-          position: "phenomen",
+          main: "Артём Хрусталёв",
+          extra:
+            "Технический директор творческой экосистемы «Открытая Территория»",
         },
         appearance: {
-          size: "L",
+          size: "M",
           direction: "left",
           image:
             "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
@@ -191,69 +189,65 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          character: "Авангард Дягилев",
-          actor: "Марат Рудницкий",
-          position: "science",
+          main: "Леонид Стрельников ",
+          extra:
+            "Сценарист вертикального сериала «Журнал ИВН». Актёр театра «У Никитских ворот» и творческой экосистемы «Открытая Территория»",
         },
         appearance: {
-          size: "S",
+          size: "M",
+          direction: "right",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+        },
+      },
+      {
+        info: {
+          main: "Анна Сорокваша ",
+          extra: "Художник-постановщик. Перформер, художник",
+        },
+        appearance: {
+          size: "M",
           direction: "left",
           image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/rudnitskiy.png",
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
       {
         info: {
-          character: "Елена Ларичева",
-          actor: "Полина Черкашина",
-          position: "science",
+          main: "Владимир Правдин ",
+          extra: "Композитор, артист ансамбля “Аракс”",
         },
         appearance: {
           size: "M",
           direction: "right",
           image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/cherkashina.png",
-          decorated: true,
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
       {
         info: {
-          character: "Сергей Клягин",
-          actor: "Александр Сальник",
-          position: "phenomen",
+          main: "Алёна Синельникова",
+          extra:
+            "Автор идеи вертикального сериала «Журнал ИВН», специалист по продвижению. Директор по связям с общественностью творческой экосистемы «Открытая Территория»",
         },
         appearance: {
-          size: "L",
-          direction: "right",
+          size: "M",
+          direction: "left",
           image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/salnik.png",
-          decorated: true,
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
       {
         info: {
-          character: "Дежурная Люба",
-          actor: "Валерия Прохорова",
-          position: "regular",
-        },
-        appearance: {
-          size: "S",
-          direction: "right",
-          image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/prohorova.png",
-        },
-      },
-      {
-        info: {
-          character: "Валентина Богина",
-          actor: "Светлана Мочалова",
-          position: "science",
+          main: "Анастасия Авраменко",
+          extra:
+            "Режиссёр вертикального сериала «Журнал ИВН». Творец экосистемы «Открытая Территория»",
         },
         appearance: {
           size: "M",
           direction: "right",
           image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/mochalova.png",
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
     ],
@@ -275,10 +269,6 @@ export const Persons: FC = () => {
       });
   };
 
-  const setTab = (tab: TGroup) => {
-    setCurrentTab(tab);
-  };
-
   const handleScroll = (e: SyntheticEvent) => {
     const tabIndex = Math.round(e.currentTarget.scrollLeft / window.innerWidth);
     setCurrentTab(tabs[tabIndex]);
@@ -291,7 +281,6 @@ export const Persons: FC = () => {
     groupsRef,
     handleChange,
     handleScroll,
-    setTab,
   };
 
   return (

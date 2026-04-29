@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 
-import { PersonGroupUI } from "../person-group";
+import { SubjectGroupUI } from "../subject-group";
+import { CommitteeGroupUI } from "../committee-group";
 
 import type { TPersonGroupsUIProps } from "./types";
 
@@ -14,7 +15,12 @@ export const PersonGroupsUI = forwardRef<
     <ul className={styles.persons__groups} ref={ref} onScrollEnd={onScroll}>
       {groups.map((group, index) => (
         <li key={index} id={group.type} className={styles.persons__group}>
-          <PersonGroupUI persons={group.persons} />
+          {group.type === "subjects" && (
+            <SubjectGroupUI persons={group.persons} />
+          )}
+          {group.type === "committee" && (
+            <CommitteeGroupUI persons={group.persons} />
+          )}
         </li>
       ))}
     </ul>
