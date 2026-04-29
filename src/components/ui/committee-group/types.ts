@@ -1,5 +1,5 @@
 import type { TPerson } from "../../../utils/types";
 
-export type TPersonGroupUIProps = {
+export type TCommitteeGroupUIProps = {
   persons: TPerson[];
 };

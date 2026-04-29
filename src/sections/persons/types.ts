@@ -8,7 +8,6 @@ export type TPersonsContextValue = {
   groupsRef?: RefObject<HTMLUListElement | null>;
   handleChange: (tab: TGroup, index: number) => void;
   handleScroll: (e: SyntheticEvent) => void;
-  setTab: (tab: TGroup) => void;
 };
 
 export type TPersonsProviderPorps = {

@@ -7,5 +7,7 @@ import { usePersonsContext } from "../../hooks/usePersonsContext";
 export const PersonGroups: FC = () => {
   const { groups, groupsRef, handleScroll } = usePersonsContext();
 
-  return <PersonGroupsUI groups={groups} onScroll={handleScroll} ref={groupsRef} />;
+  return (
+    <PersonGroupsUI groups={groups} onScroll={handleScroll} ref={groupsRef} />
+  );
 };

@@ -12,9 +12,6 @@ const initialValue: TPersonsContextValue = {
   handleScroll: (e: SyntheticEvent) => {
     console.log(e);
   },
-  setTab: (tab: TGroup) => {
-    console.log(tab);
-  },
 };
 
 export const PersonsContext = createContext<TPersonsContextValue>(initialValue);

@@ -4,13 +4,13 @@ import clsx from "clsx";
 import { PersonFrameUI } from "../person-frame";
 import { PersonInfoUI } from "../person-info";
 
-import type { TPersonUIProps } from "./types";
+import type { TSubjectUIProps } from "./types";
 
 import { useMedia } from "../../../hooks/useMedia";
 
-import styles from "./person.module.css";
+import styles from "./subject.module.css";
 
-export const PersonUI: FC<TPersonUIProps> = ({ info, appearance }) => {
+export const SubjectUI: FC<TSubjectUIProps> = ({ info, appearance }) => {
   const { isLaptop, isTablet, isMobile } = useMedia();
   const mobileResolution = isLaptop || isTablet || isMobile;
 
@@ -19,10 +19,10 @@ export const PersonUI: FC<TPersonUIProps> = ({ info, appearance }) => {
   return (
     <div
       className={clsx(
-        styles["card-container"],
-        styles[`card-container_${isMobile ? "S" : size}`],
-        decorated && styles["card-container_decorated"],
-        mobileResolution && styles["card-container_mobile"],
+        styles["subject"],
+        styles[`subject_${isMobile ? "S" : size}`],
+        decorated && styles["subject_decorated"],
+        mobileResolution && styles["subject_mobile"],
       )}
     >
       <PersonFrameUI

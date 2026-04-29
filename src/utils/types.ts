@@ -33,15 +33,15 @@ export type TPersonIcon = "regular" | "phenomen" | "science";
 export type TPersonPosition = keyof typeof Positions;
 
 export type TPersonInfo = {
-  character: string;
-  actor: string;
-  position: TPersonPosition;
+  main: string;
+  extra: string;
+  position?: TPersonPosition;
 };
 
 export type TPersonAppearance = {
   size: TPersonSize;
   direction: TPersonDirection;
-  image: string;
+  image?: string;
   caption?: string;
   decorated?: boolean;
 };
