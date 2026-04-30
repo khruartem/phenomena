@@ -8,6 +8,7 @@ import type { TCommitteeGroupUIProps } from "./types";
 import { useMedia } from "../../../hooks/useMedia";
 
 import styles from "./committee-group.module.css";
+import { usePxToVw } from "../../../hooks/usePxToVw";
 
 export const CommitteeGroupUI: FC<TCommitteeGroupUIProps> = ({ persons }) => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
@@ -26,12 +27,20 @@ export const CommitteeGroupUI: FC<TCommitteeGroupUIProps> = ({ persons }) => {
     isMobile && "33.81vw",
   );
 
+  // const rowGap = usePxToVw(clsx(isDesktop && 40));
+  const rowGap = usePxToVw({ desktop: 40, laptop: 40 });
+
   const paddingBlockStart = clsx(isLarge && "3.13vw", isMobile && "18.10vw");
 
   return (
     <ul
       className={styles["committee-group"]}
-      style={{ paddingInline, gap, paddingBlockStart }}
+      style={{
+        paddingInline,
+        gap,
+        rowGap: isDesktop || isLaptop ? rowGap : gap,
+        paddingBlockStart,
+      }}
     >
       {persons.map(({ info, appearance }) => (
         <li>

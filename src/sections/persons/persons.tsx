@@ -151,57 +151,6 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          main: "Евгений Скочин",
-          extra: "Хореограф, актёр театра “Ленком Марка Захарова”",
-        },
-        appearance: {
-          size: "M",
-          image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
-          direction: "left",
-        },
-      },
-      {
-        info: {
-          main: "Арсений Аспек",
-          extra:
-            "Дизайнер-айдентик, дизайнер интерфейсов. Арт-директор творческой экосистемы «Открытая Территория» и агентства «Открытый глаз»",
-        },
-        appearance: {
-          size: "M",
-          direction: "right",
-          image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
-        },
-      },
-      {
-        info: {
-          main: "Артём Хрусталёв",
-          extra:
-            "Технический директор творческой экосистемы «Открытая Территория»",
-        },
-        appearance: {
-          size: "M",
-          direction: "left",
-          image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
-        },
-      },
-      {
-        info: {
-          main: "Леонид Стрельников ",
-          extra:
-            "Сценарист вертикального сериала «Журнал ИВН». Актёр театра «У Никитских ворот» и творческой экосистемы «Открытая Территория»",
-        },
-        appearance: {
-          size: "M",
-          direction: "right",
-          image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
-        },
-      },
-      {
-        info: {
           main: "Анна Сорокваша ",
           extra: "Художник-постановщик. Перформер, художник",
         },
@@ -214,8 +163,33 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
+          main: "Евгений Скочин",
+          extra: "Хореограф, актёр театра “Ленком Марка Захарова”",
+        },
+        appearance: {
+          size: "M",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          direction: "left",
+        },
+      },
+      {
+        info: {
           main: "Владимир Правдин ",
           extra: "Композитор, артист ансамбля “Аракс”",
+        },
+        appearance: {
+          size: "M",
+          direction: "right",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+        },
+      },
+      {
+        info: {
+          main: "Арсений Аспек",
+          extra:
+            "Дизайнер-айдентик, дизайнер интерфейсов. Арт-директор творческой экосистемы «Открытая Территория» и агентства «Открытый глаз»",
         },
         appearance: {
           size: "M",
@@ -239,9 +213,35 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
+          main: "Артём Хрусталёв",
+          extra:
+            "Технический директор творческой экосистемы «Открытая Территория»",
+        },
+        appearance: {
+          size: "M",
+          direction: "left",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+        },
+      },
+      {
+        info: {
           main: "Анастасия Авраменко",
           extra:
             "Режиссёр вертикального сериала «Журнал ИВН». Творец экосистемы «Открытая Территория»",
+        },
+        appearance: {
+          size: "M",
+          direction: "right",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+        },
+      },
+      {
+        info: {
+          main: "Леонид Стрельников ",
+          extra:
+            "Сценарист вертикального сериала «Журнал ИВН». Актёр театра «У Никитских ворот» и творческой экосистемы «Открытая Территория»",
         },
         appearance: {
           size: "M",
