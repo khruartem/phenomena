@@ -1,11 +1,17 @@
+/* .person-info {
+--bottom-position: -104px;
+--animation-duration: 1s;
+position: absolute;
+opacity: 0;
+bottom: var(--bottom-position);
+left: 8px;
+transition: bottom var(--animation-duration) ease, opacity var(--animation-duration) ease;
+display: flex;
+flex-direction: column;
+gap: 16px;
+} */
+
 .person-info {
-  --bottom-position: -104px;
-  --animation-duration: 1s;
-  position: absolute;
-  opacity: 0;
-  bottom: var(--bottom-position);
-  left: 8px;
-  transition: bottom var(--animation-duration) ease, opacity var(--animation-duration) ease;
   display: flex;
   flex-direction: column;
   gap: 16px;

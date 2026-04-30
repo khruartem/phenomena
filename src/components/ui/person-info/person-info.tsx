@@ -8,22 +8,13 @@ import type { TPersonInfoUIProps } from "./types";
 import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
 
-import { useMedia } from "../../../hooks/useMedia";
-
 import styles from "./person-info.module.css";
 
-export const PersonInfoUI: FC<TPersonInfoUIProps> = ({ info }) => {
-  const { isLaptop, isTablet, isMobile } = useMedia();
-  const mobileResolution = isLaptop || isTablet || isMobile;
-
+export const PersonInfoUI: FC<TPersonInfoUIProps> = ({ info, style }) => {
   const { main, extra, position } = info;
 
   return (
-    <div
-      id="person-info"
-      className={styles["person-info"]}
-      style={{ alignItems: mobileResolution ? "center" : undefined }}
-    >
+    <div id="person-info" className={styles["person-info"]} style={style}>
       <div className={styles["person-info__main"]}>
         <TextUI
           typography={Typography.Text_KharkivTone_400_22}
