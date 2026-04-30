@@ -15,17 +15,24 @@ import personsBackgroundMobile from "../../../assets/persons_mobile.png";
 import { useMedia } from "../../../hooks/useMedia";
 
 import styles from "./persons.module.css";
+import { usePxToVw } from "../../../hooks/usePxToVw";
 
 export const PersonsUI: FC = () => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
-  const personsBackground = clsx(
+  const paddingBlock = clsx(isLarge && "7.08vw 17.19vw");
+
+  const backgroundImage = `url(${clsx(
     isLarge && personsBackgroundLarge,
     isDesktop && personsBackgroundDesktop,
     isLaptop && personsBackgroundLaptop,
     isTablet && personsBackgroundTablet,
     isMobile && personsBackgroundMobile,
-  );
+  )}`;
+  const backgroundSize = clsx(isLaptop && "110%");
+  const backgroundPosition = clsx(isLaptop && "50% -50%");
+
+  const minHeight = usePxToVw({ desktop: 1088, laptop: 1400 });
 
   return (
     <SectionUI
@@ -34,8 +41,11 @@ export const PersonsUI: FC = () => {
       paddingedInline={false}
       className={styles.persons}
       style={{
-        paddingBlock: clsx(isLarge && "7.08vw 17.19vw"),
-        backgroundImage: `url(${personsBackground})`,
+        paddingBlock,
+        backgroundImage,
+        backgroundSize,
+        backgroundPosition,
+        minHeight,
       }}
     >
       <div

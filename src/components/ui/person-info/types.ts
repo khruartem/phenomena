@@ -1,7 +1,8 @@
 import type { CSSProperties } from "react";
-import type { TPersonInfo } from "../../../utils/types";
+import type { TGroup, TPersonInfo } from "../../../utils/types";
 
 export type TPersonInfoUIProps = {
   info: TPersonInfo;
+  type: TGroup;
   style?: CSSProperties;
 };

@@ -30,6 +30,7 @@ export const SubjectUI: FC<TSubjectUIProps> = ({ info, appearance }) => {
       />
       <PersonInfoUI
         info={info}
+        type={"subjects"}
         style={{ alignItems: mobileResolution ? "center" : undefined }}
       />
     </div>
