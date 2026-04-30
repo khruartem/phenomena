@@ -95,6 +95,16 @@
   transform: scale(var(--scale)) translateY(var(--translate-person-y)) translateX(var(--translate-person-x));
 }
 
+.subject>:global(#person-info) {
+  --bottom-position: -104px;
+  --animation-duration: 1s;
+  position: absolute;
+  opacity: 0;
+  bottom: var(--bottom-position);
+  left: 8px;
+  transition: bottom var(--animation-duration) ease, opacity var(--animation-duration) ease;
+}
+
 .subject_mobile>:global(#person-info) {
   bottom: 8px;
   left: unset;

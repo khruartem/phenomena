@@ -48,6 +48,7 @@
 
 .person__frame {
   position: relative;
+  min-width: var(--size-person);
   width: var(--size-person);
   height: var(--size-person);
 }

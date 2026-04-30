@@ -28,7 +28,10 @@ export const SubjectUI: FC<TSubjectUIProps> = ({ info, appearance }) => {
       <PersonFrameUI
         appearance={{ ...appearance, size: mobileResolution ? "S" : size }}
       />
-      <PersonInfoUI info={info} />
+      <PersonInfoUI
+        info={info}
+        style={{ alignItems: mobileResolution ? "center" : undefined }}
+      />
     </div>
   );
 };
