@@ -13,7 +13,7 @@ export const CommitteemanUI: FC<TCommitteemanUIProps> = ({
   info,
   appearance,
 }) => {
-  const maxWidth = usePxToVw({
+  const width = usePxToVw({
     large: 520,
     desktop: 368,
     laptop: 460,
@@ -24,7 +24,7 @@ export const CommitteemanUI: FC<TCommitteemanUIProps> = ({
   });
 
   return (
-    <div className={styles.committeeman} style={{ maxWidth, height }}>
+    <div className={styles.committeeman} style={{ width, height }}>
       {appearance?.image && <PersonFrameUI appearance={appearance} />}
       <PersonInfoUI type={"committee"} info={info} />
     </div>

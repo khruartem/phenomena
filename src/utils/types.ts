@@ -49,6 +49,7 @@ export type TPersonAppearance = {
 export type TPerson = {
   info: TPersonInfo;
   appearance: TPersonAppearance;
+  order?: number;
 };
 
 export type TGroup = keyof typeof Groups;
