@@ -9,11 +9,11 @@ type TConvertObject = {
   mobile?: number;
 };
 
-const useConvert = (px?: number | string) => {
+const useConvert = (px?: number) => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
   if (px) {
-    const pxNum = (typeof px === "string" ? Number(px) : px) - 0.1;
+    const pxNum = px - 0.1;
 
     const pxToVw = (px: number, viewport: number) => {
       return ((px / viewport) * 100).toFixed(2);
@@ -47,4 +47,8 @@ export const usePxToVw = (px: TConvertObject) => {
     isTablet && pxTablet,
     isMobile && pxMobile,
   );
+};
+
+export const usePxToVwConverter = (px: number) => {
+  return useConvert(px);
 };

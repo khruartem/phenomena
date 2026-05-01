@@ -7,6 +7,8 @@ import type { TPersonsContextValue } from "./types";
 
 import type { TGroup, TPersonGroup } from "../../utils/types";
 
+import { useSetOrderGroups } from "../../hooks/useSetOrderGroups";
+
 const groups: TPersonGroup[] = [
   {
     type: "subjects",
@@ -40,19 +42,6 @@ const groups: TPersonGroup[] = [
       },
       {
         info: {
-          main: "Олег Ларичев",
-          extra: "Леонид Стрельников",
-          position: "science",
-        },
-        appearance: {
-          size: "M",
-          direction: "right",
-          image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/strelnikov.png",
-        },
-      },
-      {
-        info: {
           main: "Евгений Иванов",
           extra: "Дмитрий Грошев",
           position: "phenomen",
@@ -62,19 +51,6 @@ const groups: TPersonGroup[] = [
           direction: "left",
           image:
             "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
-        },
-      },
-      {
-        info: {
-          main: "Авангард Дягилев",
-          extra: "Марат Рудницкий",
-          position: "science",
-        },
-        appearance: {
-          size: "S",
-          direction: "left",
-          image:
-            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/rudnitskiy.png",
         },
       },
       {
@@ -116,6 +92,32 @@ const groups: TPersonGroup[] = [
           direction: "right",
           image:
             "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/prohorova.png",
+        },
+      },
+      {
+        info: {
+          main: "Авангард Дягилев",
+          extra: "Марат Рудницкий",
+          position: "science",
+        },
+        appearance: {
+          size: "S",
+          direction: "left",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/rudnitskiy.png",
+        },
+      },
+      {
+        info: {
+          main: "Олег Ларичев",
+          extra: "Леонид Стрельников",
+          position: "science",
+        },
+        appearance: {
+          size: "M",
+          direction: "right",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/strelnikov.png",
         },
       },
       {
@@ -275,7 +277,7 @@ export const Persons: FC = () => {
   };
 
   const contextValue: TPersonsContextValue = {
-    groups,
+    groups: useSetOrderGroups(groups),
     tabs,
     currentTab,
     groupsRef,
