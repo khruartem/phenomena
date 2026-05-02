@@ -7,8 +7,6 @@ import type { TPersonsContextValue } from "./types";
 
 import type { TGroup, TPersonGroup } from "../../utils/types";
 
-import { useSetOrderGroups } from "../../hooks/useSetOrderGroups";
-
 const groups: TPersonGroup[] = [
   {
     type: "subjects",
@@ -277,7 +275,7 @@ export const Persons: FC = () => {
   };
 
   const contextValue: TPersonsContextValue = {
-    groups: useSetOrderGroups(groups),
+    groups,
     tabs,
     currentTab,
     groupsRef,

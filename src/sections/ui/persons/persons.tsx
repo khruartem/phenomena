@@ -2,8 +2,7 @@ import type { FC } from "react";
 import clsx from "clsx";
 
 import { SectionUI } from "../section";
-import { SectionTitleUI } from "../../../components/ui/section-title";
-import { PersonTabBar } from "../../../components/person-tab-bar";
+import { PersonsTopUI } from "../persons-top";
 import { PersonGroups } from "../../../components/person-groups";
 
 import personsBackgroundLarge from "../../../assets/persons_large.png";
@@ -13,18 +12,22 @@ import personsBackgroundTablet from "../../../assets/persons_tablet.png";
 import personsBackgroundMobile from "../../../assets/persons_mobile.png";
 
 import { useMedia } from "../../../hooks/useMedia";
+import { usePxToVw } from "../../../hooks/usePxToVw";
 
 import styles from "./persons.module.css";
-import { usePxToVw } from "../../../hooks/usePxToVw";
 
 export const PersonsUI: FC = () => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
   const paddingBlockStart = usePxToVw({
     large: 210,
+    desktop: 120,
+    laptop: 120,
   });
   const paddingBlockEnd = usePxToVw({
     large: 330,
+    desktop: 72,
+    laptop: 72,
   });
 
   const backgroundImage = `url(${clsx(
@@ -34,10 +37,8 @@ export const PersonsUI: FC = () => {
     isTablet && personsBackgroundTablet,
     isMobile && personsBackgroundMobile,
   )}`;
-  const backgroundSize = clsx(isLaptop && "110%");
-  const backgroundPosition = clsx(isLaptop && "50% -50%");
-
-  // const minHeight = usePxToVw({ desktop: 1088, laptop: 1400 });
+  const backgroundSize = clsx(isLaptop && "116%");
+  const backgroundPosition = clsx(isLaptop && "50% -4%");
 
   return (
     <SectionUI
@@ -51,18 +52,9 @@ export const PersonsUI: FC = () => {
         backgroundImage,
         backgroundSize,
         backgroundPosition,
-        // minHeight,
       }}
     >
-      <div
-        className={styles.persons__top}
-        style={{ width: clsx(isLarge && "72.08vw") }}
-      >
-        <SectionTitleUI className={styles.persons__title}>
-          {"Действующие лица"}
-        </SectionTitleUI>
-        <PersonTabBar />
-      </div>
+      <PersonsTopUI />
       <PersonGroups />
     </SectionUI>
   );
