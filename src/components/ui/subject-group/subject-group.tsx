@@ -11,9 +11,9 @@ import { usePxToVw } from "../../../hooks/usePxToVw";
 import styles from "./subject-group.module.css";
 
 export const SubjectGroupUI: FC<TSubjectGroupUIProps> = ({ persons }) => {
-  const { isLarge } = useMedia();
+  const { isLarge, isDesktop } = useMedia();
 
-  const setCardStyle = (index: number) => {
+  const setLiStyle = (index: number) => {
     return {
       marginInlineEnd: clsx(
         isLarge && index === 0 && "2.40vw",
@@ -32,6 +32,7 @@ export const SubjectGroupUI: FC<TSubjectGroupUIProps> = ({ persons }) => {
         isLarge && index === 6 && "-0.52vw",
         isLarge && index === 8 && "4.27vw",
       ),
+      marginInline: clsx(isDesktop && index === 4 && "auto"),
     } as CSSProperties;
   };
 
@@ -43,15 +44,25 @@ export const SubjectGroupUI: FC<TSubjectGroupUIProps> = ({ persons }) => {
     mobile: 16,
   });
 
-  const paddingBlockEnd = usePxToVw({ large: 40 });
+  const columnGap = usePxToVw({ desktop: 34, laptop: 26 });
+  const rowGap = usePxToVw({ laptop: 40 });
+
+  const paddingBlockStart = usePxToVw({ desktop: 60 });
+  const paddingBlockEnd = usePxToVw({ large: 40, desktop: 140 });
 
   return (
     <ul
       className={styles["subject-group"]}
-      style={{ paddingInline, paddingBlockEnd }}
+      style={{
+        paddingInline,
+        paddingBlockStart,
+        paddingBlockEnd,
+        columnGap,
+        rowGap,
+      }}
     >
       {persons.map(({ info, appearance }, index) => (
-        <li style={setCardStyle(index)}>
+        <li style={setLiStyle(index)}>
           <SubjectUI
             info={info}
             appearance={{

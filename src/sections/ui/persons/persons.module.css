@@ -3,15 +3,3 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.persons__top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.persons__title {
-  width: min-content;
-  align-self: flex-start;
-}

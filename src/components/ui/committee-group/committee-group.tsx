@@ -33,6 +33,9 @@ export const CommitteeGroupUI: FC<TCommitteeGroupUIProps> = ({ persons }) => {
     tablet: 56,
     mobile: 76,
   });
+  const paddingBlockEnd = usePxToVw({
+    laptop: 72,
+  });
 
   return (
     <ul
@@ -42,6 +45,7 @@ export const CommitteeGroupUI: FC<TCommitteeGroupUIProps> = ({ persons }) => {
         gap,
         rowGap: isDesktop || isLaptop ? rowGap : gap,
         paddingBlockStart,
+        paddingBlockEnd,
       }}
     >
       {persons.map(({ info, appearance }) => (
