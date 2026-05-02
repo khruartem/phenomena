@@ -43,8 +43,13 @@ export const SubjectGroupUI: FC<TSubjectGroupUIProps> = ({ persons }) => {
     mobile: 16,
   });
 
+  const paddingBlockEnd = usePxToVw({ large: 40 });
+
   return (
-    <ul className={styles["subject-group"]} style={{ paddingInline }}>
+    <ul
+      className={styles["subject-group"]}
+      style={{ paddingInline, paddingBlockEnd }}
+    >
       {persons.map(({ info, appearance }, index) => (
         <li style={setCardStyle(index)}>
           <SubjectUI
