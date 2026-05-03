@@ -1,68 +1,21 @@
-import { type CSSProperties, type FC } from "react";
-import clsx from "clsx";
+import { type FC } from "react";
 
 import { SubjectUI } from "../subject";
+import { SubjectGroupItemUI } from "../subject-group-item";
 
 import type { TSubjectGroupUIProps } from "./types";
 
-import { useMedia } from "../../../hooks/useMedia";
-import { usePxToVw } from "../../../hooks/usePxToVw";
+import { useSetStyle } from "./useSetStyle";
 
 import styles from "./subject-group.module.css";
 
 export const SubjectGroupUI: FC<TSubjectGroupUIProps> = ({ persons }) => {
-  const { isLarge, isDesktop } = useMedia();
-
-  const setLiStyle = (index: number) => {
-    return {
-      marginInlineEnd: clsx(
-        isLarge && index === 0 && "2.40vw",
-        isLarge && index === 1 && "6.04vw",
-        isLarge && index === 2 && "1.98vw",
-        isLarge && index === 5 && "3.33vw",
-        isLarge && index === 6 && "2.29vw",
-        isLarge && index === 7 && "1.04vw",
-      ),
-      marginBlockStart: clsx(
-        isLarge && index === 0 && "5.52vw",
-        isLarge && index === 1 && "7.50vw",
-        isLarge && index === 3 && "9.69vw",
-        isLarge && index === 4 && "-1.67vw",
-        isLarge && index === 5 && "4.27vw",
-        isLarge && index === 6 && "-0.52vw",
-        isLarge && index === 8 && "4.27vw",
-      ),
-      marginInline: clsx(isDesktop && index === 4 && "auto"),
-    } as CSSProperties;
-  };
-
-  const paddingInline = usePxToVw({
-    large: 156,
-    desktop: 107,
-    laptop: 42,
-    tablet: 30,
-    mobile: 16,
-  });
-
-  const columnGap = usePxToVw({ desktop: 34, laptop: 26, tablet: 36 });
-  const rowGap = usePxToVw({ laptop: 40, tablet: 40, mobile: 20 });
-
-  const paddingBlockStart = usePxToVw({ desktop: 60, tablet: 40, mobile: 20 });
-  const paddingBlockEnd = usePxToVw({ large: 40, desktop: 140 });
+  const ulStyle = useSetStyle();
 
   return (
-    <ul
-      className={styles["subject-group"]}
-      style={{
-        paddingInline,
-        paddingBlockStart,
-        paddingBlockEnd,
-        columnGap,
-        rowGap,
-      }}
-    >
+    <ul className={styles["subject-group"]} style={ulStyle}>
       {persons.map(({ info, appearance }, index) => (
-        <li style={setLiStyle(index)}>
+        <SubjectGroupItemUI key={index} index={index}>
           <SubjectUI
             info={info}
             appearance={{
@@ -70,7 +23,7 @@ export const SubjectGroupUI: FC<TSubjectGroupUIProps> = ({ persons }) => {
               caption: `Изображение персонажа ${info.main} в исполнении ${info.extra}`,
             }}
           />
-        </li>
+        </SubjectGroupItemUI>
       ))}
     </ul>
   );

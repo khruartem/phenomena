@@ -1,0 +1,4 @@
+.subject-group__item {
+  width: var(--size-card);
+  height: var(--size-card);
+}
