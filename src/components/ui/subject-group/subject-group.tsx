@@ -44,10 +44,10 @@ export const SubjectGroupUI: FC<TSubjectGroupUIProps> = ({ persons }) => {
     mobile: 16,
   });
 
-  const columnGap = usePxToVw({ desktop: 34, laptop: 26 });
-  const rowGap = usePxToVw({ laptop: 40 });
+  const columnGap = usePxToVw({ desktop: 34, laptop: 26, tablet: 36 });
+  const rowGap = usePxToVw({ laptop: 40, tablet: 40, mobile: 20 });
 
-  const paddingBlockStart = usePxToVw({ desktop: 60 });
+  const paddingBlockStart = usePxToVw({ desktop: 60, tablet: 40, mobile: 20 });
   const paddingBlockEnd = usePxToVw({ large: 40, desktop: 140 });
 
   return (

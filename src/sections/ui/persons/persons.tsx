@@ -23,11 +23,15 @@ export const PersonsUI: FC = () => {
     large: 210,
     desktop: 120,
     laptop: 120,
+    tablet: 120,
+    mobile: 72,
   });
   const paddingBlockEnd = usePxToVw({
     large: 330,
     desktop: 72,
     laptop: 72,
+    tablet: 80,
+    mobile: 16,
   });
 
   const backgroundImage = `url(${clsx(

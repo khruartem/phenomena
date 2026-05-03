@@ -26,11 +26,12 @@ export const PersonsTopUI: FC = () => {
     large: 24,
     laptop: 80,
   });
+  const gap = usePxToVw({ mobile: 12 });
 
   return (
     <div
       className={styles.persons__top}
-      style={{ width, paddingInlineStart, paddingInlineEnd }}
+      style={{ width, paddingInlineStart, paddingInlineEnd, gap }}
     >
       <SectionTitleUI className={styles.persons__title}>
         {"Действующие лица"}
