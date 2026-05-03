@@ -7,14 +7,10 @@ import type { TLayoutProps } from "./types";
 import { usePageContext } from "../hooks/usePageContext";
 
 export const Layout: FC<TLayoutProps> = ({ children }) => {
-  const pageContext = usePageContext();
+  const { noHeader, noFooter, className } = usePageContext();
 
   return (
-    <LayoutUI
-      noHeader={pageContext?.noHeader}
-      noFooter={pageContext?.noFooter}
-      className={pageContext?.className}
-    >
+    <LayoutUI noHeader={noHeader} noFooter={noFooter} className={className}>
       {children}
     </LayoutUI>
   );

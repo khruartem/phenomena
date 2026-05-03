@@ -54,7 +54,6 @@
 
   <symbol id="segment-right-primary" viewBox="0 0 18 60">
     <path fill="currentColor" d="M15 0H0v60h.515C2.106 60 3.632 59.368 4.757 58.243L16.243 46.757C17.368 45.632 18 44.106 18 42.515V3c0-1.657-1.343-3-3-3z" />
-    <!-- <circle cx="15" cy="57" r="3" fill="#D8A48C"/> -->
     <path fill="var(--circle, #D8A48C)" d="M 12 57 A 3 3 0 1 0 18 57 A 3 3 0 1 0 12 57 Z" />
   </symbol>
 
@@ -132,5 +131,24 @@
     <path fill="#f85600" d="m11 56 20-12-20-12v5.98L21.03 44 11 50.02zm18.06-12-1.51.91L12 35.58v-1.82l17.06 10.23z"/>
     <circle cx="17" cy="74" r="2" fill="#f85600"/>
     <circle cx="24" cy="74" r="1" fill="#d9d9d9"/>
+  </symbol>
+
+  <symbol id="footer-segment-left" viewBox="0 0 76 200">
+    <g clip-path="url(#a)">
+      <path fill="#310000" d="M0 68.284V180c0 11.046 8.954 20 20 20h56V0h-7.716a20 20 0 0 0-14.142 5.858L5.858 54.142A20 20 0 0 0 0 68.284"/>
+      <path stroke="#310000" stroke-width="4" d="m-11.414 52.586 164-164"/>
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h76v200H0z"/>
+      </clipPath>
+    </defs>
+  </symbol>
+
+  <symbol id="footer-segment-right" viewBox="0 0 76 200">
+    <path fill="#310000" d="M76 131.716V20C76 8.954 67.046 0 56 0H0v200h7.716a20 20 0 0 0 14.142-5.858l48.284-48.284A20 20 0 0 0 76 131.716"/>
+    <circle cx="70" cy="194" r="6" fill="#310000"/>
+    <circle cx="70" cy="178" r="6" fill="#310000"/>
+    <circle cx="54" cy="194" r="6" fill="#310000"/>
   </symbol>
 </svg>

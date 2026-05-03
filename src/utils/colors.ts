@@ -8,6 +8,7 @@ const Colors = {
   Dark80: "#383838",
   Fire: "#F85600",
   Red: "#FF1F00",
+  Wine: "#310000",
 } as const;
 
 type Colors = (typeof Colors)[keyof typeof Colors];
