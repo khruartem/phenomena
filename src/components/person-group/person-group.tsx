@@ -4,6 +4,7 @@ import { SubjectGroupUI } from "../ui/subject-group";
 import { CommitteeGroupUI } from "../ui/committee-group";
 
 import type { TPersonGroupProps } from "./types";
+
 import { useMedia } from "../../hooks/useMedia";
 import { useSetOrderPersons } from "../../hooks/useSetOrderPersons";
 

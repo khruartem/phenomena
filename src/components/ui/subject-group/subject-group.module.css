@@ -6,8 +6,3 @@
   justify-content: center;
   width: 100%;
 }
-
-.subject-group>li {
-  width: var(--size-card);
-  height: var(--size-card);
-}

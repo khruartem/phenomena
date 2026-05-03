@@ -5,7 +5,7 @@ import { PersonInfoUI } from "../person-info";
 
 import type { TCommitteemanUIProps } from "./types";
 
-import { usePxToVw } from "../../../hooks/usePxToVw";
+import { useSetStyle } from "./useSetStyle";
 
 import styles from "./committeeman.module.css";
 
@@ -13,18 +13,10 @@ export const CommitteemanUI: FC<TCommitteemanUIProps> = ({
   info,
   appearance,
 }) => {
-  const width = usePxToVw({
-    large: 520,
-    desktop: 368,
-    laptop: 460,
-  });
-  const height = usePxToVw({
-    large: 228,
-    desktop: 268,
-  });
+  const divStyle = useSetStyle();
 
   return (
-    <div className={styles.committeeman} style={{ width, height }}>
+    <div className={styles.committeeman} style={divStyle}>
       {appearance?.image && <PersonFrameUI appearance={appearance} />}
       <PersonInfoUI type={"committee"} info={info} />
     </div>
