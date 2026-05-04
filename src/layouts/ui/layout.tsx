@@ -11,13 +11,19 @@ import styles from "./layout.module.css";
 export const LayoutUI: FC<TLayoutUIProps> = ({
   className,
   children,
-  noHeader = false,
-  noFooter = false,
+  noHeader,
+  noFooter,
 }) => {
   return (
     <>
       {!noHeader && <HeaderUI />}
-      <main className={clsx(styles.main, className && className)}>
+      <main
+        className={clsx(
+          styles.main,
+          noHeader && noFooter && styles.main_blank,
+          className && className,
+        )}
+      >
         {children}
       </main>
       {!noFooter && <FooterUI />}
