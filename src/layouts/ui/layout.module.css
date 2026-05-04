@@ -3,3 +3,7 @@
   flex-direction: column;
   align-items: center;
 }
+
+.main_blank {
+  height: 100dvh;
+}
