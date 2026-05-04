@@ -1,8 +1,10 @@
 .footer__container {
+  width: 100%;
   display: flex;
   gap: 0;
 }
 
 .footer__body {
+  width: 100%;
   background-color: var(--wine);
 }

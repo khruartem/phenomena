@@ -58,3 +58,5 @@ export type TPersonGroup = {
   type: TGroup;
   persons: TPerson[];
 };
+
+export type TContactType = "email" | "phone";

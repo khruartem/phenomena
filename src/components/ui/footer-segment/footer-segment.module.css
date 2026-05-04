@@ -1,0 +1,26 @@
+.footer-segment-inline {
+  min-width: 76px;
+  min-height: 200px;
+}
+
+.footer-segment-inline_left {
+  margin-inline-end: -1px;
+}
+
+.footer-segment-inline_right {
+  margin-inline-start: -1px;
+}
+
+.footer-segment-block {
+  min-width: 388px;
+  width: 100%;
+  min-height: 44px;
+}
+
+.footer-segment-block_top {
+  margin-block-end: -1px;
+}
+
+.footer-segment-block_bottom {
+  margin-block-start: -1px;
+}
