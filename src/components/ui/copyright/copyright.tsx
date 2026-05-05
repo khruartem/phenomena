@@ -6,16 +6,17 @@ import { TextUI } from "../text";
 import type { TCopirightUIProps } from "./types";
 
 import { Typography } from "../../../utils/typography";
-
-import styles from "./copiright.module.css";
 import { Colors } from "../../../utils/colors";
 
-export const CopyrightUI: FC<TCopirightUIProps> = ({ year }) => {
+import styles from "./copiright.module.css";
+
+export const CopyrightUI: FC<TCopirightUIProps> = ({ year, style }) => {
   return (
     <TextUI
       typography={Typography.Text_Onest_300_14}
       color={Colors.White100}
       className={styles.copiright}
+      style={style}
     >
       {`${year} Создано под эгидой творческой экосистемы `}
       <Link

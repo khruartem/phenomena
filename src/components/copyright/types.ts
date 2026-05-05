@@ -1,6 +1,5 @@
 import type { CSSProperties } from "react";
 
-export type TCopirightUIProps = {
-  year: number;
+export type TCopyrightProps = {
   style?: CSSProperties;
 };

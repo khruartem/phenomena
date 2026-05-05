@@ -1,0 +1,13 @@
+.contacts-ivn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts-ivn__span::before {
+  content: "[";
+}
+
+.contacts-ivn__span::after {
+  content: "/]";
+}
