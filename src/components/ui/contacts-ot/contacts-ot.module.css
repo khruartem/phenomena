@@ -1,0 +1,13 @@
+.contacts-ot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px
+}
+
+.contacts-ot__list {
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  gap: 8px
+}

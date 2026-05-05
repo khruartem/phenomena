@@ -1,22 +1,6 @@
-.contacts {
+.contact-info {
   display: flex;
-}
-
-.contacts_ivn {
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.contacts_ot {
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.contacts_ivn__span::before {
-  content: "[";
-}
-
-.contacts_ivn__span::after {
-  content: "/]";
+  width: 100%;
 }

@@ -16,7 +16,5 @@ export const ContactLink: FC<TContactLinkProps> = ({ type, contact }) => {
       : contact;
   const link = prefix + contactEdited;
 
-  console.log(contactEdited);
-
   return <ContactLinkUI type={type} link={link} contact={contact} />;
 };
