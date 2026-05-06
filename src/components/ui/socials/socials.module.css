@@ -7,6 +7,8 @@
 .socials__item {
   padding: 6px;
   color: var(--fire);
+  min-width: 40px;
+  min-height: 40px;
 }
 
 .socials__item:hover svg {

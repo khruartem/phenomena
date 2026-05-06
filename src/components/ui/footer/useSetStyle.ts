@@ -5,7 +5,7 @@ import { useMedia } from "../../../hooks/useMedia";
 export const useSetStyle = (): CSSProperties => {
   const { isMobile } = useMedia();
 
-  const paddingInline = isMobile ? 30 : 20;
+  const paddingInline = isMobile ? 16 : 20;
 
   return {
     paddingInline,

@@ -10,5 +10,13 @@ export const useSetStyle = (): CSSProperties => {
     mobile: 16,
   });
 
-  return { paddingInline };
+  const paddingBlockStart = usePxToVw({
+    large: 44,
+    desktop: 44,
+    laptop: 44,
+    tablet: 34,
+    mobile: 0,
+  });
+
+  return { paddingInline, paddingBlockStart };
 };

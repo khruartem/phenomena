@@ -1,7 +1,11 @@
 .contacts-ivn {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+.contacts-ivn__top {
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts-ivn__span::before {
