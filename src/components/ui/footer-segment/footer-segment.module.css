@@ -12,15 +12,14 @@
 }
 
 .footer-segment-block {
-  min-width: 388px;
   width: 100%;
   min-height: 44px;
 }
 
 .footer-segment-block_top {
-  margin-block-end: -1px;
+  margin-block-end: -4px;
 }
 
 .footer-segment-block_bottom {
-  margin-block-start: -1px;
+  margin-block-start: -3px;
 }
