@@ -152,28 +152,28 @@
     <circle cx="54" cy="194" r="6" fill="#310000"/>
   </symbol>
 
-  <symbol id="footer-segment-top" viewBox="0 0 388 44">
-    <g clip-path="url(#clip0_516_11436)">
-      <path d="M343.858 -1.92952e-06L8 -7.72737e-06C3.58173 -7.80506e-06 -1.56562e-07 3.58171 -3.49692e-07 7.99999L-1.9233e-06 44L388 44C388 41.4388 386.983 38.9826 385.172 37.1716L350.929 2.92893C349.054 1.05357 346.51 -1.81359e-06 343.858 -1.92952e-06Z" fill="#310000"/>
-      <line x1="345.414" y1="-15.4142" x2="509.414" y2="148.586" stroke="#310000" stroke-width="4"/>
+  <symbol id="footer-segment-top" viewBox="0 0 400 44">
+    <g clip-path="url(#clip0_1137_4358)">
+      <path d="M355.858 -1.92951e-06L8 -7.73206e-06C3.58173 -7.80716e-06 -1.56562e-07 3.58171 -3.49692e-07 7.99999L-1.9233e-06 44L400 44C400 41.4388 398.983 38.9826 397.172 37.1716L362.929 2.92893C361.054 1.05357 358.51 -1.81358e-06 355.858 -1.92951e-06Z" fill="#310000"/>
+      <line x1="357.414" y1="-15.4142" x2="521.414" y2="148.586" stroke="#310000" stroke-width="4"/>
     </g>
     <defs>
-      <clipPath id="clip0_516_11436">
-        <rect width="388" height="44" fill="white"/>
+      <clipPath id="clip0_1137_4358">
+        <rect width="400" height="44" fill="white"/>
       </clipPath>
     </defs>
   </symbol>
 
-  <symbol id="footer-segment-bottom" viewBox="0 0 388 44">
-    <g clip-path="url(#clip0_516_11451)">
+  <symbol id="footer-segment-bottom" viewBox="0 0 400 44">
+    <g clip-path="url(#clip0_1137_4373)">
       <circle cx="5" cy="39" r="5" transform="rotate(90 5 39)" fill="#310000"/>
       <circle cx="19" cy="39" r="5" transform="rotate(90 19 39)" fill="#310000"/>
       <circle cx="5" cy="25" r="5" transform="rotate(90 5 25)" fill="#310000"/>
-      <path d="M44.1422 44L380 44C384.418 44 388 40.4183 388 36L388 -2.45894e-05L-1.9233e-06 0C-1.81135e-06 2.56116 1.01741 5.01741 2.82842 6.82842L37.0711 41.0711C38.9464 42.9464 41.49 44 44.1422 44Z" fill="#310000"/>
+      <path d="M44.1421 44L392 44C396.418 44 400 40.4183 400 36L400 -2.51139e-05L-1.9233e-06 0C-1.81135e-06 2.56116 1.01741 5.01741 2.82842 6.82842L37.0711 41.0711C38.9464 42.9464 41.49 44 44.1421 44Z" fill="#310000"/>
     </g>
     <defs>
-      <clipPath id="clip0_516_11451">
-        <rect width="388" height="44" fill="white"/>
+      <clipPath id="clip0_1137_4373">
+        <rect width="400" height="44" fill="white"/>
       </clipPath>
     </defs>
   </symbol>
