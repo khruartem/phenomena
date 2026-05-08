@@ -1,3 +1,3 @@
 export type TAboutUIProps = {
-  video?: string;
+  withTrailer?: boolean;
 };

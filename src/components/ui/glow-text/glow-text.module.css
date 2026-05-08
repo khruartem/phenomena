@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* gap: 16px; */
   border-radius: 12px;
   overflow: hidden;
   position: relative;
@@ -47,9 +46,9 @@
 
 .title__base_imaged {
   background-image: url(../../../assets/big_title.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: 100%;
+  /* background-repeat: no-repeat;
+  background-position: center; */
   color: transparent;
 }
 

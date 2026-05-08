@@ -38,11 +38,9 @@ export const HeroUI: FC<THeroUIProps> = ({ externalLink }) => {
           isMobile && backgroundHeroMobile,
         )})`,
         backgroundPosition: clsx(
-          // isDesktop && "50% 40%",
           isMobile && "0 42%",
         ),
         backgroundSize: clsx(
-          // isDesktop && "123% 98%",
           isMobile && "100%",
         ),
         paddingInline: clsx(isMobile && "14px"),
@@ -58,20 +56,6 @@ export const HeroUI: FC<THeroUIProps> = ({ externalLink }) => {
         color={Colors.White80}
         className={styles.hero__label}
         style={{
-          // paddingBlockEnd: clsx(
-          //   isLarge && "13.33vw",
-          //   isDesktop && "12.88vw",
-          //   isLaptop && "29.30vw",
-          //   isTablet && "26.56vw",
-          //   isMobile && "29.52vw",
-          // ),
-          // paddingBlockStart: clsx(
-          //   isLarge && "4.5vw",
-          //   isDesktop && "6vw",
-          //   isLaptop && "22.7vw",
-          //   isTablet && "18.7vw",
-          //   isMobile && "19vw",
-          // ),
           paddingBlock: clsx(
             isLarge && "4.5vw 13.33vw",
             isDesktop && "6vw 12.88vw",
