@@ -9,6 +9,7 @@ export const Icon: FC<TIconProps> = ({
   color,
   className,
   style,
+  onClick,
 }) => {
   const spriteUrl = `${import.meta.env.BASE_URL}sprite.svg`;
   const href = `${spriteUrl}#${name}`;
@@ -19,6 +20,7 @@ export const Icon: FC<TIconProps> = ({
       height={height}
       className={className}
       style={{ ...style, color: color }}
+      onClick={onClick}
     >
       <use href={href} />
     </svg>

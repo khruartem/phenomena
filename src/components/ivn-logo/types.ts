@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
-import type { TLogoType } from "../../../utils/types";
+import type { TLogoType } from "../../utils/types";
 
-export type TLogoUIProps = {
+export type TIVNLogoProps = {
   type: TLogoType;
   className?: string;
   style?: CSSProperties;

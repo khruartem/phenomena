@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { LogoUI } from "../logo";
+import { IVNLogo } from "../../ivn-logo";
 import { Socials } from "../../socials";
 import { TextUI } from "../text";
 
@@ -22,7 +22,7 @@ export const ContactsIvnUI: FC = () => {
         className={styles["contacts-ivn__top"]}
         style={{ gap: isMobile ? 12 : 20 }}
       >
-        <LogoUI type="logo-full" />
+        <IVNLogo type="logo-full" />
         <TextUI
           as={"p"}
           typography={Typography.Text_Onest_500_14}

@@ -8,7 +8,7 @@ export const Menu: FC = () => {
   const items: TMenuItem[] = [
     { label: "О спектакле", to: "#about" },
     { label: "Действующие лица", to: "#persons" },
-    { label: "Фотоотчеты", to: "#gallery" },
+    // { label: "Фотоотчеты", to: "#gallery" },
   ];
 
   return <MenuUI items={items} />;

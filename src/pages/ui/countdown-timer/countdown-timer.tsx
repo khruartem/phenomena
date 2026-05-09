@@ -2,7 +2,7 @@ import type { FC } from "react";
 import clsx from "clsx";
 
 import { Page } from "../../page";
-import { LogoUI } from "../../../components/ui/logo";
+import { IVNLogoUI } from "../../../components/ui/ivn-logo";
 import { DigitsUI } from "../../../components/ui/digits";
 import { DotsUI } from "../../../components/ui/dots";
 import { TeleportUI } from "../../../components/ui/teleport";
@@ -32,7 +32,7 @@ export const CountdownTimerUI: FC<TCountdownTimerUIProps> = ({ timeLeft }) => {
         isMobile && styles.main_timer_mobile,
       )}
     >
-      <LogoUI
+      <IVNLogoUI
         type={"logo-full"}
         style={{
           marginBlockEnd: clsx(

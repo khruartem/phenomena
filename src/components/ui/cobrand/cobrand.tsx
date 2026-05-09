@@ -1,7 +1,8 @@
 import type { FC } from "react";
 
-import { LogoUI } from "../logo";
+import { IVNLogo } from "../../ivn-logo";
 import { Icon } from "../../icon";
+import { OTLogo } from "../../ot-logo";
 
 import { useMedia } from "../../../hooks/useMedia";
 
@@ -12,9 +13,9 @@ export const CobrandUI: FC = () => {
 
   return (
     <div className={styles.cobrand}>
-      <LogoUI type={isDesktop || isMobile ? "logo-sign" : "logo-full"} />
+      <IVNLogo type={isDesktop || isMobile ? "logo-sign" : "logo-full"} />
       <Icon name={"divider"} width={12} height={12} />
-      <Icon name={"ot-logo"} width={135} height={24} />
+      <OTLogo />
     </div>
   );
 };
