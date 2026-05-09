@@ -9,6 +9,7 @@
   color: var(--fire);
   min-width: 40px;
   min-height: 40px;
+  cursor: pointer;
 }
 
 .socials__item:hover svg {

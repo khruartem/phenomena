@@ -29,7 +29,6 @@ export type TPersonSize = "L" | "M" | "S";
 
 export type TPersonIcon = "regular" | "phenomen" | "science";
 
-// export type TPersonPosition = "Гражданский" | "Феномен" | "Научный сотрудник";
 export type TPersonPosition = keyof typeof Positions;
 
 export type TPersonInfo = {
@@ -60,3 +59,8 @@ export type TPersonGroup = {
 };
 
 export type TContactType = "email" | "phone";
+
+export type TSocials = {
+  icon: "telegram" | "vk";
+  onClick: () => void;
+};

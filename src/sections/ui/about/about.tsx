@@ -19,7 +19,7 @@ export const AboutUI: FC<TAboutUIProps> = ({ withTrailer }) => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
   return (
-    <SectionUI className={styles.about} gap={isLarge ? 68 : 32}>
+    <SectionUI id="about" className={styles.about} gap={isLarge ? 68 : 32}>
       <SectionTitleUI
         style={{
           paddingInlineStart: clsx(

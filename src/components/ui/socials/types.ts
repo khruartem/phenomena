@@ -1,4 +1,6 @@
+import type { TSocials } from "../../../utils/types";
+
 export type TSocialsUIProps = {
-  items: string[];
+  items: TSocials[];
   gap?: number;
 };

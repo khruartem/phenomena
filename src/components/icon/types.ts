@@ -9,4 +9,5 @@ export type TIconProps = {
   className?: string;
   style?: CSSProperties;
   title?: string;
+  onClick?: () => void;
 };
