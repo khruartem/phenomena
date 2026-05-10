@@ -13,6 +13,7 @@ export type TLogoType = "logo-full" | "logo-sign";
 export type TMenuItem = {
   label: string;
   to: string;
+  onClick?: () => void;
 };
 
 export type TMedia = {

@@ -1,19 +1,17 @@
 import type { FC } from "react";
+import clsx from "clsx";
 
 import { Menu } from "../../menu";
 import { ButtonUI } from "../button";
 import { Socials } from "../../socials";
-import { OpenNavigationUI } from "../open-navigation";
-import { BurgerUI } from "../burger";
-
-import type { TNavigationUIProps } from "./types";
+import { OpenNavigation } from "../../open-navigation";
+import { Burger } from "../../burger";
 
 import { useMedia } from "../../../hooks/useMedia";
 
 import styles from "./navigation.module.css";
-import clsx from "clsx";
 
-export const NavigationUI: FC<TNavigationUIProps> = ({ opened, onOpen }) => {
+export const NavigationUI: FC = () => {
   const { isLarge, isDesktop, isMobile } = useMedia();
   const isLargeResolution = isLarge || isDesktop;
 
@@ -34,17 +32,13 @@ export const NavigationUI: FC<TNavigationUIProps> = ({ opened, onOpen }) => {
                 {"Участвовать"}
               </ButtonUI>
             )}
-            {isLargeResolution ? (
-              <Socials />
-            ) : (
-              <OpenNavigationUI opened={opened} onOpen={onOpen} />
-            )}
+            {isLargeResolution ? <Socials /> : <OpenNavigation />}
           </div>
         </div>
       ) : (
-        <OpenNavigationUI opened={opened} onOpen={onOpen} />
+        <OpenNavigation />
       )}
-      {!isLargeResolution && <BurgerUI opened={opened} />}
+      {!isLargeResolution && <Burger />}
     </>
   );
 };
