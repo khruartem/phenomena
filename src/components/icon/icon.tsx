@@ -18,6 +18,7 @@ export const Icon: FC<TIconProps> = ({
     <svg
       width={width}
       height={height}
+      preserveAspectRatio="none"
       className={className}
       style={{ ...style, color: color }}
       onClick={onClick}

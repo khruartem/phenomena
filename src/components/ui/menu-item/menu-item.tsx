@@ -5,7 +5,7 @@ import type { TMenuItemUIProps } from "./types";
 
 import styles from "./menu-item.module.css";
 
-export const MenuItemUI: FC<TMenuItemUIProps> = ({ label, to }) => {
+export const MenuItemUI: FC<TMenuItemUIProps> = ({ label, to, onClick }) => {
   return (
     <li className={styles.menu__item}>
       <HashLink
@@ -16,6 +16,7 @@ export const MenuItemUI: FC<TMenuItemUIProps> = ({ label, to }) => {
             behavior: "smooth",
           });
         }}
+        onClick={onClick}
       >
         {label}
       </HashLink>

@@ -1,25 +1,35 @@
+.footer-segment-block {
+  background-repeat: no-repeat;
+}
+
 .footer-segment-inline {
   min-width: 76px;
   min-height: 200px;
+  background-size: cover;
 }
 
 .footer-segment-inline_left {
   margin-inline-end: -1px;
+  background-image: url(../../../assets/footer_decor_left.png);
 }
 
 .footer-segment-inline_right {
   margin-inline-start: -1px;
+  background-image: url(../../../assets/footer_decor_right.png);
 }
 
 .footer-segment-block {
   width: 100%;
   min-height: 44px;
+  background-size: 100% 100%;
 }
 
 .footer-segment-block_top {
-  margin-block-end: -4px;
+  margin-block-end: -1px;
+  background-image: url(../../../assets/footer_decor_top.png);
 }
 
 .footer-segment-block_bottom {
-  margin-block-start: -4px;
+  margin-block-start: -1px;
+  background-image: url(../../../assets/footer_decor_bottom.png);
 }

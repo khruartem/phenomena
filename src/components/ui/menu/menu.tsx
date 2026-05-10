@@ -17,8 +17,8 @@ export const MenuUI: FC<TMenuUIProps> = ({ items }) => {
         className={styles.menu__list}
         style={{ flexDirection: isLarge || isDesktop ? "row" : "column" }}
       >
-        {items.map(({ label, to }, index) => (
-          <MenuItemUI key={index} label={label} to={to} />
+        {items.map(({ label, to, onClick }, index) => (
+          <MenuItemUI key={index} label={label} to={to} onClick={onClick} />
         ))}
       </ul>
     </nav>
