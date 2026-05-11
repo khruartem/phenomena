@@ -65,3 +65,10 @@ export type TSocials = {
   icon: "telegram" | "vk";
   onClick: () => void;
 };
+
+export type TPhotoDirection = "left" | "right";
+
+export type TPhoto = {
+  src: string;
+  direction: TPhotoDirection;
+}
