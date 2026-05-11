@@ -48,7 +48,7 @@ export const Trailer: FC = () => {
     // Авто-скрытие для тач-устройств
     hideTimeoutRef.current = setTimeout(() => {
       setIsHovered(false);
-    }, 3000);
+    }, 1500);
   };
 
   const handleHideControls = () => {

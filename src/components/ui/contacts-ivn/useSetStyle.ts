@@ -6,11 +6,15 @@ export const useSetStyle = (): CSSProperties => {
 
   const flexDirection = isMobile ? "row" : "column";
   const maxWidth = isTablet ? "21.94ch" : undefined;
+  const width = isMobile ? "100%" : undefined;
+  const justifyContent = isMobile ? "space-between" : undefined;
   const gap = isMobile ? 0 : 20;
 
   return {
     flexDirection,
     maxWidth,
+    width,
+    justifyContent,
     gap,
   };
 };
