@@ -144,8 +144,8 @@ const groups: TPersonGroup[] = [
         },
         appearance: {
           size: "M",
-          // image:
-          //   "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
           direction: "right",
         },
       },
@@ -157,8 +157,8 @@ const groups: TPersonGroup[] = [
         appearance: {
           size: "M",
           direction: "left",
-          // image:
-          //   "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
       {
@@ -168,8 +168,8 @@ const groups: TPersonGroup[] = [
         },
         appearance: {
           size: "M",
-          // image:
-          //   "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
           direction: "left",
         },
       },
@@ -181,8 +181,8 @@ const groups: TPersonGroup[] = [
         appearance: {
           size: "M",
           direction: "right",
-          // image:
-          //   "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
       {
@@ -194,8 +194,8 @@ const groups: TPersonGroup[] = [
         appearance: {
           size: "M",
           direction: "right",
-          // image:
-          //   "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
       {
@@ -207,8 +207,8 @@ const groups: TPersonGroup[] = [
         appearance: {
           size: "M",
           direction: "left",
-          // image:
-          //   "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
       {
@@ -220,8 +220,8 @@ const groups: TPersonGroup[] = [
         appearance: {
           size: "M",
           direction: "left",
-          // image:
-          //   "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
       {
@@ -233,8 +233,8 @@ const groups: TPersonGroup[] = [
         appearance: {
           size: "M",
           direction: "right",
-          // image:
-          //   "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
       {
@@ -246,8 +246,8 @@ const groups: TPersonGroup[] = [
         appearance: {
           size: "M",
           direction: "right",
-          // image:
-          //   "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
+          image:
+            "https://storage.yandexcloud.net/otkter-bucket/phenomena/persons/groshev.png",
         },
       },
     ],
