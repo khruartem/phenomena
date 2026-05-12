@@ -1,23 +1,31 @@
-import type { FC } from "react";
+import { forwardRef } from "react";
 
+import { GalleryItemUI } from "../../../components/ui/gallery-item";
 import { PhotoUI } from "../../../components/ui/photo";
 
 import type { TGalleryUIProps } from "./types";
 
-import styles from "./gallery.module.css";
-import { GalleryItemUI } from "../../../components/ui/gallery-item";
 import { useSetStyle } from "./useSetSyle";
 
-export const GalleryUI: FC<TGalleryUIProps> = ({ photos }) => {
-  const ulStyle = useSetStyle();
+import styles from "./gallery.module.css";
+import { SectionUI } from "../section";
+import { useMedia } from "../../../hooks/useMedia";
 
-  return (
-    <ul className={styles.gallery} style={ulStyle}>
-      {photos.map(({ src, direction }, index) => (
-        <GalleryItemUI key={index}>
-          <PhotoUI src={src} direction={direction} />
-        </GalleryItemUI>
-      ))}
-    </ul>
-  );
-};
+export const GalleryUI = forwardRef<HTMLUListElement, TGalleryUIProps>(
+  ({ photos }, ref) => {
+    const { isLarge } = useMedia();
+    const ulStyle = useSetStyle();
+
+    return (
+      <SectionUI id="gallery" gap={isLarge ? 68 : 32}>
+        <ul className={styles.gallery} style={ulStyle} ref={ref}>
+          {photos.map(({ src, direction }, index) => (
+            <GalleryItemUI key={index}>
+              <PhotoUI src={src} direction={direction} />
+            </GalleryItemUI>
+          ))}
+        </ul>
+      </SectionUI>
+    );
+  },
+);
