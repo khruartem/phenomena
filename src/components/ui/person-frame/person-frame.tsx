@@ -103,7 +103,7 @@ export const PersonFrameUI: FC<TPersonFrameUIPorps> = ({ appearance }) => {
             strokeWidth="7"
           />
         </svg>
-        <img src={image} alt={caption} />
+        <img loading="lazy" src={image} alt={caption} />
       </div>
     </div>
   );
