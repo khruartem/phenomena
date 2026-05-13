@@ -1,4 +1,4 @@
-.persons__top {
+.section__top {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
   align-items: flex-end;
 }
 
-.persons__title {
+.section__title {
   width: min-content;
   align-self: flex-start;
 }

@@ -57,7 +57,6 @@ export const Gallery: FC = () => {
     (() => setPhotoWidth(photoWidth))();
     (() => setIncriment(Math.floor(galleryWidth / photoWidth)))();
     (() => setPaginatorLength(Math.floor(photos.length / incriment)))();
-    // console.log(photo, photoWidth, paginatorLength, galleryWidth);
 
     return () => window.removeEventListener("resize", handleResize);
   }, [incriment, width]);
