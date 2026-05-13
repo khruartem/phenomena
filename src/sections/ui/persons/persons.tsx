@@ -1,7 +1,8 @@
 import type { FC } from "react";
 
 import { SectionUI } from "../section";
-import { PersonsTopUI } from "../persons-top";
+import { SectionTopUI } from "../../../components/ui/section-top";
+import { PersonTabBar } from "../../../components/person-tab-bar";
 import { PersonGroups } from "../../../components/person-groups";
 
 import { useSetStyle } from "./useSetStyle";
@@ -19,7 +20,7 @@ export const PersonsUI: FC = () => {
       className={styles.persons}
       style={sectionStyle}
     >
-      <PersonsTopUI />
+      <SectionTopUI title="Действующие лица" tabBar={<PersonTabBar />} />
       <PersonGroups />
     </SectionUI>
   );
