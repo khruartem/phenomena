@@ -1,0 +1,13 @@
+.point {
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  background-color: var(--white80);
+}
+
+.point_current {
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: var(--fire);
+}

@@ -47,16 +47,18 @@ export const Gallery: FC = () => {
   const galleryRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
+    const handleResize = () => {
+      const photo = document.querySelector("#photo");
+      const photoWidth = photo?.clientWidth || 1;
+      const galleryWidth = galleryRef.current?.clientWidth || 0;
+
+      setPhotoWidth(photoWidth);
+      setIncriment(Math.floor(galleryWidth / photoWidth));
+      setPaginatorLength(Math.floor(photos.length / incriment));
+      setWidth(window.innerWidth);
+    };
+
     window.addEventListener("resize", handleResize);
-
-    const photo = document.querySelector("#photo");
-    const photoWidth = photo?.clientWidth || 1;
-    const galleryWidth = galleryRef.current?.clientWidth || 0;
-
-    (() => setPhotoWidth(photoWidth))();
-    (() => setIncriment(Math.floor(galleryWidth / photoWidth)))();
-    (() => setPaginatorLength(Math.floor(photos.length / incriment)))();
 
     return () => window.removeEventListener("resize", handleResize);
   }, [incriment, width]);
