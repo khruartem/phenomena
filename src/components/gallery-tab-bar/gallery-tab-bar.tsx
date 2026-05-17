@@ -12,6 +12,10 @@ export const GalleryTabBar: FC = () => {
     currentPaginatorIndex,
   } = useGalleryContext();
 
+  console.log(
+    paginatorLength,
+    currentPaginatorIndex,)
+
   return (
     <GalleryTabBarUI
       paginator={{ paginatorLength, currentPaginatorIndex }}

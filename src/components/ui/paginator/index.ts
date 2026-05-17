@@ -1,0 +1,1 @@
+export { PaginatorUI } from "./paginator";
