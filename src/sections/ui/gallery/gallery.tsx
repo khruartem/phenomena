@@ -21,7 +21,7 @@ export const GalleryUI = forwardRef<HTMLUListElement, TGalleryUIProps>(
     return (
       <SectionUI id="gallery" gap={isLarge ? 68 : 32}>
         <SectionTopUI title="Фотоотчеты" tabBar={<GalleryTabBar />} />
-        <ul className={styles.gallery} style={ulStyle} ref={ref}>
+        <ul id="photo-list" className={styles.gallery} style={ulStyle} ref={ref}>
           {photos.map(({ src, direction }, index) => (
             <GalleryItemUI key={index}>
               <PhotoUI src={src} direction={direction} />
