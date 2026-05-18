@@ -1,4 +1,4 @@
-export type TPaginatorProps = {
-  length: number;
-  currentIndex: number;
-};
+// export type TPaginatorProps = {
+//   length: number;
+//   currentIndex: number;
+// };

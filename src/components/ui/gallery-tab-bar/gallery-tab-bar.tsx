@@ -6,17 +6,17 @@ import { Paginator } from "../../paginator";
 import type { TGalleryTabBarUIProps } from "./types";
 
 export const GalleryTabBarUI: FC<TGalleryTabBarUIProps> = ({
-  paginator,
+  // paginator,
   onClickLeft,
   onClickRight,
 }) => {
-  const { paginatorLength, currentPaginatorIndex } = paginator;
+  // const { paginatorLength, currentPaginatorIndex } = paginator;
   return (
     <div>
       <ArrowUI direction={"left"} onClick={onClickLeft} />
       <Paginator
-        length={paginatorLength}
-        currentIndex={currentPaginatorIndex}
+        // length={paginatorLength}
+        // currentIndex={currentPaginatorIndex}
       />
       <ArrowUI direction={"right"} onClick={onClickRight} />
     </div>

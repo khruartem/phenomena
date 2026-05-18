@@ -5,20 +5,14 @@ import { GalleryTabBarUI } from "../ui/gallery-tab-bar";
 import { useGalleryContext } from "../../sections/gallery/gallery-context";
 
 export const GalleryTabBar: FC = () => {
-  const {
-    handleGalleryClickLeft,
-    handleGalleryClickRight,
-    paginatorLength,
-    currentPaginatorIndex,
-  } = useGalleryContext();
+  const { handleGalleryClickLeft, handleGalleryClickRight } =
+    useGalleryContext();
 
-  console.log(
-    paginatorLength,
-    currentPaginatorIndex,)
+  // const paginatorLength = calculatePaginatorLength();
 
   return (
     <GalleryTabBarUI
-      paginator={{ paginatorLength, currentPaginatorIndex }}
+      // paginator={{ paginatorLength, currentPaginatorIndex }}
       onClickLeft={handleGalleryClickLeft}
       onClickRight={handleGalleryClickRight}
     />
