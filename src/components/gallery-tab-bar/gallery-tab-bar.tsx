@@ -8,11 +8,8 @@ export const GalleryTabBar: FC = () => {
   const { handleGalleryClickLeft, handleGalleryClickRight } =
     useGalleryContext();
 
-  // const paginatorLength = calculatePaginatorLength();
-
   return (
     <GalleryTabBarUI
-      // paginator={{ paginatorLength, currentPaginatorIndex }}
       onClickLeft={handleGalleryClickLeft}
       onClickRight={handleGalleryClickRight}
     />

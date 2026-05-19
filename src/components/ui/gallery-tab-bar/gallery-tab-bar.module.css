@@ -1,0 +1,6 @@
+.gallery-tab-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 164px;
+}
