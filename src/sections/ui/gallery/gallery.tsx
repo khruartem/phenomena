@@ -4,7 +4,7 @@ import { SectionUI } from "../section";
 import { SectionTopUI } from "../../../components/ui/section-top";
 import { GalleryTabBar } from "../../../components/gallery-tab-bar";
 import { GalleryItemUI } from "../../../components/ui/gallery-item";
-import { PhotoUI } from "../../../components/ui/photo";
+import { Photo } from "../../../components/photo";
 
 import type { TGalleryUIProps } from "./types";
 
@@ -21,10 +21,15 @@ export const GalleryUI = forwardRef<HTMLUListElement, TGalleryUIProps>(
     return (
       <SectionUI id="gallery" gap={isLarge ? 68 : 32}>
         <SectionTopUI title="Фотоотчеты" tabBar={<GalleryTabBar />} />
-        <ul id="photo-list" className={styles.gallery} style={ulStyle} ref={ref}>
-          {photos.map(({ src, direction }, index) => (
+        <ul
+          id="photo-list"
+          className={styles.gallery}
+          style={ulStyle}
+          ref={ref}
+        >
+          {photos.map((photo, index) => (
             <GalleryItemUI key={index}>
-              <PhotoUI src={src} direction={direction} />
+              <Photo index={index} photo={photo} />
             </GalleryItemUI>
           ))}
         </ul>

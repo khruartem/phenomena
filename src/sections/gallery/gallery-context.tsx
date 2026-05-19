@@ -3,12 +3,9 @@ import { createComponentContext } from "../../utils/createComponentContext";
 
 const initialValue: TGalleryContextValue = {
   currentPaginatorIndex: 0,
-  calculatePaginatorLength: () => 0,
-  handlePhotoInView: (
-    index: number,
-    currentPaginatorIndex: number,
-    inView: boolean,
-  ) => console.log(index, currentPaginatorIndex, inView),
+  paginatorLength: 0,
+  handlePhotoInView: (index: number, inView: boolean) =>
+    console.log(index, inView),
   handleGalleryClickLeft: () => {},
   handleGalleryClickRight: () => {},
 };
