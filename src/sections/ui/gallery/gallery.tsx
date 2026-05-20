@@ -12,15 +12,27 @@ import { useMedia } from "../../../hooks/useMedia";
 import { useSetStyle } from "./useSetSyle";
 
 import styles from "./gallery.module.css";
+// import clsx from "clsx";
 
 export const GalleryUI = forwardRef<HTMLUListElement, TGalleryUIProps>(
   ({ photos }, ref) => {
-    const { isLarge } = useMedia();
+    const { isLarge, isDesktop } = useMedia();
     const ulStyle = useSetStyle();
 
     return (
-      <SectionUI id="gallery" gap={isLarge ? 68 : 32}>
-        <SectionTopUI title="Фотоотчеты" tabBar={<GalleryTabBar />} />
+      <SectionUI
+        id="gallery"
+        gap={isLarge ? 68 : 32}
+        paddingedInline={false}
+        paddingedInlineStart
+        paddingedInlineEnd={isLarge || isDesktop ? true : false}
+      >
+        <SectionTopUI
+          title="Фотоотчеты"
+          tabBar={<GalleryTabBar />}
+          className={styles.section__top_gallery}
+          // style={{ paddingInlineEnd: clsx( isTablet && "7.8vw") }}
+        />
         <ul
           id="photo-list"
           className={styles.gallery}

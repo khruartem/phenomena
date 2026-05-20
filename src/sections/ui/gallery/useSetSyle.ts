@@ -1,14 +1,10 @@
 import type { CSSProperties } from "react";
 import { usePxToVw } from "../../../hooks/usePxToVw";
+import { useMedia } from "../../../hooks/useMedia";
 
 export const useSetStyle = (): CSSProperties => {
-  // const paddingInline = usePxToVw({
-  //   large: 156,
-  //   desktop: 107,
-  //   laptop: 42,
-  //   tablet: 30,
-  //   mobile: 16,
-  // });
+  const { isLaptop, isTablet, isMobile } = useMedia();
+  const smallResolution = isLaptop || isTablet || isMobile;
 
   const gap = usePxToVw({
     large: 24,
@@ -27,7 +23,7 @@ export const useSetStyle = (): CSSProperties => {
   });
 
   return {
-    // paddingInline,
+    paddingInlineEnd: smallResolution ? gap : undefined,
     gap,
     height,
   };

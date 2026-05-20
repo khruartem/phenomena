@@ -12,6 +12,8 @@ export const SectionUI: FC<TSectionUIProps> = ({
   id,
   paddingedBlock = true,
   paddingedInline = true,
+  paddingedInlineStart,
+  paddingedInlineEnd,
   gap = 0,
   hidden = false,
   className,
@@ -42,7 +44,12 @@ export const SectionUI: FC<TSectionUIProps> = ({
       style={{
         display: clsx(hidden && "none"),
         paddingBlock: clsx(paddingedBlock && paddingedBlockStyle),
-        paddingInline: clsx(paddingedInline && paddingedInlineStyle),
+        paddingInlineStart: clsx(
+          (paddingedInline || paddingedInlineStart) && paddingedInlineStyle,
+        ),
+        paddingInlineEnd: clsx(
+          (paddingedInline || paddingedInlineEnd) && paddingedInlineStyle,
+        ),
         gap,
         ...style,
       }}
