@@ -49,8 +49,6 @@ export const Gallery: FC = () => {
   const incriment = Math.floor(galleryWidth / photoWidth);
   const paginatorLength = Math.round(photos.length / incriment);
 
-  console.log(incriment);
-
   const handlePhotoInView = (index: number, inView: boolean) => {
     if (inView && index % incriment === 0) {
       const paginatorIndex = Math.floor(index / incriment);
