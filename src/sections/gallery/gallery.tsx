@@ -51,16 +51,6 @@ export const Gallery: FC = () => {
     photos.length / incriment,
   );
 
-  const handlePhotoInView = (index: number, inView: boolean) => {
-    if (inView && index % incriment === 0) {
-      const paginatorIndex = Math.floor(index / incriment);
-
-      if (paginatorIndex !== currentPaginatorIndex) {
-        setCurrentPaginatorIndex(paginatorIndex);
-      }
-    }
-  };
-
   const handleScroll = (e: SyntheticEvent) => {
     console.log(e.currentTarget.scrollLeft)
     const paginatorIndex = Math.round(
@@ -90,7 +80,6 @@ export const Gallery: FC = () => {
   const contextValue: TGalleryContextValue = {
     currentPaginatorIndex,
     paginatorLength,
-    handlePhotoInView,
     handleGalleryClickLeft,
     handleGalleryClickRight,
   };
