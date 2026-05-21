@@ -1,4 +1,4 @@
-import { useRef, useState, type FC } from "react";
+import { useRef, useState, type FC, type SyntheticEvent } from "react";
 
 import { GalleryUI } from "../ui/gallery";
 
@@ -41,13 +41,15 @@ const photos: TPhoto[] = [
 
 export const Gallery: FC = () => {
   const [currentPaginatorIndex, setCurrentPaginatorIndex] = useState<number>(0);
-
+  
   const galleryRef = useRef<HTMLUListElement>(null);
 
   const galleryWidth = useGalleryWidth();
   const photoWidth = usePhotoWidth();
   const incriment = Math.floor(galleryWidth / photoWidth);
-  const paginatorLength = Math.round(photos.length / incriment);
+  const paginatorLength = Math.round(
+    photos.length / incriment,
+  );
 
   const handlePhotoInView = (index: number, inView: boolean) => {
     if (inView && index % incriment === 0) {
@@ -57,6 +59,14 @@ export const Gallery: FC = () => {
         setCurrentPaginatorIndex(paginatorIndex);
       }
     }
+  };
+
+  const handleScroll = (e: SyntheticEvent) => {
+    console.log(e.currentTarget.scrollLeft)
+    const paginatorIndex = Math.round(
+      e.currentTarget.scrollLeft / (photoWidth * incriment),
+    );
+    setCurrentPaginatorIndex(paginatorIndex);
   };
 
   const handleGalleryClickLeft = () => {
@@ -87,7 +97,7 @@ export const Gallery: FC = () => {
 
   return (
     <GalleryProvider value={contextValue}>
-      <GalleryUI photos={photos} ref={galleryRef} />
+      <GalleryUI photos={photos} onScroll={handleScroll} ref={galleryRef} />
     </GalleryProvider>
   );
 };
