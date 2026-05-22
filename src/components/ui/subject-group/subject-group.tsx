@@ -1,4 +1,5 @@
 import { type FC } from "react";
+import { nanoid } from "nanoid";
 
 import { SubjectUI } from "../subject";
 import { SubjectGroupItemUI } from "../subject-group-item";
@@ -15,7 +16,7 @@ export const SubjectGroupUI: FC<TSubjectGroupUIProps> = ({ persons }) => {
   return (
     <ul className={styles["subject-group"]} style={ulStyle}>
       {persons.map(({ info, appearance }, index) => (
-        <SubjectGroupItemUI key={index} index={index}>
+        <SubjectGroupItemUI key={nanoid()} index={index}>
           <SubjectUI
             info={info}
             appearance={{

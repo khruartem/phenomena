@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import { nanoid } from "nanoid";
 
 import { PointUI } from "../point";
 
@@ -9,8 +10,8 @@ import styles from "./paginator.module.css";
 export const PaginatorUI: FC<TPaginatorUIProps> = ({ points }) => {
   return (
     <ul className={styles.paginator}>
-      {points.map((point, index) => (
-        <PointUI key={index} current={point} />
+      {points.map((point) => (
+        <PointUI key={nanoid()} current={point} />
       ))}
     </ul>
   );

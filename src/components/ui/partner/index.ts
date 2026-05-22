@@ -1,0 +1,1 @@
+export { PartnerUI } from "./partner";
