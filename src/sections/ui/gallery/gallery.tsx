@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import { nanoid } from "nanoid";
 
 import { SectionUI } from "../section";
 import { SectionTopUI } from "../../../components/ui/section-top";
@@ -38,8 +39,8 @@ export const GalleryUI = forwardRef<HTMLUListElement, TGalleryUIProps>(
           ref={ref}
           onScrollEnd={onScroll}
         >
-          {photos.map((photo, index) => (
-            <GalleryItemUI key={index}>
+          {photos.map((photo) => (
+            <GalleryItemUI key={nanoid()}>
               <PhotoUI {...photo} />
             </GalleryItemUI>
           ))}

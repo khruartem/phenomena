@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import { nanoid } from "nanoid";
 
 import { MenuItemUI } from "../menu-item";
 
@@ -17,8 +18,8 @@ export const MenuUI: FC<TMenuUIProps> = ({ items }) => {
         className={styles.menu__list}
         style={{ flexDirection: isLarge || isDesktop ? "row" : "column" }}
       >
-        {items.map(({ label, to, onClick }, index) => (
-          <MenuItemUI key={index} label={label} to={to} onClick={onClick} />
+        {items.map(({ label, to, onClick }) => (
+          <MenuItemUI key={nanoid()} label={label} to={to} onClick={onClick} />
         ))}
       </ul>
     </nav>
