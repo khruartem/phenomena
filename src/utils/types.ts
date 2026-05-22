@@ -72,3 +72,9 @@ export type TPhoto = {
   src: string;
   direction: TPhotoDirection;
 }
+
+export type TPartner = {
+  icon: string;
+  width: number;
+  height: number;
+}

@@ -1,0 +1,10 @@
+.partners__list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.partners__list-item {
+  min-width: 180px;
+}
