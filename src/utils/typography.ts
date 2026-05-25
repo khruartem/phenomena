@@ -15,8 +15,10 @@ export type TTypography = {
   lineHeight:
     | "140px"
     | "100px"
+    | "94px"
     | "80px"
     | "60px"
+    | "54.04px"
     | "48px"
     | "32px"
     | "28px"
@@ -52,6 +54,27 @@ const Typography = {
     fontWeight: 400,
     size: "40px",
     lineHeight: "60px",
+    letterSpacing: "0",
+  },
+  Text_KharkivTone_400_80: {
+    fontFamily: "KharkivTone",
+    fontWeight: 400,
+    size: "80px",
+    lineHeight: "94px",
+    letterSpacing: "0",
+  },
+  Text_KharkivTone_400_60: {
+    fontFamily: "KharkivTone",
+    fontWeight: 400,
+    size: "60px",
+    lineHeight: "80px",
+    letterSpacing: "0",
+  },
+  Text_KharkivTone_400_40: {
+    fontFamily: "KharkivTone",
+    fontWeight: 400,
+    size: "40px",
+    lineHeight: "54.04px",
     letterSpacing: "0",
   },
   Text_KharkivTone_400_32: {
