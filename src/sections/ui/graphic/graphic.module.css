@@ -1,15 +1,18 @@
 .graphic__container {
-  width: 100%;
   position: relative;
-  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 .graphic__buttons {
-  display: flex;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  display: flex;
   width: max-content;
+  transform: translateX(-50%);
 }

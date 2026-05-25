@@ -1,0 +1,6 @@
+.graphic__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-align: center;
+}

@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import { SectionUI } from "../section";
+import { GraphicTitleUI } from "../../../components/ui/graphic-title";
 import { ButtonUI } from "../../../components/ui/button";
 
 import { useContainerStyle } from "./useContainerStyle";
@@ -15,6 +16,7 @@ export const GraphicUI: FC = () => {
   return (
     <SectionUI id="graphic">
       <div className={styles.graphic__container} style={containerStyle}>
+        <GraphicTitleUI />
         <div className={styles.graphic__buttons} style={buttonsStyle}>
           <ButtonUI variant={"secondary"} onClick={() => {}}>
             {"Участвовать в комиссии"}
