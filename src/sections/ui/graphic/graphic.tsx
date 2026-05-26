@@ -4,17 +4,19 @@ import { SectionUI } from "../section";
 import { GraphicTitleUI } from "../../../components/ui/graphic-title";
 import { ButtonUI } from "../../../components/ui/button";
 
+import { useSectionStyle } from "./useSectionStyle";
 import { useContainerStyle } from "./useContainerStyle";
 import { useButtonsStyle } from "./useButtonsStyle";
 
 import styles from "./graphic.module.css";
 
 export const GraphicUI: FC = () => {
+  const sectionStyle = useSectionStyle();
   const containerStyle = useContainerStyle();
   const buttonsStyle = useButtonsStyle();
 
   return (
-    <SectionUI id="graphic">
+    <SectionUI id="graphic" paddingedBlock={false} style={sectionStyle}>
       <div className={styles.graphic__container} style={containerStyle}>
         <GraphicTitleUI />
         <div className={styles.graphic__buttons} style={buttonsStyle}>
