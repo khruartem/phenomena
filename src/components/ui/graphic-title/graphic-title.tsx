@@ -9,6 +9,7 @@ import { useMedia } from "../../../hooks/useMedia";
 import { useTypography } from "./useTypography";
 
 import styles from "./graphic-title.module.css";
+import { GlowTextUI } from "../glow-text";
 
 export const GraphicTitleUI: FC = () => {
   const { isLaptop, isTablet, isMobile } = useMedia();
@@ -29,5 +30,7 @@ export const GraphicTitleUI: FC = () => {
         {"ищет феноменов"}
       </TextUI>
     </div>
-  ) : null;
+  ) : (
+    <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
+  );
 };
