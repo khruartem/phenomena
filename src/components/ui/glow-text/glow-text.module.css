@@ -9,6 +9,8 @@
   overflow: hidden;
   position: relative;
   user-select: none;
+  height: 150%;
+
 }
 
 .title {
@@ -21,10 +23,10 @@
   font-family: "KharkivTone", sans-serif;
 }
 
-.title::before {
+.title > :global(#base) > span::before {
   content: "";
-  left: 0;
-  top: 0;
+  /* left: 0;
+  top: 0; */
   position: absolute;
   display: block;
   width: 100%;
@@ -34,7 +36,17 @@
   z-index: 1;
 }
 
-.title_blured::before {
+.title > :global(#base) > span:first-child::before {
+  left: 0;
+  top: 0;
+}
+
+.title > :global(#base) > span:nth-child(2)::before {
+  left: 0;
+  top: 140px;
+}
+
+.title_blured span:nth-child(2)::before {
   background: transparent;
   backdrop-filter: blur(2.8px);
 }
@@ -42,6 +54,9 @@
 .title__base {
   -webkit-background-clip: text;
   background-clip: text;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .title__base_imaged {
@@ -64,4 +79,7 @@
   top: 0px;
   left: 0px;
   pointer-events: none;
+
+  display: flex;
+  flex-direction: column;
 }

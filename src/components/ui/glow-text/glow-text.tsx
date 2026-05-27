@@ -67,10 +67,12 @@ export const GlowTextUI: FC<TGlowTextUIProps> = ({ children }) => {
             styles.title__base_imaged,
           )}
         >
-          {children}
+          <span>{children}</span>
+          <span>{children}</span>
         </div>
         <div id="lit" className={styles.title__lit} ref={lit}>
-          {children}
+          <span>{children}</span>
+          <span>{children}</span>
         </div>
       </div>
     </div>
