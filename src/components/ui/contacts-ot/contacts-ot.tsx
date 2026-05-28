@@ -20,7 +20,7 @@ export const ContactsOtUI: FC = () => {
       </TextUI>
       <div className={styles["contacts-ot__list"]} style={{ gap: isMobile ? 0 : 8 }}>
         <ContactLink type={"phone"} contact={"8 (916) 756-95-05"} />
-        <ContactLink type={"email"} contact={"otkterr@gmail.com"} />
+        <ContactLink type={"email"} contact={"hello@otkter.ru"} />
       </div>
     </div>
   );
