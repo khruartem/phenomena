@@ -10,7 +10,6 @@
   position: relative;
   user-select: none;
   height: 150%;
-
 }
 
 .title {
@@ -31,7 +30,7 @@
   display: block;
   width: 100%;
   border-radius: 10%;
-  mask-image: radial-gradient(circle 168px at var(--x) var(--y), black 0%, black 30%, transparent 100%);
+  mask-image: radial-gradient(circle 168px at calc(var(--x) + 5px) calc(var(--y) - 70px), black 0%, black 30%, transparent 100%);
   z-index: 1;
 }
 
@@ -48,13 +47,16 @@
 }
 
 .title_blured> :global(#base)>span:nth-child(2)::before {
+  /* background: greenyellow; */
   background: transparent;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2.8px);
+  /* -webkit-background-clip: text;
+  background-clip: text; */
 }
 
 .title__base {
-  -webkit-background-clip: text;
-  background-clip: text;
+  /* -webkit-background-clip: text;
+  background-clip: text; */
 
   display: flex;
   flex-direction: column;
@@ -70,8 +72,7 @@
 .title__base_imaged {
   background-image: url(../../../assets/big_title.png);
   background-size: 100%;
-  /* background-repeat: no-repeat;
-  background-position: center; */
+  background-position: 0.15px 1.2px;
   color: transparent;
 }
 
