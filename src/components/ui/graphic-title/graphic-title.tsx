@@ -1,6 +1,8 @@
 import type { FC } from "react";
 
 import { TextUI } from "../text";
+// import { GlowTextUI } from "../glow-text";
+import { GlowTitleUI } from "../glow-title";
 
 import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
@@ -9,7 +11,6 @@ import { useMedia } from "../../../hooks/useMedia";
 import { useTypography } from "./useTypography";
 
 import styles from "./graphic-title.module.css";
-import { GlowTextUI } from "../glow-text";
 
 export const GraphicTitleUI: FC = () => {
   const { isLaptop, isTablet, isMobile } = useMedia();
@@ -31,6 +32,7 @@ export const GraphicTitleUI: FC = () => {
       </TextUI>
     </div>
   ) : (
-    <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
+    // <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
+    <GlowTitleUI>{"ищет феноменов"}</GlowTitleUI>
   );
 };

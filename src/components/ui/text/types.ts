@@ -3,6 +3,7 @@ import type { Colors } from "../../../utils/colors";
 import type { TTypography } from "../../../utils/typography";
 
 export type TTextUIProps = {
+  id?: string;
   as?: ElementType;
   children: ReactNode;
   typography: TTypography | "inherit";

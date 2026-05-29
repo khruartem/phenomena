@@ -5,6 +5,7 @@ import type { TTextUIProps } from "./types";
 
 export const TextUI: FC<TTextUIProps> = ({
   as: Tag = "span",
+  id,
   children,
   typography,
   color,
@@ -13,6 +14,7 @@ export const TextUI: FC<TTextUIProps> = ({
 }) => {
   return (
     <Tag
+      id={id}
       className={clsx(className && className)}
       style={{
         ...style,
