@@ -3,8 +3,10 @@ export type TTypography = {
   fontWeight: 300 | 400 | 500;
   size:
     | "120px"
+    | "92.46px"
     | "80px"
     | "60px"
+    | "46.23px"
     | "40px"
     | "32px"
     | "24px"
@@ -14,9 +16,11 @@ export type TTypography = {
     | "14px";
   lineHeight:
     | "140px"
+    | "107.87px"
     | "100px"
     | "94px"
     | "80px"
+    | "61.64px"
     | "60px"
     | "54.04px"
     | "48px"
@@ -56,6 +60,20 @@ const Typography = {
     lineHeight: "60px",
     letterSpacing: "0",
   },
+  Text_KharkivTone_400_120: {
+    fontFamily: "KharkivTone",
+    fontWeight: 400,
+    size: "120px",
+    lineHeight: "140px",
+    letterSpacing: "0",
+  },
+  Text_KharkivTone_400_92: {
+    fontFamily: "KharkivTone",
+    fontWeight: 400,
+    size: "92.46px",
+    lineHeight: "107.87px",
+    letterSpacing: "0",
+  },
   Text_KharkivTone_400_80: {
     fontFamily: "KharkivTone",
     fontWeight: 400,
@@ -68,6 +86,13 @@ const Typography = {
     fontWeight: 400,
     size: "60px",
     lineHeight: "80px",
+    letterSpacing: "0",
+  },
+  Text_KharkivTone_400_46: {
+    fontFamily: "KharkivTone",
+    fontWeight: 400,
+    size: "46.23px",
+    lineHeight: "61.64px",
     letterSpacing: "0",
   },
   Text_KharkivTone_400_40: {

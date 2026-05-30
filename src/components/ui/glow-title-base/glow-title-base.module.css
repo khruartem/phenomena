@@ -1,0 +1,49 @@
+.content__base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content__base>span::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  border-radius: 10%;
+  mask-image: radial-gradient(circle var(--blur) at calc(var(--x) + 5px) calc(var(--y) - 70px), black 0%, black 30%, transparent 100%);
+}
+
+.content__base>:global(#bottom) {
+  color: transparent;
+  background-image: url(../../../assets/big_title.png);
+  background-position: var(--background-position);
+  background-size: 100%;
+}
+
+.content__base>:global(#top)::before {
+  top: 0;
+  left: 0;
+  height: var(--first-phrase-height);
+}
+
+.content__base>:global(#bottom)::before {
+  top: var(--first-phrase-height);
+  left: 0;
+  height: var(--second-phrase-height);
+}
+
+/* Стили для разных разрешений экранов */
+.content__base_large {
+  --first-phrase-height: 80px;
+  --second-phrase-height: 140px;
+  --blur: 168px;
+  --background-position: 0.15px 1.2px;
+}
+
+.content__base_desktop {
+  --first-phrase-height: 61.64px;
+  --second-phrase-height: 107.87px;
+  --blur: 150px;
+  --background-position: unset;
+}

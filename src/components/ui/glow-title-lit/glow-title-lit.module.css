@@ -1,0 +1,10 @@
+.content__lit {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: transparent;
+  pointer-events: none;
+}

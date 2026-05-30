@@ -1,0 +1,8 @@
+.content {
+  position: relative;
+}
+
+:global(.content_blured)> :global(#base)>:global(#bottom)::before {
+  background: transparent;
+  backdrop-filter: blur(2.8px);
+}

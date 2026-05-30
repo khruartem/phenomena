@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 
-export type TGlowTextUIProps = {
+export type TGlowTitleBaseUIProps = {
   children: ReactNode;
-  className?: string;
 };
