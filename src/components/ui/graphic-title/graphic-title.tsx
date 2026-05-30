@@ -1,8 +1,7 @@
 import type { FC } from "react";
 
 import { TextUI } from "../text";
-// import { GlowTextUI } from "../glow-text";
-import { GlowTitleUI } from "../glow-title";
+import { GlowTitle } from "../../glow-title";
 
 import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
@@ -32,7 +31,6 @@ export const GraphicTitleUI: FC = () => {
       </TextUI>
     </div>
   ) : (
-    // <GlowTextUI>{"ищет феноменов"}</GlowTextUI>
-    <GlowTitleUI>{"ищет феноменов"}</GlowTitleUI>
+    <GlowTitle />
   );
 };
