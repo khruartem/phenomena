@@ -9,7 +9,7 @@ import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
 
 export const GlowTitleUI: FC<TGlowTitleUIProps> = ({ children }) => {
-  const title = useRef<HTMLDivElement | null>(null);
+  const content = useRef<HTMLDivElement | null>(null);
   const scene = useRef<HTMLDivElement | null>(null);
   const lit = useRef<HTMLDivElement | null>(null);
 
@@ -31,12 +31,12 @@ export const GlowTitleUI: FC<TGlowTitleUIProps> = ({ children }) => {
     const backgroundOn =
       "linear-gradient(180deg, var(--fire) 0%, var(--red) 100%)";
 
-    if (lit.current && title.current) {
+    if (lit.current && content.current) {
       lit.current.style.maskImage = maskOn;
       lit.current.style.backgroundImage = backgroundOn;
       lit.current.style.backgroundClip = "text";
 
-      title.current.classList.add(styles.title_blured);
+      content.current.classList.add(styles.content_blured);
     } else return;
   };
 
@@ -45,12 +45,12 @@ export const GlowTitleUI: FC<TGlowTitleUIProps> = ({ children }) => {
       "radial-gradient(circle 0px at -9999px -9999px, black 0%, transparent 100%)";
     const backgroundOff = "unset";
 
-    if (lit.current && title.current) {
+    if (lit.current && content.current) {
       lit.current.style.maskImage = maskOff;
       lit.current.style.backgroundImage = backgroundOff;
       lit.current.style.backgroundClip = "unset";
 
-      title.current.classList.remove(styles.title_blured);
+      content.current.classList.remove(styles.content_blured);
     } else return;
   };
 
@@ -62,8 +62,8 @@ export const GlowTitleUI: FC<TGlowTitleUIProps> = ({ children }) => {
       onMouseLeave={handleMouseLeave}
       ref={scene}
     >
-      <div className={styles.title} ref={title}>
-        <div id="base" className={clsx(styles.title__base)}>
+      <div className={styles.content} ref={content}>
+        <div id="base" className={clsx(styles.content__base)}>
           <TextUI
             id="top"
             typography={Typography.Text_KharkivTone_400_60}
@@ -71,11 +71,11 @@ export const GlowTitleUI: FC<TGlowTitleUIProps> = ({ children }) => {
           >
             {"Институт внедрения навыков"}
           </TextUI>
-          <span id="bottom" className={styles.title__base_imaged}>
+          <span id="bottom" className={styles.content__base_imaged}>
             {children}
           </span>
         </div>
-        <div id="lit" className={styles.title__lit} ref={lit}>
+        <div id="lit" className={styles.content__lit} ref={lit}>
           <TextUI id="top" typography={Typography.Text_KharkivTone_400_60}>
             {"Институт внедрения навыков"}
           </TextUI>
