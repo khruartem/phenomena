@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 import { usePxToVw } from "../../../hooks/usePxToVw";
 import { useMedia } from "../../../hooks/useMedia";
 
-export const useSetStyle = (): CSSProperties => {
+export const usePhotoListStyle = (): CSSProperties => {
   const { isLaptop, isTablet, isMobile } = useMedia();
   const smallResolution = isLaptop || isTablet || isMobile;
 

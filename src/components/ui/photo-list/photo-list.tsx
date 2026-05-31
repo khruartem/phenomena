@@ -1,0 +1,33 @@
+import { forwardRef } from "react";
+import { nanoid } from "nanoid";
+
+import { PhotoListItemUI } from "../photo-list-item";
+import { PhotoUI } from "../photo";
+
+import type { TPhotoListUIProps } from "./types";
+
+import { usePhotoListStyle } from "./usePhotoListStyle";
+
+import styles from "./photo-list.module.css";
+
+export const PhotoListUI = forwardRef<HTMLUListElement, TPhotoListUIProps>(
+  ({ photos, onScroll }, ref) => {
+    const photoListStyle = usePhotoListStyle();
+
+    return (
+      <ul
+        id="photo-list"
+        className={styles["photo-list"]}
+        style={photoListStyle}
+        ref={ref}
+        onScrollEnd={onScroll}
+      >
+        {photos.map((photo) => (
+          <PhotoListItemUI key={nanoid()}>
+            <PhotoUI {...photo} />
+          </PhotoListItemUI>
+        ))}
+      </ul>
+    );
+  },
+);

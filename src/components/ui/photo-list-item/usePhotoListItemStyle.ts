@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import { usePxToVw } from "../../../hooks/usePxToVw";
 
-export const useSetStyle = (): CSSProperties => {
+export const usePhotoListItemStyle = (): CSSProperties => {
   const minWidth = usePxToVw({
     large: 384,
     desktop: 270,

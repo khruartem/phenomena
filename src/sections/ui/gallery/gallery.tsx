@@ -1,51 +1,32 @@
-import { forwardRef } from "react";
-import { nanoid } from "nanoid";
+import { type FC } from "react";
 
 import { SectionUI } from "../section";
 import { SectionTopUI } from "../../../components/ui/section-top";
 import { GalleryTabBar } from "../../../components/gallery-tab-bar";
-import { GalleryItemUI } from "../../../components/ui/gallery-item";
-import { PhotoUI } from "../../../components/ui/photo";
+import { PhotoList } from "../../../components/photo-list";
 
-import type { TGalleryUIProps } from "./types";
-
-import { useMedia } from "../../../hooks/useMedia";
-import { useSetStyle } from "./useSetSyle";
+import { useGalleryGap } from "./useGalleryGap";
+import { useGalleryStyle } from "./useGalleryStyle";
 
 import styles from "./gallery.module.css";
 
-export const GalleryUI = forwardRef<HTMLUListElement, TGalleryUIProps>(
-  ({ photos, onScroll }, ref) => {
-    const { isLarge, isDesktop } = useMedia();
-    const ulStyle = useSetStyle();
+export const GalleryUI: FC = () => {
+  const galleryGap = useGalleryGap();
+  const galleryStyle = useGalleryStyle();
 
-    return (
-      <SectionUI
-        id="gallery"
-        gap={isLarge ? 68 : 32}
-        paddingedInline={false}
-        paddingedInlineStart
-        paddingedInlineEnd={isLarge || isDesktop ? true : false}
-      >
-        <SectionTopUI
-          title="Фотоотчеты"
-          tabBar={<GalleryTabBar />}
-          className={styles.section__top_gallery}
-        />
-        <ul
-          id="photo-list"
-          className={styles.gallery}
-          style={ulStyle}
-          ref={ref}
-          onScrollEnd={onScroll}
-        >
-          {photos.map((photo) => (
-            <GalleryItemUI key={nanoid()}>
-              <PhotoUI {...photo} />
-            </GalleryItemUI>
-          ))}
-        </ul>
-      </SectionUI>
-    );
-  },
-);
+  return (
+    <SectionUI
+      id="gallery"
+      gap={galleryGap}
+      paddingedBlock={false}
+      style={galleryStyle}
+    >
+      <SectionTopUI
+        title="Фотоотчеты"
+        tabBar={<GalleryTabBar />}
+        className={styles.section__top_gallery}
+      />
+      <PhotoList />
+    </SectionUI>
+  );
+};

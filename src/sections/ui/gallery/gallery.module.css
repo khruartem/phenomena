@@ -1,12 +1,3 @@
-.gallery {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  scroll-snap-type: x mandatory;
-}
-
 .section__top_gallery {
   align-items: center;
 }
