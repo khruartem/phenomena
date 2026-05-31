@@ -3,9 +3,11 @@ import { useRef, useState, type FC, type SyntheticEvent } from "react";
 import { GalleryUI } from "../ui/gallery";
 
 import type { TPhoto } from "../../utils/types";
-import { GalleryProvider } from "./gallery-context";
 import type { TGalleryContextValue } from "./types";
-import { useGalleryWidth } from "./useGalleryWidth";
+
+import { GalleryProvider } from "./gallery-context";
+
+import { usePhotoListWidth } from "./usePhotoListWidth";
 import { usePhotoWidth } from "./usePhotoWidth";
 
 const photos: TPhoto[] = [
@@ -41,18 +43,15 @@ const photos: TPhoto[] = [
 
 export const Gallery: FC = () => {
   const [currentPaginatorIndex, setCurrentPaginatorIndex] = useState<number>(0);
-  
-  const galleryRef = useRef<HTMLUListElement>(null);
 
-  const galleryWidth = useGalleryWidth();
+  const photoListRef = useRef<HTMLUListElement>(null);
+
+  const photoListWidth = usePhotoListWidth();
   const photoWidth = usePhotoWidth();
-  const incriment = Math.floor(galleryWidth / photoWidth);
-  const paginatorLength = Math.round(
-    photos.length / incriment,
-  );
+  const incriment = Math.floor(photoListWidth / photoWidth);
+  const paginatorLength = Math.round(photos.length / incriment);
 
   const handleScroll = (e: SyntheticEvent) => {
-    console.log(e.currentTarget.scrollLeft)
     const paginatorIndex = Math.round(
       e.currentTarget.scrollLeft / (photoWidth * incriment),
     );
@@ -60,33 +59,36 @@ export const Gallery: FC = () => {
   };
 
   const handleGalleryClickLeft = () => {
-    if (galleryRef.current) {
-      galleryRef.current.scrollTo({
-        left: galleryRef.current.scrollLeft - photoWidth * incriment,
+    if (photoListRef.current) {
+      photoListRef.current.scrollTo({
+        left: photoListRef.current.scrollLeft - photoWidth * incriment,
         behavior: "smooth",
       });
     }
   };
 
   const handleGalleryClickRight = () => {
-    if (galleryRef.current) {
-      galleryRef.current.scrollTo({
-        left: galleryRef.current.scrollLeft + photoWidth * incriment,
+    if (photoListRef.current) {
+      photoListRef.current.scrollTo({
+        left: photoListRef.current.scrollLeft + photoWidth * incriment,
         behavior: "smooth",
       });
     }
   };
 
   const contextValue: TGalleryContextValue = {
+    photos,
     currentPaginatorIndex,
     paginatorLength,
     handleGalleryClickLeft,
     handleGalleryClickRight,
+    handleScroll,
+    photoListRef,
   };
 
   return (
     <GalleryProvider value={contextValue}>
-      <GalleryUI photos={photos} onScroll={handleScroll} ref={galleryRef} />
+      <GalleryUI />
     </GalleryProvider>
   );
 };

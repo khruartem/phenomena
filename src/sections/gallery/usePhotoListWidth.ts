@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useMedia } from "../../hooks/useMedia";
 
-export const useGalleryWidth = () => {
+export const usePhotoListWidth = () => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
   return +clsx(
