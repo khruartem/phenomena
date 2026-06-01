@@ -1,18 +1,18 @@
 import { createUseStyleHook } from "../../../utils/createUseStyleHook";
 
-export const useGalleryStyle = createUseStyleHook({
+export const useStyle = createUseStyleHook({
   paddingBlockStart: {
     large: 100,
     desktop: 60,
     laptop: 60,
     tablet: 60,
-    mobile: 40,
+    mobile: 0,
   },
   paddingBlockEnd: {
-    large: 180,
-    desktop: 100,
-    laptop: 100,
-    tablet: 100,
-    mobile: 100,
+    large: 100,
+    desktop: 60,
+    laptop: 60,
+    tablet: 60,
+    mobile: 32,
   },
 });

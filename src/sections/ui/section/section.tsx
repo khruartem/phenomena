@@ -10,7 +10,7 @@ import styles from "./section.module.css";
 export const SectionUI: FC<TSectionUIProps> = ({
   children,
   id,
-  paddingedBlock = true,
+  // paddingedBlock = true,
   paddingedInline = true,
   paddingedInlineStart,
   paddingedInlineEnd,
@@ -21,13 +21,13 @@ export const SectionUI: FC<TSectionUIProps> = ({
 }) => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
-  const paddingedBlockStyle = clsx(
-    isLarge && "5.21vw",
-    isDesktop && "4.39vw",
-    isLaptop && "5.86vw",
-    isTablet && "0 4.17vw",
-    isMobile && "9.52vw",
-  );
+  // const paddingedBlockStyle = clsx(
+  //   isLarge && "5.21vw",
+  //   isDesktop && "4.39vw",
+  //   isLaptop && "5.86vw",
+  //   isTablet && "0 4.17vw",
+  //   isMobile && "9.52vw",
+  // );
 
   const paddingedInlineStyle = clsx(
     isLarge && "8.12vw",
@@ -43,7 +43,7 @@ export const SectionUI: FC<TSectionUIProps> = ({
       className={clsx(styles.section, className && className)}
       style={{
         display: clsx(hidden && "none"),
-        paddingBlock: clsx(paddingedBlock && paddingedBlockStyle),
+        // paddingBlock: clsx(paddingedBlock && paddingedBlockStyle),
         paddingInlineStart: clsx(
           (paddingedInline || paddingedInlineStart) && paddingedInlineStyle,
         ),

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useMedia } from "./useMedia";
 
-type TConvertObject = {
+export type TBreakpointValues = {
   large?: number;
   desktop?: number;
   laptop?: number;
@@ -31,7 +31,7 @@ const useConvert = (px?: number) => {
   } else return undefined;
 };
 
-export const usePxToVw = (px: TConvertObject) => {
+export const usePxToVw = (px: TBreakpointValues) => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
   const pxLarge = useConvert(px.large);

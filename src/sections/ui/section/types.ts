@@ -3,7 +3,7 @@ import type { CSSProperties, ReactNode } from "react";
 export type TSectionUIProps = {
   children: ReactNode;
   id?: string;
-  paddingedBlock?: boolean;
+  // paddingedBlock?: boolean;
   paddingedInline?: boolean;
   paddingedInlineStart?: boolean;
   paddingedInlineEnd?: boolean;

@@ -8,7 +8,6 @@ import styles from "./partners.module.css";
 export const PartnersUI: FC = () => {
   return (
     <SectionUI
-      paddingedBlock={false}
       paddingedInline={false}
       className={styles.partners}
     >

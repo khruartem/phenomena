@@ -16,7 +16,7 @@ export const GraphicUI: FC = () => {
   const buttonsStyle = useButtonsStyle();
 
   return (
-    <SectionUI id="graphic" paddingedBlock={false} style={sectionStyle}>
+    <SectionUI id="graphic" style={sectionStyle}>
       <div className={styles.graphic__container} style={containerStyle}>
         <GraphicTitleUI />
         <div className={styles.graphic__buttons} style={buttonsStyle}>

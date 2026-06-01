@@ -10,7 +10,7 @@ import personsBackgroundMobile from "../../../assets/persons_mobile.png";
 import { useMedia } from "../../../hooks/useMedia";
 import { usePxToVw } from "../../../hooks/usePxToVw";
 
-export const useSetStyle = (): CSSProperties => {
+export const useStyle = (): CSSProperties => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
   const paddingBlockStart = usePxToVw({

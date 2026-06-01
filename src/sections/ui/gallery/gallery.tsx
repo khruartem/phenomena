@@ -18,7 +18,6 @@ export const GalleryUI: FC = () => {
     <SectionUI
       id="gallery"
       gap={galleryGap}
-      paddingedBlock={false}
       style={galleryStyle}
     >
       <SectionTopUI
