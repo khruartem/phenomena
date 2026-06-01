@@ -26,7 +26,6 @@ export const HeroUI: FC<THeroUIProps> = ({ externalLink }) => {
 
   return (
     <SectionUI
-      paddingedBlock={false}
       paddingedInline={false}
       className={styles.hero}
       style={{

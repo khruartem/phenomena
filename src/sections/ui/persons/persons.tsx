@@ -5,17 +5,16 @@ import { SectionTopUI } from "../../../components/ui/section-top";
 import { PersonTabBar } from "../../../components/person-tab-bar";
 import { PersonGroups } from "../../../components/person-groups";
 
-import { useSetStyle } from "./useSetStyle";
+import { useStyle } from "./useStyle";
 
 import styles from "./persons.module.css";
 
 export const PersonsUI: FC = () => {
-  const sectionStyle = useSetStyle();
+  const sectionStyle = useStyle();
 
   return (
     <SectionUI
       id="persons"
-      paddingedBlock={false}
       paddingedInline={false}
       className={styles.persons}
       style={sectionStyle}

@@ -12,14 +12,21 @@ import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
 
 import { useMedia } from "../../../hooks/useMedia";
+import { useStyle } from "./useStyle";
 
 import styles from "./about.module.css";
 
 export const AboutUI: FC<TAboutUIProps> = ({ withTrailer }) => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
+  const aboutStyle = useStyle();
 
   return (
-    <SectionUI id="about" className={styles.about} gap={isLarge ? 68 : 32}>
+    <SectionUI
+      id="about"
+      className={styles.about}
+      gap={isLarge ? 68 : 32}
+      style={aboutStyle}
+    >
       <SectionTitleUI
         style={{
           paddingInlineStart: clsx(
