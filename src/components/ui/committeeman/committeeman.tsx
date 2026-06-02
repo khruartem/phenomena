@@ -5,7 +5,7 @@ import { PersonInfoUI } from "../person-info";
 
 import type { TCommitteemanUIProps } from "./types";
 
-import { useSetStyle } from "./useSetStyle";
+import { useStyle } from "./useStyle";
 
 import styles from "./committeeman.module.css";
 
@@ -13,10 +13,10 @@ export const CommitteemanUI: FC<TCommitteemanUIProps> = ({
   info,
   appearance,
 }) => {
-  const divStyle = useSetStyle();
+  const committeemanStyle = useStyle();
 
   return (
-    <div className={styles.committeeman} style={divStyle}>
+    <div className={styles.committeeman} style={committeemanStyle}>
       {appearance?.image && <PersonFrameUI appearance={appearance} />}
       <PersonInfoUI type={"committee"} info={info} />
     </div>
