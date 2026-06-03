@@ -4,24 +4,21 @@ import { FooterSegmentUI } from "../footer-segment";
 
 import type { TFooterContainerUIProps } from "./types";
 
-import { useMedia } from "../../../hooks/useMedia";
+import { useContainerStyle } from "./useContainerStyle";
+import { useBodyStyle } from "./useBodyStyle";
 
 import styles from "./footer-container.module.css";
-import { useSetStyle } from "./useSetStyle";
 
 export const FooterContainerUI: FC<TFooterContainerUIProps> = ({
   children,
 }) => {
-  const { isMobile } = useMedia();
-  const divStyle = useSetStyle();
+  const containerStyle = useContainerStyle();
+  const bodyStyle = useBodyStyle();
 
   return (
-    <div
-      className={styles.footer__container}
-      style={{ flexDirection: isMobile ? "column" : "row" }}
-    >
+    <div className={styles.footer__container} style={containerStyle}>
       <FooterSegmentUI index="first" />
-      <div className={styles.footer__body} style={divStyle}>
+      <div className={styles.footer__body} style={bodyStyle}>
         {children}
       </div>
       <FooterSegmentUI index="second" />
