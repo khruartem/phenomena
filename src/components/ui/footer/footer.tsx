@@ -20,7 +20,7 @@ export const FooterUI: FC = () => {
       <FooterContainerUI>
         <ContactInfoUI />
       </FooterContainerUI>
-      <Copyright style={copyrightStyle} />
+      <Copyright className={styles.copiright_footer} style={copyrightStyle} />
     </footer>
   );
 };

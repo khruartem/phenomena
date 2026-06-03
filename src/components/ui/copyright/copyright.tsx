@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import clsx from "clsx";
 import { Link } from "react-router-dom";
 
 import { TextUI } from "../text";
@@ -10,12 +11,16 @@ import { Colors } from "../../../utils/colors";
 
 import styles from "./copiright.module.css";
 
-export const CopyrightUI: FC<TCopirightUIProps> = ({ year, style }) => {
+export const CopyrightUI: FC<TCopirightUIProps> = ({
+  year,
+  className,
+  style,
+}) => {
   return (
     <TextUI
       typography={Typography.Text_Onest_300_14}
       color={Colors.White100}
-      className={styles.copiright}
+      className={clsx(styles.copiright, className && className)}
       style={style}
     >
       {`${year} Создано под эгидой творческой экосистемы `}

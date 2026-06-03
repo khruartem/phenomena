@@ -4,9 +4,9 @@ import { CopyrightUI } from "../ui/copyright";
 
 import type { TCopyrightProps } from "./types";
 
-export const Copyright: FC<TCopyrightProps> = ({ style }) => {
+export const Copyright: FC<TCopyrightProps> = ({ className, style }) => {
   const today = new Date();
   const currentYear = today.getFullYear();
 
-  return <CopyrightUI year={currentYear} style={style} />;
+  return <CopyrightUI year={currentYear} className={className} style={style} />;
 };
