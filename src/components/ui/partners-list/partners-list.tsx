@@ -5,15 +5,15 @@ import { PartnerUI } from "../partner/partner";
 
 import type { TPartnersListUIProps } from "./types";
 
-import { useGetStyle } from "./useGetStyle";
+import { useStyle } from "./useStyle";
 
 import styles from "./partners-list.module.css";
 
 export const PartnersListUI: FC<TPartnersListUIProps> = ({ partners }) => {
-  const ulStyle = useGetStyle();
+  const partnersStyle = useStyle();
 
   return (
-    <ul className={styles.partners__list} style={ulStyle}>
+    <ul className={styles.partners__list} style={partnersStyle}>
       {partners.map((partner) => (
         <li key={nanoid()} className={styles["partners__list-item"]}>
           <PartnerUI {...partner} />

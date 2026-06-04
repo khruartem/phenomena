@@ -7,26 +7,12 @@ import personsBackgroundLaptop from "../../../assets/persons_laptop.png";
 import personsBackgroundTablet from "../../../assets/persons_tablet.png";
 import personsBackgroundMobile from "../../../assets/persons_mobile.png";
 
+import { createUseStyleHook } from "../../../utils/createUseStyleHook";
+
 import { useMedia } from "../../../hooks/useMedia";
-import { usePxToVw } from "../../../hooks/usePxToVw";
 
-export const useStyle = (): CSSProperties => {
+const useCallBack = (): CSSProperties => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
-
-  const paddingBlockStart = usePxToVw({
-    large: 210,
-    desktop: 120,
-    laptop: 120,
-    tablet: 120,
-    mobile: 72,
-  });
-  const paddingBlockEnd = usePxToVw({
-    large: 330,
-    desktop: 72,
-    laptop: 72,
-    tablet: 80,
-    mobile: 16,
-  });
 
   const backgroundImage = `url(${clsx(
     isLarge && personsBackgroundLarge,
@@ -35,14 +21,33 @@ export const useStyle = (): CSSProperties => {
     isTablet && personsBackgroundTablet,
     isMobile && personsBackgroundMobile,
   )}`;
+
   const backgroundSize = clsx(isLaptop && "116%");
   const backgroundPosition = clsx(isLaptop && "50% -4%");
 
   return {
-    paddingBlockStart,
-    paddingBlockEnd,
     backgroundImage,
     backgroundSize,
     backgroundPosition,
   };
 };
+
+export const useStyle = createUseStyleHook(
+  {
+    paddingBlockStart: {
+      large: 210,
+      desktop: 120,
+      laptop: 120,
+      tablet: 120,
+      mobile: 72,
+    },
+    paddingBlockEnd: {
+      large: 330,
+      desktop: 72,
+      laptop: 72,
+      tablet: 80,
+      mobile: 16,
+    },
+  },
+  useCallBack,
+);

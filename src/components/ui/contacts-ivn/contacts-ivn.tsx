@@ -8,16 +8,16 @@ import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
 
 import { useMedia } from "../../../hooks/useMedia";
-import { useSetStyle } from "./useSetStyle";
+import { useStyle } from "./useSetStyle";
 
 import styles from "./contacts-ivn.module.css";
 
 export const ContactsIvnUI: FC = () => {
   const { isMobile } = useMedia();
-  const divStyle = useSetStyle();
+  const contactsStyle = useStyle();
 
   return (
-    <div className={styles["contacts-ivn"]} style={divStyle}>
+    <div className={styles["contacts-ivn"]} style={contactsStyle}>
       <div
         className={styles["contacts-ivn__top"]}
         style={{ gap: isMobile ? 12 : 20 }}
