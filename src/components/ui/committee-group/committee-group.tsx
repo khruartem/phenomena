@@ -5,15 +5,15 @@ import { CommitteemanUI } from "../committeeman";
 
 import type { TCommitteeGroupUIProps } from "./types";
 
-import { useSetStyle } from "./useSetStyle";
+import { useStyle } from "./useSetStyle";
 
 import styles from "./committee-group.module.css";
 
 export const CommitteeGroupUI: FC<TCommitteeGroupUIProps> = ({ persons }) => {
-  const ulStyle = useSetStyle();
+  const groupStyle = useStyle();
 
   return (
-    <ul className={styles["committee-group"]} style={ulStyle}>
+    <ul className={styles["committee-group"]} style={groupStyle}>
       {persons.map(({ info, appearance }) => (
         <li key={nanoid()}>
           <CommitteemanUI

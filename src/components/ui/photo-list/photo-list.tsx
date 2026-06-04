@@ -6,13 +6,13 @@ import { PhotoUI } from "../photo";
 
 import type { TPhotoListUIProps } from "./types";
 
-import { usePhotoListStyle } from "./usePhotoListStyle";
+import { useStyle } from "./useStyle";
 
 import styles from "./photo-list.module.css";
 
 export const PhotoListUI = forwardRef<HTMLUListElement, TPhotoListUIProps>(
   ({ photos, onScroll }, ref) => {
-    const photoListStyle = usePhotoListStyle();
+    const photoListStyle = useStyle();
 
     return (
       <ul

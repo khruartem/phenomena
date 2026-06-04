@@ -1,13 +1,13 @@
 import type { FC } from "react";
+import clsx from "clsx";
 
 import { SectionTitleUI } from "../section-title";
 
 import type { TSectionTopUIProps } from "./types";
 
-import { useSetStyle } from "./useSetStyle";
+import { useStyle } from "./useStyle";
 
 import styles from "./section-top.module.css";
-import clsx from "clsx";
 
 export const SectionTopUI: FC<TSectionTopUIProps> = ({
   title,
@@ -15,12 +15,12 @@ export const SectionTopUI: FC<TSectionTopUIProps> = ({
   className,
   style,
 }) => {
-  const divStyle = useSetStyle();
+  const sectionTopStyle = useStyle();
 
   return (
     <div
       className={clsx(styles.section__top, className && className)}
-      style={{ ...divStyle, ...style }}
+      style={{ ...sectionTopStyle, ...style }}
     >
       <SectionTitleUI className={styles.section__title}>{title}</SectionTitleUI>
       {tabBar}

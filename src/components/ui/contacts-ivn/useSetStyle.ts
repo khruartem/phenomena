@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import { useMedia } from "../../../hooks/useMedia";
 
-export const useSetStyle = (): CSSProperties => {
+export const useStyle = (): CSSProperties => {
   const { isTablet, isMobile } = useMedia();
 
   const flexDirection = isMobile ? "row" : "column";

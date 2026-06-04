@@ -6,15 +6,15 @@ import { SubjectGroupItemUI } from "../subject-group-item";
 
 import type { TSubjectGroupUIProps } from "./types";
 
-import { useSetStyle } from "./useSetStyle";
+import { useStyle } from "./useStyle";
 
 import styles from "./subject-group.module.css";
 
 export const SubjectGroupUI: FC<TSubjectGroupUIProps> = ({ persons }) => {
-  const ulStyle = useSetStyle();
+  const groupStyle = useStyle();
 
   return (
-    <ul className={styles["subject-group"]} style={ulStyle}>
+    <ul className={styles["subject-group"]} style={groupStyle}>
       {persons.map(({ info, appearance }, index) => (
         <SubjectGroupItemUI key={nanoid()} index={index}>
           <SubjectUI
