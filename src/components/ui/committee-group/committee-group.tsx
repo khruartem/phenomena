@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import { nanoid } from "nanoid";
 
 import { CommitteemanUI } from "../committeeman";
 
@@ -14,8 +13,8 @@ export const CommitteeGroupUI: FC<TCommitteeGroupUIProps> = ({ persons }) => {
 
   return (
     <ul className={styles["committee-group"]} style={groupStyle}>
-      {persons.map(({ info, appearance }) => (
-        <li key={nanoid()}>
+      {persons.map(({ info, appearance }, index) => (
+        <li key={index}>
           <CommitteemanUI
             info={info}
             appearance={{
