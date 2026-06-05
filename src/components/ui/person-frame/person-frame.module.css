@@ -93,6 +93,10 @@
   clip-path: url(#person-clip-right);
 }
 
+.person__image {
+  overflow: visible;
+}
+
 .person__image img {
   display: block;
   width: 100%;
