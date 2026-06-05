@@ -1,11 +1,11 @@
 # Феномены
 
-> **Лэндинг спецпроекта "Феномены"** — веб-приложение Института внедрения навыков (ИВН)
+> **Лэндинг спецпроекта "Феномены"** — веб-приложение Открытой Территории
 
 [![Vercel Deployment](https://img.shields.io/badge/deployed%20on-Vercel-000?style=flat-square&logo=vercel)](https://phenomena-lake.vercel.app)
-[![TypeScript](https://img.shields.io/badge/TypeScript-82.9%-3178C6?style=flat-square&logo=typescript)](package.json)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)](package.json)
-[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite)](package.json)
+[![TypeScript](https://img.shields.io/badge/TypeScript-82.9%-3178C6?style=flat-square&logo=typescript&logoColor=white)](package.json)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=white)](package.json)
+[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)](package.json)
 
 [🌐 Посетить сайт](https://phenomena-lake.vercel.app) • [📦 Исходный код](#структура-проекта) • [🚀 Начало-работы](#быстрый-старт)
 
