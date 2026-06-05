@@ -1,5 +1,4 @@
 import { forwardRef } from "react";
-import { nanoid } from "nanoid";
 
 import { PersonGroup } from "../../person-group";
 
@@ -14,7 +13,7 @@ export const PersonGroupsUI = forwardRef<
   return (
     <ul className={styles.persons__groups} ref={ref} onScrollEnd={onScroll}>
       {groups.map((group) => (
-        <li key={nanoid()} id={group.type} className={styles.persons__group}>
+        <li key={group.type} id={group.type} className={styles.persons__group}>
           <PersonGroup type={group.type} persons={group.persons} />
         </li>
       ))}

@@ -1,5 +1,4 @@
 import { forwardRef } from "react";
-import { nanoid } from "nanoid";
 
 import { PhotoListItemUI } from "../photo-list-item";
 import { PhotoUI } from "../photo";
@@ -22,8 +21,8 @@ export const PhotoListUI = forwardRef<HTMLUListElement, TPhotoListUIProps>(
         ref={ref}
         onScrollEnd={onScroll}
       >
-        {photos.map((photo) => (
-          <PhotoListItemUI key={nanoid()}>
+        {photos.map((photo, index) => (
+          <PhotoListItemUI key={index}>
             <PhotoUI {...photo} />
           </PhotoListItemUI>
         ))}

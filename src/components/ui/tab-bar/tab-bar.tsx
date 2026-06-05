@@ -1,5 +1,4 @@
 import type { CSSProperties, FC } from "react";
-import { nanoid } from "nanoid";
 
 import { TabUI } from "../tab";
 
@@ -21,7 +20,7 @@ export const TabBarUI: FC<TTabBarUIProps> = ({
     >
       {tabs.map((tab, index) => (
         <TabUI
-          key={nanoid()}
+          key={index}
           tab={tab}
           current={currentTab === tab}
           onClick={() => onChange(tab, index)}
