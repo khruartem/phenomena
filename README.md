@@ -3,7 +3,7 @@
 > **Лэндинг спецпроекта "Феномены"** — веб-приложение Открытой Территории
 
 [![Vercel Deployment](https://img.shields.io/badge/deployed%20on-Vercel-000?style=flat-square&logo=vercel)](https://phenomena-lake.vercel.app)
-[![TypeScript](https://img.shields.io/badge/TypeScript-82.9%-3178C6?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PGRlZnM+PHN0eWxlPi5hIHtmaWxsOiMzMTc4YzY7fSBpbnZlcnNlIHtmb250LXdlaWdodDogYm9sZDt9PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTAgMTJhMTIgMTIgMCAxIDAgMjQgMEExMiAxMiAwIDAgMCAw3IDEyeiIgY2xhc3M9ImEiLz48cGF0aCBkPSJNNiAxMGgzdjd6bTYgMGgzdjd6Ii8+PC9zdmc+&logoColor=white)](package.json)
+[![TypeScript](https://img.shields.io/badge/TypeScript-82.9%-3178C6?style=flat-square)](package.json)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=white)](package.json)
 [![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)](package.json)
 
