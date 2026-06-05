@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+# Феномены
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Лэндинг спецпроекта "Феномены"** — веб-приложение Института внедрения навыков (ИВН)
 
-Currently, two official plugins are available:
+[![Vercel Deployment](https://img.shields.io/badge/deployed%20on-Vercel-000?style=flat-square&logo=vercel)](https://phenomena-lake.vercel.app)
+[![TypeScript](https://img.shields.io/badge/TypeScript-82.9%-3178C6?style=flat-square&logo=typescript)](package.json)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)](package.json)
+[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite)](package.json)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[🌐 Посетить сайт](https://phenomena-lake.vercel.app) • [📦 Исходный код](#структура-проекта) • [🚀 Начало-работы](#быстрый-старт)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## О проекте
 
-## Expanding the ESLint configuration
+Это современный лэндинг для инновационного проекта "Феномены", разработанный командой Института внедрения навыков. Сайт демонстрирует возможности и цели проекта с использованием современных веб-технологий и лучших практик фронтенд-разработки.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### ✨ Ключевые особенности
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🎨 **Современный UI/UX дизайн** — отзывчивый интерфейс с плавными анимациями
+- ⚡ **Высокая производительность** — построен на Vite с оптимизацией для быстрой загрузки
+- 📱 **Полностью адаптивный** — отлично работает на всех устройствах
+- 🎭 **Анимации и интерактивность** — использует Framer Motion для плавных переходов
+- 🛣️ **Навигация** — интеллектуальная маршрутизация с React Router
+- ♿ **Доступность** — заботимся о юзабилити для всех пользователей
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Стек технологий
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| Слой | Технология |
+|------|-----------|
+| **Фреймворк** | React 19 |
+| **Язык** | TypeScript |
+| **Сборка** | Vite |
+| **Маршрутизация** | React Router v7 |
+| **Анимации** | Framer Motion |
+| **Стили** | CSS + Clsx |
+| **Утилиты** | React Intersection Observer, React Responsive |
+| **Развёртывание** | Vercel |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Композиция кода
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- TypeScript: 82.9%
+- CSS: 15.6%
+- HTML: 1.1%
+- JavaScript: 0.4%
+
+---
+
+## 🚀 Быстрый старт
+
+### Требования
+
+- Node.js 18+
+- npm или yarn
+
+### Установка
+
+1. Клонируйте репозиторий: `git clone https://github.com/khruartem/phenomena.git && cd phenomena`
+2. Установите зависимости: `npm install`
+3. Запустите локальный сервер: `npm run dev` (приложение откроется на http://localhost:5173)
+
+### Команды разработки
+
+- `npm run dev` — разработка с горячей перезагрузкой
+- `npm run lint` — проверка кода на ошибки
+- `npm run build` — сборка для продакшена
+- `npm run build:production` — сборка для продакшена (опция)
+- `npm run build:test` — сборка для тестирования
+- `npm run preview` — предпросмотр собранного приложения
+
+---
+
+## 📁 Структура проекта
+
+phenomena/ ├── src/ │   ├── components/ — переиспользуемые компоненты │   ├── pages/ — страницы приложения │   ├── styles/ — глобальные стили │   ├── types/ — TypeScript типы │   ├── utils/ — утилиты и хелперы │   ├── App.tsx — главный компонент │   └── main.tsx — точка входа ├── public/ — статические ресурсы ├── package.json — зависимости и скрипты ├── tsconfig.json — конфигурация TypeScript ├── vite.config.ts — конфигурация Vite └── README.md — этот файл
+
+---
+
+## 🌐 Развёртывание
+
+Проект автоматически развёртывается на **Vercel** при каждом push в ветку `main`. Live версия доступна по адресу: https://phenomena-lake.vercel.app
+
+---
+
+## 📝 Лицензия
+
+Этот проект создан Институтом внедрения навыков (ИВН).
+
+---
+
+## 👨‍💻 Разработчик
+
+Проект разработан и поддерживается [@khruartem](https://github.com/khruartem)
+
+---
+
+## 📞 Связь
+
+Для вопросов и предложений обратитесь к организатору проекта через GitHub Issues.
+
+---
+
+**Создано с ❤️ для Феноменов**
