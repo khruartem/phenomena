@@ -3,7 +3,7 @@
 > **Лэндинг спецпроекта "Феномены"** — веб-приложение Открытой Территории
 
 [![Vercel Deployment](https://img.shields.io/badge/deployed%20on-Vercel-000?style=flat-square&logo=vercel)](https://phenomena-lake.vercel.app)
-[![TypeScript](https://img.shields.io/badge/TypeScript-82.9%-3178C6?style=flat-square&logo=typescript&logoColor=white)](package.json)
+[![TypeScript](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)](package.json)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=white)](package.json)
 [![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)](package.json)
 
@@ -84,7 +84,7 @@ phenomena/ ├── src/ │   ├── components/ — переиспольз
 
 ## 📝 Лицензия
 
-Этот проект создан Институтом внедрения навыков (ИВН).
+Этот проект создан Открытой Территорией.
 
 ---
 
