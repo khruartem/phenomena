@@ -3,7 +3,7 @@
 > **Лэндинг спецпроекта "Феномены"** — веб-приложение Открытой Территории
 
 [![Vercel Deployment](https://img.shields.io/badge/deployed%20on-Vercel-000?style=flat-square&logo=vercel)](https://phenomena-lake.vercel.app)
-[![TypeScript](https://img.shields.io/badge/TypeScript-82.9%-3178C6?style=flat-square&logo=typescript&logoColor=white)](package.json)
+[![TypeScript](https://img.shields.io/badge/TypeScript-82.9%-3178C6?style=flat-square&logo=typescript)](package.json)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=white)](package.json)
 [![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)](package.json)
 
@@ -13,7 +13,7 @@
 
 ## О проекте
 
-Лэндинг специального проекта "Феномены" от Открытой Территории. Разработан технической командой Открытой Территории с использованием современных веб-технологий и лучших практик фронтенд-разработки.
+Лэндинг специального проекта "Феномены" от Открытой Территории. Разработан технической командой Открытой Территории с использованием современных технологий фронтенда.
 
 ### ✨ Ключевые особенности
 
@@ -72,7 +72,22 @@
 
 ## 📁 Структура проекта
 
-phenomena/ ├── src/ │   ├── components/ — переиспользуемые компоненты │   ├── pages/ — страницы приложения │   ├── styles/ — глобальные стили │   ├── types/ — TypeScript типы │   ├── utils/ — утилиты и хелперы │   ├── App.tsx — главный компонент │   └── main.tsx — точка входа ├── public/ — статические ресурсы ├── package.json — зависимости и скрипты ├── tsconfig.json — конфигурация TypeScript ├── vite.config.ts — конфигурация Vite └── README.md — этот файл
+```
+phenomena/
+├── src/
+│   ├── components/     — переиспользуемые компоненты
+│   ├── pages/          — страницы приложения
+│   ├── styles/         — глобальные стили
+│   ├── utils/          — утилиты и хелперы
+│   ├── App.tsx         — основной компонент приложения
+│   └── main.tsx        — точка входа
+├── public/             — статические активы
+├── index.html          — главный HTML файл
+├── package.json        — зависимости проекта
+├── tsconfig.json       — конфигурация TypeScript
+├── vite.config.ts      — конфигурация Vite
+└── README.md           — этот файл
+```
 
 ---
 
