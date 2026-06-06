@@ -55,7 +55,9 @@ export const Gallery: FC = () => {
     const paginatorIndex = Math.round(
       e.currentTarget.scrollLeft / (photoWidth * incriment),
     );
-    setCurrentPaginatorIndex(paginatorIndex);
+
+    if (paginatorIndex !== currentPaginatorIndex)
+      setCurrentPaginatorIndex(paginatorIndex);
   };
 
   const handleGalleryClickLeft = () => {

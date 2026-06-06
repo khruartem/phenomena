@@ -19,7 +19,7 @@ export const PhotoListUI = forwardRef<HTMLUListElement, TPhotoListUIProps>(
         className={styles["photo-list"]}
         style={photoListStyle}
         ref={ref}
-        onScrollEnd={onScroll}
+        onScroll={onScroll}
       >
         {photos.map((photo, index) => (
           <PhotoListItemUI key={index}>
