@@ -57,7 +57,7 @@ const BORDER_STYLES = {
   },
   right: {
     stroke: Colors.Dark80,
-    strokeOpacity: undefined,
+    strokeOpacity: 1,
   },
 };
 
@@ -75,20 +75,19 @@ export const PersonFrameUI: FC<TPersonFrameUIPorps> = ({ appearance }) => {
         styles[`person__frame_${direction}-bottom`],
       )}
     >
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <clipPath id={clipId} clipPathUnits="objectBoundingBox">
+            <path d={CLIP_PATHS[direction]} />
+          </clipPath>
+        </defs>
+      </svg>
       <div
         className={clsx(
           styles.person__image,
           styles[`person__image_${direction}`],
         )}
       >
-        <svg width="0" height="0" style={{ position: "absolute" }}>
-          <defs>
-            <clipPath id={clipId} clipPathUnits="objectBoundingBox">
-              <path d={CLIP_PATHS[direction]} />
-            </clipPath>
-          </defs>
-        </svg>
-
         <svg
           className={styles.person__border}
           viewBox="0 0 248 248"
