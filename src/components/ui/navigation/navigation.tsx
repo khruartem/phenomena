@@ -19,6 +19,7 @@ export const NavigationUI: FC = () => {
     <>
       {!isMobile ? (
         <div
+          id="navigation"
           className={styles.navigation}
           style={{ gap: clsx(isLarge && "48px", isDesktop && "50px") }}
         >
