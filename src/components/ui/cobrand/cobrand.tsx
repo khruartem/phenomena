@@ -12,7 +12,7 @@ export const CobrandUI: FC = () => {
   const { isDesktop, isMobile } = useMedia();
 
   return (
-    <div className={styles.cobrand}>
+    <div id="cobrand" className={styles.cobrand}>
       <IVNLogo type={isDesktop || isMobile ? "logo-sign" : "logo-full"} />
       <Icon name={"divider"} width={12} height={12} />
       <OTLogo />

@@ -1,5 +1,9 @@
 body:has(.burger_opened) {
-  position: fixed;
+  overflow: hidden;
+}
+
+header:has(.burger_opened) :is(:global(#cobrand), :global(#navigation)) {
+  z-index: 1;
 }
 
 .burger {
