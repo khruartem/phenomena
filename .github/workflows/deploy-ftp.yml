@@ -16,14 +16,14 @@ jobs:
           npm run build:production
       # Here is the deployment action
       - name: Upload from dist via FTP
-        uses: airvzxf/ftp-deployment-action@v2
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local_dir: "./dist"
-          remote_dir: "/nii-vn.ru/docs"
-          delete: true
+          local-dir: "./dist/"
+          server-dir: "/nii-vn.ru/docs/"
+          dangerous-clean-slate: true
 
 # name: CI -> Deploy to hosting
 # on:
