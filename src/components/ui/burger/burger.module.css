@@ -2,7 +2,7 @@ body:has(.burger_opened) {
   overflow: hidden;
 }
 
-header:has(.burger_opened) :is(:global(#cobrand), :global(#navigation)) {
+header:has(.burger_opened)> :is(:global(#cobrand), :global(#navigation), button) {
   z-index: 1;
 }
 
