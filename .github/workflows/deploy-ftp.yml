@@ -16,7 +16,7 @@ jobs:
           npm run build:production
       # Here is the deployment action
       - name: Upload from dist via FTP
-        uses: airvzxf/ftp-deployment-action@main
+        uses: airvzxf/ftp-deployment-action@v2
         with:
           server: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
