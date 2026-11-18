@@ -1,0 +1,24 @@
+name: Build Phenomena site
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build:production
+      # Here is the deployment action
+      - name: Save production build
+        uses: actions/upload-artifact@v7
+        with:
+          name: phenomena-dist-${{ github.sha }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14
